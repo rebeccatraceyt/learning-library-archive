@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+:root {
+    --body-font: "Montserrat", sans-serif;
+    --alt-font: "Indie Flower", cursive;
+    --code-font: "Courier Prime", monospace;
+
+    --action-red: #e84610;
+    --action-blue: #23bbbb;
+
+    --text-color: #4a4a4f;
+
+    --accent-pink: #ff5a60;
+    --accent-orange: #ef8e6e;
+    --accent-green: #64de9d;
+    --accent-blue: #64c3ec;
+
+    --frame-shadow: rgba(0, 0, 0, 0.25);
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0px 8px 16px var(--frame-shadow);
+    box-shadow: 0px 8px 16px var(--frame-shadow);
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+/* text resets */
+.code-text {
+    font-family: var(--code-font);
+}
+.italic-text {
+    font-style: italic;
+}
+.center-text {
+    text-align: center;
+}
+.center-code-sm {
+    text-align: center;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.overflow-scroll-sm {
+    overflow-x: scroll;
+}
+.bold-text {
+    font-weight: bolder;
+}
+.alt-text {
+    font-family: var(--alt-font);
+}
+
+
+/* color resets */
+.red {
+    color: var(--action-red);
+}
+.orange {
+    color: var(--accent-orange);
+}
+
+.blue {
+    color: var(--accent-blue);
+}
+.green {
+    color: var(--accent-green);
+}
+
+/* section reset */
+#checklist-card {
+    max-width: 700px;
+    margin: 20px auto;
+
+    padding: 28px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+/* header resets */
+#header {
+    padding-bottom: 20px;
+}
+#header-text {
+    display: flex;
+    align-items: flex-end;
+    line-height: 1;
+}
+#header-text > h1 {
+    font-family: var(--alt-font);
+    font-size: 2.8rem;
+    color: var(--action-red);
+    margin: 0;
+    padding-right: 12px;
+}
+#header-icon {
+    min-width: 16%;
+}
+#header-icon > img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* hr resets */
+#header-hr {
+    width: 80%;
+    border: 0 none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(74, 74, 79, 0.25);
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* title resets */
+#title-heading {
+    font-family: var(--body-font);
+    font-weight: 900;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+#title-text {
+    line-height: 24px;
+}
+.subtitle {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 20px 0 4px;
+}
+
+/* step resets */
+#step-list {
+    padding: 20px 0;
+}
+.step {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* checkbox resets
+  credit: https://moderncss.dev/pure-css-custom-checkbox-style */
+.checkbox-icon {
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+input[type="checkbox"] {
+    appearance: none;
+    color: var(--text-color);
+    width: 12px;
+    height: 12px;
+    border: 0.15em solid var(--text-color);
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    margin: 4px;
+}
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--action-red);
+}
+.checkbox-icon > span {
+    padding-left: 4px;
+    line-height: 16px;
+}
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+.checkbox-code-line {
+    padding-top: 12px;
+}
+.checkbox-code-line > span {
+    font-weight: bold;
+}
+
+/* code block resets */
+.code-block {
+    display: flex;
+    justify-content: center;
+}
+.dark-box {
+    min-width: 90%;
+    padding: 24px;
+    border-radius: 12px;
+    color: #fcfdfd;
+    background-color: #445261;
+}
+.code-margin {
+    margin-bottom: 8px;
+}
+.code-indent {
+    padding-left: 20px;
+}
+.code-indent2 {
+    padding-left: 24px;
+}
+.code-indent3 {
+    padding-left: 36px;
+}
+.code-indent4 {
+    padding-left: 36px;
+}
+
+
+/* end text resets */
+#end-container {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#end-icon {
+    max-width: 80%;
+    padding-right: 20px;
+}
+#extra-end-container {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+#extra-end-title {
+    max-width: 80%;
+}
+#extra-end-title > div {
+    margin: 4px 0;
+}
+#extra-end-img {
+    max-width: 20%;
+}
+#extra-end-img > img {
+    max-width: 100%;
+}
+
+/* bullet point resets */
+.point-container {
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+    padding-top: 12px;
+}
+.point-container > img {
+    width: 1rem;
+    height: auto;
+}
+.point-body {
+    padding-left: 4px;
+}
+
+/* favicon specific */
+#favicon-ex {
+    text-align: center;
+}
+#favicon-ex > img {
+    max-width: 100%;
+}
+.fav-link {
+    display: flex;
+    padding-left: 24px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .step {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .center-code-sm {
+        text-align: left;
+    }
+    
+    #checklist-card {
+        font-size: 16px;
+        padding: 40px;
+    }
+    #header-text {
+        justify-content: space-between;
+    }
+    #header-text > h1 {
+        font-size: 3.8rem;
+    }
+
+    input[type="checkbox"] {
+        width: 1.15rem;
+        height: 1.15rem;
+        margin: 3px;
+    }
+    .checkbox-icon > span {
+        line-height: 22px;
+    }
+    .checkbox-code-line > span {
+        padding-left: 28px;
+    }
+    .line-break {
+        display: none;
+    }
+    .code-indent{
+        padding-left: 32px;
+    }
+    .code-indent2,
+    .code-indent3 {
+        padding-left: 0;
+    }
+}
+@media only screen and (min-width: 750px) {
+    .overflow-scroll-sm {
+        /* to ensure overflow is still in place on md devices */
+        overflow-x: visible;
+    }
+}
