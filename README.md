@@ -23,13 +23,13 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 ### Templates
 | Template Name | Created | Reviewed | Published | Revision Notes |
 |---------------|:-------:|:--------:|:---------:|----------|
-|               | &#9744; |  &#9744; |  &#9744;  |     
+| Checklist       | &#9745; |  &#9744; |  &#9744;  |     
 
 [Back to top ⇧](#table-of-contents)
 
 ### Components
 | Component Name | Created | Reviewed | Published | Revision Notes |
 |----------------|:-------:|:--------:|:---------:|----------|
-|                | &#9744; |  &#9744; |  &#9744;  |          |
+| Step Code block              | &#9745; |  &#9744; |  &#9744;  |          |
 
 [Back to top ⇧](#table-of-contents)
