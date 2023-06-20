@@ -34,5 +34,6 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Step Code block             | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
 | Step with code line           | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
 | Single code line            | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
+| Step bullet point          | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
 
 [Back to top ⇧](#table-of-contents)
