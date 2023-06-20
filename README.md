@@ -36,5 +36,6 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Single code line            | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
 | Step bullet point          | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
 | Step sub text          | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
+| Extra footer step          | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
 
 [Back to top ⇧](#table-of-contents)
