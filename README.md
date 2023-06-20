@@ -2,7 +2,7 @@
 
 The primary purpose of this repository is to act as a dual-purpose resource, functioning as a development tool and an archive for the learning library. It provides developers with readily available components and templates that streamline the development process, reducing redundancy and enhancing productivity. Simultaneously, it serves as an archive, storing current resources for reference, and maintaining coherence within the learning library.
 
-**last updated: 19/06/2023**
+**last updated: 20/06/2023**
 
 ***
 
@@ -28,10 +28,11 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 [Back to top ⇧](#table-of-contents)
 
 ### Components
-| Component Name | Created | Reviewed | Published | Revision Notes |
-|----------------|:-------:|:--------:|:---------:|----------|
-| Step              | &#9745; |  &#9744; |  &#9744;  |          |
-| Step Code block              | &#9745; |  &#9744; |  &#9744;  |          |
-| Step with code line              | &#9745; |  &#9744; |  &#9744;  |          |
+| Component Name | Template | Created | Reviewed | Published | Revision Notes |
+|----------------|:-------:|:-------:|:--------:|:---------:|----------|
+| Step              | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
+| Step Code block             | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
+| Step with code line           | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
+| Single code line            | Checklist | &#9745; |  &#9744; |  &#9744;  |          |
 
 [Back to top ⇧](#table-of-contents)
