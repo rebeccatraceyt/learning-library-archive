@@ -30,6 +30,8 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 ### Components
 | Component Name | Created | Reviewed | Published | Revision Notes |
 |----------------|:-------:|:--------:|:---------:|----------|
+| Step              | &#9745; |  &#9744; |  &#9744;  |          |
 | Step Code block              | &#9745; |  &#9744; |  &#9744;  |          |
+| Step with code line              | &#9745; |  &#9744; |  &#9744;  |          |
 
 [Back to top ⇧](#table-of-contents)
