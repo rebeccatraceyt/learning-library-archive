@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../assets/css/checklist/checklist.css" />
+        <title>Checklist Template</title>
+    </head>
+    <body>
+        <nav>
+            <a href="../../bitesize.html">Bitesize</a>
+            <a href="../../checklist.html">Checklists</a>
+            <a href="../../flashcards.html">Flash</a>
+        </nav>
+        <section id="checklist-card" class="box-shadow">
+            <div id="header">
+                <div id="header-text">
+                    <h1>Checklist:</h1>
+                    <div id="header-icon">
+                        <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/checklist_circle_secondary.svg"
+                        alt="Blue checklist logo with checkmark in circle"
+                        />
+                    </div>
+                </div>
+                <hr id="header-hr" />
+            </div>
+            <div id="title">
+                <h2 id="title-heading">
+                    Making, applying, and undoing migrations in Django
+                </h2>
+                <span id="title-text">
+                    When you have set up a model in your Django app, you will need to migrate it. During migration, Django converts your model into a database table in which your data will be stored.  Unfortunately, things don’t always go with data, so it’s useful to know how to reverse your migrations too!
+                </span>
+            </div>
+            <div id="step-list">
+                <div class="subtitle">
+                    <span>
+                        Making Migrations
+                    </span>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Before making a migration, it’s always useful to perform a dry run. This shows you the migrations that will be made, without actually making them, so you can spot any potential issues.
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py makemigrations --dry-run
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Once you are happy with what will be created, make your migrations:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py makemigrations 
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Before you migrate, use the plan flag to see exactly what will be migrated when you run the migrate command: 
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py migrate --plan 
+                        </span>
+                    </div>
+                </div>
+                <div class="subtitle">
+                    <span>
+                        Applying Migrations
+                    </span>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Once you are happy with what will be migrated, apply your migrations:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py migrate 
+                        </span>
+                    </div>
+                </div>
+                <div class="subtitle">
+                    <span>
+                        Undoing Migrations
+                    </span>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            If you need to revert an app to a specific migration, you can do so by running the command:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py migrate your_app_name_here 0010
+                        </span>
+                    </div>
+                </div>
+                <div class="step center-text italic-text">
+                    The number at the end of the command is the number of the migration you want to revert to.
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Alternatively, you may wish to undo all migrations from an app, with the command:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py migrate your_app_name_here zero 
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            The above commands will only unapply your migrations. The associated migration files will still exist in your app. To get rid of these, you can simply delete the migration files.
+                        </span>
+                    </label>
+                </div>
+                <div class="step center-text italic-text bold-text">
+                    Note that you should not delete the __init__.py files.
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            You can make any necessary changes and restart your migration process.
+                        </span>
+                    </label>
+                </div>
+                <div id="end-container">
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/tada_icon_blue.svg"
+                        alt="Blue tada icon with confetti exploding from cone"
+                        id="end-icon"
+                    />
+                    <div>
+                        You can now make, apply, and undo migrations in a Django App!
+                    </div>
+                </div>
+                <div id="extra-end-container">
+                    <div id="extra-end-title">
+                        <div class="alt-text subtitle">
+                            Have data you need to keep?
+                        </div>
+                        <div>
+                            Before you undo your migrations, you can save your data to a json file, using the command:
+                        </div>
+                        <div>
+                            <span class="code-text red">
+                                python3 manage.py dumpdata > fullDB.json
+                            </span>
+                        </div>
+                    </div>
+                    <div id="extra-end-img">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_yellow.svg" alt="yellow lightbulb icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

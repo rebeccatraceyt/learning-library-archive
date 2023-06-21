@@ -20,7 +20,9 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Creating an env.py file   | &#9744; |  &#9744; |  &#9744;  |          | 
 | Django 404 Page   | &#9744; |  &#9744; |  &#9744;  |          | 
 | New Django App   | &#9744; |  &#9744; |  &#9744;  |          | 
+| Django Migrations   | &#9744; |  &#9744; |  &#9744;  |          | 
 |    | &#9744; |  &#9744; |  &#9744;  |          | 
+
 
 [Back to top ⇧](#table-of-contents)
 
