@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../assets/css/checklist/checklist.css" />
+        <title>Checklist Template</title>
+    </head>
+    <body>
+        <nav>
+            <a href="../../bitesize.html">Bitesize</a>
+            <a href="../../checklist.html">Checklists</a>
+            <a href="../../flashcards.html">Flash</a>
+        </nav>
+        <section id="checklist-card" class="box-shadow">
+            <div id="header">
+                <div id="header-text">
+                    <h1>Checklist:</h1>
+                    <div id="header-icon">
+                        <img
+                            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/checklist_circle_secondary.svg"
+                            alt="Blue checklist logo with checkmark in circle"
+                        />
+                    </div>
+                </div>
+                <hr id="header-hr" />
+            </div>
+            <div id="title">
+                <h2 id="title-heading">New Django App</h2>
+                <span id="title-text">Steps for creating a new app in your Django project</span>
+            </div>
+            <div id="step-list">
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Run the
+                            following command in the terminal to create an empty
+                            app:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py startapp APPNAME
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            In your
+                            <span class="code-text red">settings.py</span>
+                            file, add the name of your new app to the
+                            <span class="code-text red">INSTALLED_APPS</span>
+                            variable.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Set up <strong>views</strong> for your app. Basic
+                            structure of a view:
+                        </span>
+                    </label>
+                </div>
+                <div class="step code-block">
+                    <div class="code-text box-shadow dark-box">
+                        <div class="code-margin">
+                            <span class="orange">from</span> django.shortcuts
+                            <span class="orange">import</span> render
+                        </div>
+                        <div class="code-margin">
+                            <span>
+                                <span class="orange">def</span>
+                                <span class="green">my_view</span>
+                                (request):
+                            </span>
+                        </div>
+                        <div class="code-indent">
+                            <span>
+                                context<span class="blue"> = </span>
+                                {<br class="line-break"/><span class="code-indent2"><span class="blue">‘title’</span>: <span class="blue">‘Hello, World!’</span></span><br class="line-break" />}
+                            </span>
+                        </div>
+                        <div class="code-indent">
+                            <span>
+                                <span class="orange">return</span>
+                                <span class="green">render</span>
+                                (<br class="line-break" /><span class="code-indent2">request, </span><br class="line-break" />
+                                <span class="code-indent2 blue">‘APPNAME/main.html'</span>, <br class="line-break" />
+                                <span class="code-indent2">context</span><br class="line-break" />)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>Create a <strong class="code-text">templates</strong>
+                            directory in your app. Inside the templates
+                            directory, create another directory named
+                            <strong class="code-text">APPNAME</strong>.
+                        </span><br />
+                        <span>
+                            You will put your HTML template files into this
+                            inner directory:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            APPNAME/templates/APPNAME/main.html
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" /> 
+                        <span>
+                            Set up app
+                            URLs. In your app’s urls.py file, create a path for your
+                            view(s):
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            path(‘home’, views.my_view, name=a),
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Add your app’s
+                            URLS to the project’s URLS file:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            path('APPNAME/', include('APPNAME.urls')),
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Optional - Create models for your app with the basic
+                            structure of a model:
+                        </span>
+                    </label>
+                </div>
+                <div class="step code-block">
+                    <div class="code-text box-shadow dark-box">
+                        <div class="code-margin">
+                            <span class="orange">from</span> django.db
+                            <span class="orange">import</span> models
+                        </div>
+                        <div class="code-margin">
+                            <span>
+                                <span class="orange">class</span>
+                                <span class="blue">ModelName</span>(models.<span class="blue">Model</span>):</span>
+                        </div>
+                        <div class="code-indent">
+                            <span>
+                                field_name = <br class="line-break" />
+                                <span class="code-indent2">models.<span class="blue">FieldType</span></span>
+                                (<br class="line-break" /><span class="code-indent3">parameters</span><br class="line-break" /><span class="code-indent2">)</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            After creating
+                            the model, make and run migrations with the commands:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py makemigrations
+                        </span>
+                    </div>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py migrate
+                        </span>
+                    </div>
+                </div>
+                <div id="end-container">
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/tada_icon_blue.svg"
+                        alt="Blue tada icon with confetti exploding from cone"
+                        id="end-icon"
+                    />
+                    <div>Your new Django app is ready to go!</div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
