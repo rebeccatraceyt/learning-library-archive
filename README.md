@@ -18,6 +18,7 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 |---------------|:-------:|:--------:|:---------:|----------|
 | Setting up AllAuth   | &#9745; |  &#9744; |  &#9744;  |          | 
 | Creating an env.py file   | &#9744; |  &#9744; |  &#9744;  |          | 
+| Django 404 Page   | &#9744; |  &#9744; |  &#9744;  |          | 
 |    | &#9744; |  &#9744; |  &#9744;  |          | 
 
 [Back to top ⇧](#table-of-contents)

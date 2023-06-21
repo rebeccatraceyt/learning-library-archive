@@ -19,25 +19,98 @@
                     <h1>Checklist:</h1>
                     <div id="header-icon">
                         <img
-                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/checklist_circle_secondary.svg"
-                        alt="Blue checklist logo with checkmark in circle"
+                            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/checklist_circle_secondary.svg"
+                            alt="Blue checklist logo with checkmark in circle"
                         />
                     </div>
                 </div>
                 <hr id="header-hr" />
             </div>
             <div id="title">
-                <h2 id="title-heading">
-                    Checklist Name
-                </h2>
-                <span id="title-text">Checklist subtext</span>
+                <h2 id="title-heading">Django 404 page creation</h2>
+                <span id="title-text">
+                    If a user tries to navigate to a page which doesn’t exist on your site, they will be shown a 404 page. By default, a plain 404 message is shown by Django when this happens. However, Django also does all the heavy lifting when it comes to custom error pages, so you can greatly improve your UX with a custom 404 page in a matter of minutes!
+                </span>
             </div>
             <div id="step-list">
                 <div class="step">
                     <label class="checkbox-icon">
                         <input name="checkbox" type="checkbox" />
                         <span>
-                            ADD YOUR STEP HERE
+                            Add <span class="code-text red">import os</span> at the top of your <span class="code-text red">settings.py</span> file if it is not there already.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" /> 
+                        <span>
+                            In <span class="code-text red">settings.py</span>, make sure the <span class="code-text red">DIRS</span> key within the <span class="code-text red">TEMPLATES</span> variable has the following value:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            'DIRS': [os.path.join(BASE_DIR, 'templates')],
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Add a <span class="code-text red">templates</span> directory to the root of your project if there isn’t already one.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" /> 
+                        <span>
+                            Add a file called <span class="code-text red">404.html</span> into this templates directory. The file path should be:</span>
+                    </label>
+                    <div class="checkbox-code-line center-code-sm">
+                        <span class="code-text red">
+                            APPNAME/templates/404.html
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Add whatever HTML and template code you want your 404 page to have. In the below example, we extend from a <span class="code-text red">base.html</span> file.
+                        </span>
+                    </label>
+                </div>
+                <div class="step code-block">
+                    <div class="code-text box-shadow dark-box">
+                        <div class="code-margin">
+                            {% <span class="blue">extends</span> <span class="green">"base.html"</span> %}
+                        </div>
+                        <div class="code-margin">
+                            {% <span class="blue">block</span> <span class="green">"content"</span> %}
+                        </div>
+                        <div class="code-margin code-indent">
+                            <span>
+                                &lt;<span class="blue">h1</span>&gt; 
+                            </span> </br>
+                            <span class="code-indent4">
+                                This is my 404 page
+                            </span> </br>
+                            <span>
+                                &lt;<span class="blue">/h1</span>&gt; 
+                            </span>
+                        </div>
+                        <div class="code-margin">
+                            {% <span class="blue">endblock</span> <span class="green">"content"</span> %}
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            The 404 page will only display <strong>when DEBUG is set to False</strong>, so make sure this setting is correct in your <span class="code-text red">settings.py</span> file.
                         </span>
                     </label>
                 </div>
@@ -47,9 +120,7 @@
                         alt="Blue tada icon with confetti exploding from cone"
                         id="end-icon"
                     />
-                    <div>
-                        Your template is ready to use!
-                    </div>
+                    <div>Your customized 404 page will now load whenever you try to access a page that doesn’t exist!</div>
                 </div>
             </div>
         </section>
