@@ -17,6 +17,7 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Resource Name | Created | Reviewed | Published | Revision Notes |
 |---------------|:-------:|:--------:|:---------:|----------|
 | Setting up AllAuth   | &#9745; |  &#9744; |  &#9744;  |          | 
+| Creating an env.py file   | &#9744; |  &#9744; |  &#9744;  |          | 
 |    | &#9744; |  &#9744; |  &#9744;  |          | 
 
 [Back to top ⇧](#table-of-contents)

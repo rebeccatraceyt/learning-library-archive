@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../assets/css/checklist/checklist.css" />
+        <title>Checklist Template</title>
+    </head>
+    <body>
+        <nav>
+            <a href="../../bitesize.html">Bitesize</a>
+            <a href="../../checklist.html">Checklists</a>
+            <a href="../../flashcards.html">Flash</a>
+        </nav>
+        <section id="checklist-card" class="box-shadow">
+            <div id="header">
+                <div id="header-text">
+                    <h1>Checklist:</h1>
+                    <div id="header-icon">
+                        <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/checklist_circle_secondary.svg"
+                        alt="Blue checklist logo with checkmark in circle"
+                        />
+                    </div>
+                </div>
+                <hr id="header-hr" />
+            </div>
+            <div id="title">
+                <h2 id="title-heading">
+                    Creating an env.py file 
+                </h2>
+                <span id="title-text">How to set up your secret environment variables using an env.py file:</span>
+            </div>
+            <div id="step-list">
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" /> 
+                        <span>
+                            Create a file named <span class="code-text red">env.py</span> in the root directory of the project (at the same level as your <span class="code-text red">README</span>). This is where your environment variables will live.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            To keep your variables secure, we need to stop git from pushing this file to GitHub. To do this, write <span class="code-text red">env.py</span> on a new line in your <span class="code-text red">.gitignore</span> file, and save.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            At the top of your new <span class="code-text red">env.py</span> file, add:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line center-code-sm">
+                        <span class="code-text red">import os</span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Now we can start adding variables using the following format:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">os.environ["VARIABLE_NAME"] = “variable_value”</span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Import your new <span class="code-text red">env.py</span> file at the top of your <span class="code-text red">settings.py</span> file:
+                        </span>
+                    </label>
+                </div>
+                <div class="step code-block">
+                    <div class="code-text box-shadow dark-box">
+                        <div class="code-margin">
+                            <span class="orange">import</span> os
+                        </div>
+                        <div class="code-margin">
+                            <span>
+                                <span class="orange">if</span> os.path.<span class="green">exists</span>(<span class="blue">"env.py"</span>):
+                            </span>
+                        </div>
+                        <div class="code-indent">
+                            <span>
+                                <span class="orange">import</span> env
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="step italic-text center-text">
+                    The if statement will ensure your <span class="code-text red">env.py</span> file will be used when developing locally, but not when you deploy your project.
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Now that the variables have been set in your env.py file and loaded via <span class="code-text red">settings.py</span>, you can use them with the following syntax:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            VARIABLE = os.environ.get('VARIABLE_NAME')
+                        </span>
+                    </div>
+                </div>
+                <div id="end-container">
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/tada_icon_blue.svg"
+                        alt="Blue tada icon with confetti exploding from cone"
+                        id="end-icon"
+                    />
+                    <div>
+                        Your local environment variables are set up and ready to use!
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
