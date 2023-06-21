@@ -17,10 +17,10 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Resource Name | Created | Reviewed | Published | Revision Notes |
 |---------------|:-------:|:--------:|:---------:|----------|
 | Setting up AllAuth   | &#9745; |  &#9744; |  &#9744;  |          | 
-| Creating an env.py file   | &#9744; |  &#9744; |  &#9744;  |          | 
-| Django 404 Page   | &#9744; |  &#9744; |  &#9744;  |          | 
-| New Django App   | &#9744; |  &#9744; |  &#9744;  |          | 
-| Django Migrations   | &#9744; |  &#9744; |  &#9744;  |          | 
+| Creating an env.py file   | &#9745; |  &#9744; |  &#9744;  |          | 
+| Django 404 Page   | &#9745; |  &#9744; |  &#9744;  |          | 
+| New Django App   | &#9745; |  &#9744; |  &#9744;  |          | 
+| Django Migrations   | &#9745; |  &#9744; |  &#9744;  |          | 
 | Exposed SECRET_KEY   | &#9745; |  &#9744; |  &#9744;  |          | 
 | Reset SQLite3 Database  | &#9745; |  &#9744; |  &#9744;  |          | 
 | Favicon  | &#9745; |  &#9744; |  &#9744;  |          | 
