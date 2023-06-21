@@ -21,7 +21,7 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Django 404 Page   | &#9744; |  &#9744; |  &#9744;  |          | 
 | New Django App   | &#9744; |  &#9744; |  &#9744;  |          | 
 | Django Migrations   | &#9744; |  &#9744; |  &#9744;  |          | 
-|    | &#9744; |  &#9744; |  &#9744;  |          | 
+| Exposed SECRET_KEY   | &#9745; |  &#9744; |  &#9744;  |          | 
 
 
 [Back to top ⇧](#table-of-contents)
