@@ -72,6 +72,11 @@ body {
     color: var(--accent-green);
 }
 
+/* image resets */
+.max-img-width {
+    max-width: 100%;
+}
+
 /* section reset */
 #checklist-card {
     max-width: 700px;
@@ -264,19 +269,6 @@ input[type="checkbox"]:checked::before {
 .point-body {
     padding-left: 4px;
 }
-
-/* favicon specific */
-#favicon-ex {
-    text-align: center;
-}
-#favicon-ex > img {
-    max-width: 100%;
-}
-.fav-link {
-    display: flex;
-    padding-left: 24px;
-}
-
 
 @media only screen and (min-width: 600px) {
     .step {
