@@ -16,14 +16,15 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 ### Resources
 | Resource Name | Created | Reviewed | Published | Revision Notes |
 |---------------|:-------:|:--------:|:---------:|----------|
-|               | &#9744; |  &#9744; |  &#9744;  |   
+| Setting up AllAuth   | &#9745; |  &#9744; |  &#9744;  |          | 
+|    | &#9744; |  &#9744; |  &#9744;  |          | 
 
 [Back to top ⇧](#table-of-contents)
 
 ### Templates
 | Template Name | Created | Reviewed | Published | Revision Notes |
 |---------------|:-------:|:--------:|:---------:|----------|
-| Checklist       | &#9745; |  &#9744; |  &#9744;  |     
+| Checklist       | &#9745; |  &#9744; |  &#9744;  |        |    
 
 [Back to top ⇧](#table-of-contents)
 

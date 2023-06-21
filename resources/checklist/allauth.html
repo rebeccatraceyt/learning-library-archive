@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../assets/css/checklist/checklist.css" />
+        <title>Setting up AllAuth</title>
+    </head>
+    <body>
+        <nav>
+            <a href="../../bitesize.html">Bitesize</a>
+            <a href="../../checklist.html">Checklists</a>
+            <a href="../../flashcards.html">Flash</a>
+        </nav>
+        <section id="checklist-card" class="box-shadow">
+            <div id="header">
+                <div id="header-text">
+                    <h1>Checklist:</h1>
+                    <div id="header-icon">
+                        <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/checklist_circle_secondary.svg"
+                        alt="Blue checklist logo with checkmark in circle"
+                        />
+                    </div>
+                </div>
+                <hr id="header-hr" />
+            </div>
+            <div id="title">
+                <h2 id="title-heading">
+                    Installing and setting up AllAuth 
+                </h2>
+                <span id="title-text">
+                    Steps for installing and setting up the django-allauth package files:
+                </span>
+            </div>
+            <div id="step-list">
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            If you’re following our walkthrough, we recommend installing the same allauth version that is used in the video:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            pip3 install django-allauth==0.41.0
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Next, you’ll need to head over to the <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" class="red" target="_blank">django-allauth docs</a> and copy the entire <span class="code-text red">AUTHENTICATION_BACKENDS</span> section into your <span class="code-text red">settings.py</span> file.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            From the docs, you will also need to grab the <span class="code-text red">INSTALLED_APPS</span> settings.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Add <span class="code-text red">SITE_ID = 1</span> underneath your new <span class="code-text red">AUTHENTICATION_BACKENDS</span>.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Add allauth’s URLs to your main <span class="code-text red">urls.py</span> file:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            path('accounts/', include('allauth.urls')),
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Run the migration commands to add Allauth’s tables to your database:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py makemigrations
+                        </span>
+                    </div>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            python3 manage.py migrate
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            In <span class="code-text red">settings.py</span>, temporarily set your project’s email backend to log emails to the console:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line overflow-scroll-sm">
+                        <span class="code-text red nowrap">
+                            EMAIL_BACKEND = “django.core.mail.backends.console.EmailBackend"
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Copy the account configurations you need from the <a href="https://django-allauth.readthedocs.io/en/latest/configuration.html" class="red" target="_blank">docs</a>.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Inside your root <span class="code-text red">templates</span> folder, create a folder called <span class="code-text red">allauth</span>.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Finally, in order to be able to customise the authorization pages, we’ll need to copy allauth’s built-in templates from the Python site-package directory.
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <div>
+                        <span>
+                            To do that, run these few commands in the terminal:
+                        </span>
+                    </div>
+                    <div class="point-container">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg" alt="red arrow pointing right">
+                        <div class="point-body">
+                            <span>
+                                Enter the python shell with <span class="code-text red">python</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="point-container">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg" alt="red arrow pointing right">
+                        <div class="point-body">
+                            <span>
+                                Find the path to your allauth package with <span class="code-text red">help(‘allauth’)</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="point-container">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg" alt="red arrow pointing right">
+                        <div class="point-body">
+                            <span>
+                                Copy that path into this command, to copy the files into your <span class="code-text red">allauth</span> folder:
+                            </span>
+                        </div>
+                    </div>
+                    <div class="checkbox-code-line overflow-scroll-sm">
+                        <span class="code-text red nowrap">
+                            cp -r [your-site-package-path]/allauth/templates/* ./templates/allauth/
+                        </span>
+                    </div>
+                </div>
+                <div id="end-container">
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/tada_icon_blue.svg"
+                        alt="Blue tada icon with confetti exploding from cone"
+                        id="end-icon"
+                    />
+                    <div>
+                        Allauth is now set up and ready to use and customise in your Django project!
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
