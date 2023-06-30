@@ -36,6 +36,7 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 |---------------|:-------:|:--------:|:---------:|----------|
 | 5 Planes of UX   | &#9745; |  &#9744; |  &#9744;  |          | 
 | Dynamic Debug   | &#9745; |  &#9744; |  &#9744;  |          | 
+| Visual Hierarchy   | &#9745; |  &#9744; |  &#9744;  |          | 
 
 [Back to top ⇧](#table-of-contents)
 
