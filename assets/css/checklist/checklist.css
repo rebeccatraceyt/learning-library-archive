@@ -83,6 +83,9 @@ body {
 .max-img-width-sm {
     max-width: 50%;
 }
+.max-img-width-md {
+    max-width: 75%;
+}
 
 /* section reset */
 #checklist-card {
@@ -338,6 +341,9 @@ input[type="checkbox"]:checked::before {
     }
     .max-img-width-sm {
         max-width: 25%;
+    }
+    .max-img-width-md {
+        max-width: 50%;
     }
     .flex-step {
         flex-direction: row;

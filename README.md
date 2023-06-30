@@ -7,13 +7,14 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 ***
 
 ### Table of contents
-1. [Resources](#Resources)
+1. [Checklists](#Checklists)
+1. [Bitesize](#Bitesize)
 2. [Templates](#Templates)
 3. [Components](#Components)
 
 ***
 
-### Resources
+### Checklists
 | Resource Name | Created | Reviewed | Published | Revision Notes |
 |---------------|:-------:|:--------:|:---------:|----------|
 | Setting up AllAuth   | &#9745; |  &#9744; |  &#9744;  |          | 
@@ -25,6 +26,7 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Reset SQLite3 Database  | &#9745; |  &#9744; |  &#9744;  |          | 
 | Favicon  | &#9745; |  &#9744; |  &#9744;  |          | 
 | Setup a React Application  | &#9745; |  &#9744; |  &#9744;  |          | 
+| GitHub Pages Deployment  | &#9745; |  &#9744; |  &#9744;  |          | 
 
 
 [Back to top ⇧](#table-of-contents)
