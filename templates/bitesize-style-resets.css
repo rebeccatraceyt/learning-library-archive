@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+/* root variables */
+:root {
+    --body-font: "Montserrat", sans-serif;
+    --alt-font: "Indie Flower", cursive;
+    --code-font: "Courier Prime", monospace;
+
+    --action-red-60: #ef8e6e;
+    --action-red-100: #E84610;
+    --action-blue: #23bbbb;
+
+    --text-color: #4a4a4f;
+    --text-alt-white: #fcfdfd;
+    --text-alt-blue: #445261;
+
+    --accent-pink: #ff5a60;
+    --accent-orange: #efb920;
+    --accent-green: #00cc5f;
+    --accent-blue: #009fe3;
+    --accent-grey: #d6d7d8;
+
+    --box-shadow: rgba(0, 0, 0, 0.25);
+}
+
+/* reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0px 8px 16px var(--box-shadow);
+    box-shadow: 0px 8px 16px var(--box-shadow);
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-alt-white);
+}
+
+.text-heading {
+    font-family: var(--body-font);
+    font-size: 3.5rem;
+    color: var(--text-alt-white);
+}
+
+.alt-heading {
+    font-family: var(--alt-font);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.code-text {
+    font-family: var(--code-font);
+    color: var(--action-red-60);
+}
+
+#template-body {
+    max-width: 700px;
+    margin: 20px auto;
+
+    border-radius: 12px;
+    background-color: var(--text-alt-blue);
+}
+
+.section-padding {
+    padding: 12px 0;
+}
+
+/* header styling */
+#header {
+    padding: 20px 0 32px;
+}
+#header-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+#header-text span {
+    line-height: 1.5;
+}
+#header-hr {
+    max-width: 688px;
+    height: 0px;
+
+    border: 2px solid rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 4px 8px var(--box-shadow);
+    margin: auto;
+}
+
+/* footer styling */
+#footer-icon {
+    display: flex;
+}
+#footer-icon > img {
+    max-width: 100%;
+}
+
+/* main body styling */
+
+/* ADD STYLE HERE */
