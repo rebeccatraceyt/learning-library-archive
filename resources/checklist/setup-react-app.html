@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../assets/css/checklist/checklist.css" />
+        <title>Setup a React Application</title>
+    </head>
+    <body>
+        <nav>
+            <a href="../../bitesize.html">Bitesize</a>
+            <a href="../../checklist.html">Checklists</a>
+            <a href="../../flashcards.html">Flash</a>
+        </nav>
+        <section id="checklist-card" class="box-shadow">
+            <div id="header">
+                <div id="header-text">
+                    <h1>Checklist:</h1>
+                    <div id="header-icon">
+                        <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/checklist_circle_secondary.svg"
+                        alt="Blue checklist logo with checkmark in circle"
+                        />
+                    </div>
+                </div>
+                <hr id="header-hr" />
+            </div>
+            <div id="title">
+                <h2 id="title-heading">
+                    Setup a React Application
+                </h2>
+                <span id="title-text">As React is an unopinionated library, there are a number of ways to structure a React application. In this checklist, we will cover the setup of a fully featured React App with industry-standard directory structure:</span>
+            </div>
+            <div id="step-list">
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Create a new repository in your preferred IDE using the CI template for <a href="https://github.com/Code-Institute-Org/gitpod-full-template" target="_blank" rel="noopener noreferrer" class="red">Gitpod</a> or <a href="https://github.com/Code-Institute-Org/react-ci-template" target="_blank" rel="noopener noreferrer" class="red">CodeAnywhere</a>
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Create a new workspace instance in your preferred IDE by selecting the applicable button in the repo:
+                        </span>
+                    </label>
+                </div>
+                <div class="step center-text">
+                    <img class="max-img-width" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react-create-workspace.png" alt="Example of applicable buttons in repository to open workspace">
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" />
+                        <span>
+                            Open a new terminal window in your editor. If you cannot see a terminal, press: CTRL + SHIFT + `
+                        </span>
+                    </label>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" /> 
+                        <span>
+                            Enter the npx create-react-app-command:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line overflow-scroll-sm">
+                        <span class="code-text red clone-box-decoration">
+                            npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" /> 
+                        <span>
+                            Start the React server with:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            npm start
+                        </span>
+                    </div>
+                </div>
+                <div class="step">
+                    <label class="checkbox-icon">
+                        <input name="checkbox" type="checkbox" /> 
+                        <span>
+                            Install any other packages required with the syntax:
+                        </span>
+                    </label>
+                    <div class="checkbox-code-line">
+                        <span class="code-text red">
+                            npm install [package_name]@[version]
+                        </span>
+                    </div>
+                </div>
+                <div class="flex-step">
+                    <div class="step">
+                        <label class="checkbox-icon">
+                            <input name="checkbox" type="checkbox" />
+                            <span>
+                                Scaffold the application further
+                            </span>
+                        </label>
+                        <div class="second-line-padding">
+                            There is no set way to structure your application. You can include as many or as little of the adjacent directories based on your project's requirements, and the approach you feel best complements your development style.
+                        </div>
+                    </div>
+                    <img class="max-img-width-sm" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react-project-structure.png" alt="Image detailing scaffolding method in the src folder">
+                </div>
+                <div id="end-container">
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/tada_icon_blue.svg"
+                        alt="Blue tada icon with confetti exploding from cone"
+                        id="end-icon"
+                    />
+                    <div>
+                        Your new React app has successfully been created!
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
