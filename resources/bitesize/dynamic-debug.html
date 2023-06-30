@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../assets/css/bitesize/dynamic-debug.css" />
+        <title>Dynamic Debug</title>
+    </head>
+    <body>
+        <nav>
+            <a href="../../bitesize.html">Bitesize</a>
+            <a href="../../checklist.html">Checklists</a>
+            <a href="../../flashcards.html">Flash</a>
+        </nav>
+        <section id="template-body" class="box-shadow">
+            <div id="header">
+                <div id="header-text">
+                    <h1 class="text-heading">Dynamic Debug</h1>
+                    <span>
+                        When working on your project, you will want to
+                        dynamically change your DEBUG setting without modifying
+                        your code. To achieve this, we can make the DEBUG
+                        setting dependent on the presence of an environment
+                        variable called DEVELOPMENT, which will enable debug
+                        mode for us if present.
+                    </span>
+                </div>
+                <hr id="header-hr" />
+            </div>
+            <div class="body">
+                <div id="section1" class="section-padding">
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/toggle-right_red.svg"
+                        alt="red toggle button showing on setting"
+                        width="100"
+                        height="100"
+                    />
+                    <div id="section1-text">
+                        <p>
+                            Think about a dynamic debug value as a switch you
+                            toggle on and off.
+                        </p>
+                        <p>
+                            You do this with a variable called:
+                            <span class="code-text">DEVELOPMENT</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="section2" class="section-padding">
+                    <span class="alt-heading"
+                        >Let's look at how to do that:</span
+                    >
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-left_red.svg"
+                        alt="large red arrow pointing down and left"
+                    />
+                </div>
+                <div id="section3" class="section-padding">
+                    <div class="point-header">
+                        <p>1. In <span class="code-text">settings.py</span></p>
+                    </div>
+                    <div class="point-body">
+                        <img
+                            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg"
+                            alt="red arrow pointing right"
+                        />
+                        <div class="point-text">
+                            <p
+                                >Replace your current DEBUG variable with:</p
+                            ><p class="code-text"
+                                >DEBUG = 'DEVELOPMENT' in os.environ</p
+                            ><p
+                                >This line of code will conditionally set the
+                                DEBUG variable, depending on the existence of a
+                                DEVELOPMENT variable in your env.py file.</p
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section4">
+                <p>The condition we are setting here is:</p>
+                <p id="section4-condition">
+                    If a DEVELOPMENT variable exists in your
+                    <span class="code-text">env.py</span> file, DEBUG will be
+                    <strong>True</strong> for your local development environment
+                </p>
+            </div>
+            <div class="body">
+                <div id="section5" class="section-padding">
+                    <div class="point-header">
+                        <p>2. In <span class="code-text">env.py</span></p>
+                    </div>
+                    <div class="point-body-alt">
+                        <div class="point-body">
+                            <img
+                                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg"
+                                alt="red arrow pointing right"
+                            />
+                            <div class="point-text">
+                                <p
+                                    >Create a variable named DEVELOPMENT and set its
+                                    value to 1</p
+                                ><p class="code-text"
+                                    >os.environ["DEVELOPMENT"] = "1"</p
+                                ><p
+                                    >DEBUG is now switched on correctly for your
+                                    local environment.</p
+                                >
+                            </div>
+                        </div>
+                            <img
+                                class="point-toggle"
+                                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/toggle-right-fill.svg"
+                                alt="red toggle button showing on setting"
+                            />
+                    </div>
+                </div>
+                <div id="section6" class="section-padding">
+                    <div class="point-body-alt">
+                        <div class="point-body">
+                            <img
+                                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg"
+                                alt="red arrow pointing right"
+                            />
+                            <div class="point-text">
+                                <p
+                                    >To switch DEBUG off for your local environment,
+                                    simply remove this variable (and its value) from
+                                    your env.py file.</p
+                                >
+                            </div>
+                        </div>
+                        <img
+                            class="point-toggle"
+                            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/toggle-left-fill.svg"
+                            alt="grey toggle button showing off setting"
+                        />
+                    </div>
+                </div>
+                <div id="section7" class="section-padding">
+                    <div class="point-header">
+                        <p>3. In your deployment’s environment variables</p>
+                    </div>
+                    <div class="point-body-alt">
+                        <div class="point-body">
+                            <img
+                                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg"
+                                alt="red arrow pointing right"
+                            />
+                            <div class="point-text">
+                                <p
+                                    >While you are working on your project and
+                                    debugging you can add the DEVELOPMENT variable
+                                    into your environment variables</p
+                                ><p
+                                    >You can set the DEVELOPMENT variable
+                                    with:</p
+                                ><p class="code-text"
+                                    >DEVELOPMENT = "1"</p
+                                >
+                            </div>
+                        </div>
+                        <img
+                            class="point-toggle"
+                            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/toggle-right-fill.svg"
+                            alt="red toggle button showing on setting"
+                        />
+                    </div>
+                </div>
+                <div id="section8" class="section-padding">
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/alert_icon_red.svg"
+                        alt="red alert icon in a circle"
+                    />
+                    <div class="point-body">
+                        <span id="alert-heading" class="alert-text"
+                            >Remember:</span
+                        >
+                        <span
+                            >On submission there should be
+                            <span class="alert-text">no </span>DEVELOPMENT
+                            variable in your deployment’s environment
+                            variables</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div id="footer-icon">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-light.png" alt="Code Institute logo - light version for dark backgrounds">
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+/* root variables */
+:root {
+    --body-font: "Montserrat", sans-serif;
+    --alt-font: "Indie Flower", cursive;
+    --code-font: "Courier Prime", monospace;
+
+    --action-red-60: #ef8e6e;
+    --action-red-100: #E84610;
+    --action-blue: #23bbbb;
+
+    --text-color: #4a4a4f;
+    --text-alt-white: #fcfdfd;
+    --text-alt-blue: #445261;
+
+    --accent-pink: #ff5a60;
+    --accent-orange: #efb920;
+    --accent-green: #00cc5f;
+    --accent-blue: #009fe3;
+    --accent-grey: #d6d7d8;
+
+    --box-shadow: rgba(0, 0, 0, 0.25);
+}
+
+/* reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0px 8px 16px var(--box-shadow);
+    box-shadow: 0px 8px 16px var(--box-shadow);
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-alt-white);
+}
+
+.text-heading {
+    font-family: var(--body-font);
+    font-size: 3rem;
+    color: var(--text-alt-white);
+}
+
+.alt-heading {
+    font-family: var(--alt-font);
+}
+
+.code-text {
+    font-family: var(--code-font);
+    color: var(--action-red-60);
+}
+
+#template-body {
+    width: 96%;
+    max-width: 700px;
+    margin: 20px auto;
+
+    border-radius: 12px;
+    background-color: var(--text-alt-blue);
+}
+
+.section-padding {
+    padding: 12px 0;
+}
+
+/* header styling */
+#header {
+    padding: 20px 0 32px;
+}
+#header-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#header-text span {
+    line-height: 1.5;
+}
+#header-hr {
+    max-width: 688px;
+    height: 0px;
+
+    border: 2px solid rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 4px 8px var(--box-shadow);
+    margin: auto;
+}
+
+/* footer styling */
+#footer-icon {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px 40px;
+}
+#footer-icon > img {
+    max-width: 25%;
+}
+
+/* main body styling */
+.body {
+    padding: 20px;
+}
+
+#section1 {
+    line-height: 1.5;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section1-text {
+    padding-left: 10px;
+}
+#section1-text > p {
+    padding-bottom: 10px;
+}
+
+#section2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#section2 span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#section2 > img {
+    display: none;
+}
+
+.point-header {
+    font-size: 1.2rem;
+    padding-bottom: 8px;
+}
+
+.point-body {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 12px;
+}
+
+.point-text {
+    font-size: 1rem;
+    padding: 0 8px;
+}
+.point-text .code-text {
+    padding: 20px 0;
+}
+
+#section4 {
+    background-color: var(--accent-grey);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+#section4-condition {
+    padding: 24px 0;
+    text-align: center;
+}
+#section4-condition .code-text {
+    color: var(--action-red-100);
+    font-weight: 800;
+}
+
+.point-body-alt {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.point-toggle {
+    margin: auto 0;
+}
+
+#alert-heading {
+    font-size: 1.3rem;
+    padding-bottom: 4px;
+}
+
+.alert-text {
+    color: var(--action-red-60);
+}
+
+#section8 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+#section8 .point-body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+}
+
+@media only screen and (min-width: 600px) {
+    .text-heading {
+        font-size: 3.5rem;
+    }
+    
+    #template-body {
+        width: 100%;
+    }
+    #header-text {
+        padding: 20px 40px;
+    }
+    .body {
+        padding: 20px 48px;
+    }
+    #section1 {
+        flex-direction: row;
+    }
+    #section2 span {
+        font-size: 2.5rem;
+    }
+    #section2 > img {
+        display: block;
+    }
+    #section4 {
+        padding: 32px 44px;
+    }
+    #section4-condition {
+        padding: 20px 32px 0;
+    }
+    .point-body-alt {
+        flex-direction: row;
+    }
+    #section8 {
+        margin-top: 0;
+    }
+}
