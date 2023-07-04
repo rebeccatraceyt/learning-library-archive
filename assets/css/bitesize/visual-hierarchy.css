@@ -41,7 +41,7 @@ body {
 
 .text-heading {
     font-family: var(--body-font);
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--text-alt-white);
 }
 
@@ -53,6 +53,7 @@ body {
 }
 
 #template-body {
+    width: 96%;
     max-width: 700px;
     margin: 20px auto;
 
@@ -67,7 +68,7 @@ body {
 #header-text {
     display: flex;
     flex-direction: column;
-    padding: 20px 40px;
+    padding: 20px;
 }
 #header-text span {
     line-height: 1.5;
@@ -150,6 +151,16 @@ body {
 
 
 @media only screen and (min-width: 600px) {
+    .text-heading {
+        font-size: 3.5rem;
+    }
+    #template-body {
+        width: 100%;
+    }
+    #header-text {
+        padding: 20px 40px;
+    }
+
     #section1 {
         flex-direction: row;
     }
