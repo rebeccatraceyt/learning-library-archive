@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/sticky-header-and-footer.css">
+    <title>Sticky Headers and Footers</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Sticky Headers and Footers</h1>
+                <span>
+                    Sometimes you will want to keep either your header or footer visible at all times. Fortunately, this is a straightforward process which can be implemented using just a few lines of CSS!
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <div>
+                <p>
+                    For our header, we will create a new CSS rule which targets the HTML element with the id of header. We set the top property to 0 and the position property to sticky.  This combination will cause the corresponding HTML element to stick to the top of the screen, irrespective of how far the user scrolls.
+                </p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span class="orange">#header {</span>
+                    </div>
+                    <div class="code-indent">
+                        <span>
+                            <span class="blue">top</span>: <span class="green">0</span>;
+                        </span>
+                        <br>
+                        <span>
+                            <span class="blue">position</span>: <span class="green">sticky</span>;
+                        </span>
+                    </div>
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <p>
+                    Our footer rule will be created the same way, but we will change the top property to bottom, so it sticks to the bottom of the screen rather than the top.
+                </p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span class="orange">#footer {</span>
+                    </div>
+                    <div class="code-indent">
+                        <span>
+                            <span class="blue">bottom</span>: <span class="green">0</span>;
+                        </span>
+                        <br>
+                        <span>
+                            <span class="blue">position</span>: <span class="green">sticky</span>;
+                        </span>
+                    </div>
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin results-section">
+                <div class="results-content">
+                    <div class="results-heading-container">
+                        <div class="results-heading">
+                            <h1>Results</h1>
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/tada_blue_right.png" alt="Tada icon in a yellow">
+                        </div>
+                        <div class="results-heading-img lg-only">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.png" alt="Red arrow pointing to the right">
+                        </div>
+                    </div>
+                    <div class="results-text">
+                        <p>
+                            The result is what you see <span class="sm-only">below</span><span class="lg-only">here</span>.
+                        </p>
+                        <p>
+                            The header and footer are present throughout the page, no matter how far down or up you scroll!
+                        </p>
+                    </div>
+                </div>
+                <div class="results-embed">
+                    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="QWJMOEb" data-user="rebeccatraceyt" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                        <span>See the Pen <a href="https://codepen.io/rebeccatraceyt/pen/QWJMOEb">
+                        Sticky Header &amp; Footer</a> by Rebecca Tracey-Timoney (<a href="https://codepen.io/rebeccatraceyt">@rebeccatraceyt</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+            </div>
+            <div class="section-margin link-container">
+                <div class="link-img">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_red.png" alt="Red lightbulb icon">
+                </div>
+                <div class="link-text">
+                    You can also view this working demo on <a href="https://codepen.io/rebeccatraceyt/pen/QWJMOEb" target="_blank" rel="noopener noreferrer" class="red">CodePen</a>.
+                </div>
+            </div>
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
