@@ -114,7 +114,7 @@ body {
     padding: 0 40px 40px;
 }
 #footer-icon > img {
-    max-width: 100%;
+    max-width: 40%;
 }
 
 /* main body styling */
@@ -129,6 +129,9 @@ body {
 
 /* media query styling */
 @media only screen and (min-width: 600px) {
+    #footer-icon > img {
+        max-width: 20%;
+    }
     .text-heading {
         font-size: 3.5rem;
     }
