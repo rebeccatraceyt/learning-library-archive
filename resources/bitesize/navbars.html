@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/navbars.css">
+    <title>Navbars</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Navbars</h1>
+                <span>
+                    The navbar is the core navigation point for users of your website. 
+                    Just as you would have traditional signage in a brick and mortar shop, the navbar is the signposting for your website, enabling users to quickly find and navigate to whatever resource they are looking for. 
+                    Your navbar should be easily accessible on every page of your website, allowing visitors to quickly and easily change the direction of their user journey if required.
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <div>
+                <h3 class="section-padding">When creating a navbar, UX must be at the core of the design</h3>
+                <p class="section-padding">With this in mind, when wireframing the navigation for your site, you should have your list of user stories to hand in order to guide you in the right direction:</p>
+                <div class="code-block section-padding">
+                    <div class="code-container box-shadow text-center">
+                        <p class="alt-heading">
+                            “As a user I want to be able to navigate easily so that I can find sandals, socks, trainers or boots”
+                        </p>
+                        <br>
+                        <img class="sm-only m-width" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/ex_nav_sm.png" alt="Example Navbar for smaller screens">
+                        <img class="lg-only m-width" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/ex_nav_lg.png" alt="Example Navbar for larger screens">
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h3 class="section-padding">Elements & Structure</h3>
+                <p class="section-padding">In HTML, the navigation &lt;<span class="red code-text">nav</span>&gt element  is generally placed inside the &lt;<span class="red code-text">header</span>&gt element. At the very least, it should contain a list of links to the important pages in your site. These links can then be styled with CSS to make the navbar fit in with the overall style of your site. Here is a very simple map of the element structure:</p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div>
+                            &lt;<span class="blue">header</span>&gt
+                        </div>
+                        <div class="code-indent">
+                            &lt;<span class="blue">nav</span>&gt
+                        </div>
+                        <div class="code-indent2">
+                            &lt;<span class="blue">ul</span>&gt
+                        </div>
+                        <div class="code-indent3">
+                            &lt;<span class="blue">li</span>&gt
+                        </div>
+                        <div class="code-indent4">
+                            &lt;<span class="blue">a</span> <span class="green">href</span>=<span class="orange">'#'</span>&gt <br class="sm-only"> Item 1 <br class="sm-only">&lt;<span class="blue">/a</span>&gt
+                        </div>
+                        <div class="code-indent3">
+                            &lt;<span class="blue">/li</span>&gt
+                        </div>
+                        <div class="code-indent3">
+                            &lt;<span class="blue">li</span>&gt
+                        </div>
+                        <div class="code-indent4">
+                            &lt;<span class="blue">a</span> <span class="green">href</span>=<span class="orange">'#'</span>&gt <br class="sm-only"> Item 2 <br class="sm-only">&lt;<span class="blue">/a</span>&gt
+                        </div>
+                        <div class="code-indent3">
+                            &lt;<span class="blue">/li</span>&gt
+                        </div>
+                        <div class="code-indent2">
+                            &lt;<span class="blue">/ul</span>&gt
+                        </div>
+                        <div class="code-indent">
+                            &lt;<span class="blue">/nav</span>&gt
+                        </div>
+                        <div>
+                            &lt;<span class="blue">/header</span>&gt
+                        </div>
+                    </div>
+                </div>
+                <p class="section-padding">For a basic working example using HTML, CSS & JavaScript take a look at our <a href="https://codepen.io/gjsayers/pen/ExEwGWw" target="_blank" rel="noopener noreferrer" class="red">Simple Navbar example</a> on CodePen!</p>
+            </div>
+            <div class="section-margin">
+                <h3 class="section-padding">Keep it simple, semantic, and SEO-friendly!</h3>
+                <div class="thumbs-section">
+                    <div class="left-col-lg">
+                        <div class="thumbs-row">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/thumbs-up-blue.png" alt="Blue thumbs up icon">
+                            <span>Do keep Nav items to a max of 5</span>
+                        </div>
+                        <div class="thumbs-row">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/thumbs-up-blue.png" alt="Blue thumbs up icon">
+                            <span>Do use semantic, descriptive link names</span>
+                        </div>
+                        <div class="thumbs-row">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/thumbs-up-blue.png" alt="Blue thumbs up icon">
+                            <span>Do use Aria labels for accessibility</span>
+                        </div>
+                        <div class="thumbs-row">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/thumbs-up-blue.png" alt="Blue thumbs up icon">
+                            <span>Do ensure to include a mobile nav / hamburger</span>
+                        </div>
+                        <div class="thumbs-row">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/thumbs-up-blue.png" alt="Blue thumbs up icon">
+                            <span>Do ensure to include a home link with logo in the top left</span>
+                        </div>
+                    </div>
+                    <div class="right-col-lg">
+                        <div class="thumbs-row">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/thumbs-up-blue.png" alt="Blue thumbs up icon">
+                            <span>Use active classes to highlight the active page</span>
+                        </div>
+                        <div class="thumbs-row thumbs-padding-lg">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/thumbs-up-blue.png" alt="Blue thumbs up icon">
+                            <span>Give interactive feedback (hover, pointer-cursor)</span>
+                        </div>
+                        <div class="thumbs-row">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/thumbs-down-red.png" alt="Red thumbs down icon">
+                            <span>Don't overcrowd your Navbar</span>
+                        </div>
+                        <div class="thumbs-row">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/thumbs-down-red.png" alt="Red thumbs down icon">
+                            <span>Don't use generic link names like 'products' & 'services'</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin final-section">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_yellow_left.png" alt="Yellow lightbulb icon tilted left">
+                <p>Semantic, relevant, accessible menu options will result in better click-through as well as better SEO</p>
+            </div>
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
