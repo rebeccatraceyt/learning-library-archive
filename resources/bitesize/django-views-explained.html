@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/django-views-explained.css">
+    <title>Django Views explained</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Django Views</h1>
+                <span class="alt-text">
+                    (explained)
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <div>
+                <h3 class="section-padding">What are views?</h3>
+                <p class="section-padding">A view is a Python function which we use to add logic to our pages, generally by returning a template and whatever data needs to be included on it (this data is referred to as the context).</p>
+                <p class="section-padding">Views take a HTTP request and return a response. The request is passed in as a function parameters, and the response is returned in the function's "return" statement.</p>
+                <p class="section-padding">Here is a simple example of a view which returns a template but no additional data in the context:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span class="orange">from</span> django.shortcuts <span class="orange">import</span> render
+                    </div>
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">def</span> <span class="blue">my_view</span>(request):
+                        </span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent2">
+                        <span class="orange">A simple view example</span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent">
+                        <span>
+                            <span class="orange">return</span> <span class="blue">render</span>(request, <span class="blue">'myapp/template/index.html'</span>, {}):
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <span>There are two types of view in Django: <span class="red">function-based views</span> (FBVs) and <span class="red">class-based views</span> (CBVs). Each come with their own set of advantages.</span>
+            </div>
+            <div class="section-margin">
+                <h3 class="section-padding">How do we use views?</h3>
+                <div class="section-padding circle-points">
+                    <span class="circle">1</span>
+                    <span>Make queries to your database</span>
+                </div>
+                <div class="section-padding circle-points">
+                    <span class="circle">2</span>
+                    <span>Add logic to use those queries</span>
+                </div>
+                <div class="section-padding circle-points">
+                    <span class="circle">3</span>
+                    <span>Decide which template to use</span>
+                </div>
+                <div class="section-padding circle-points">
+                    <span class="circle">4</span>
+                    <span>Add data to your context, so your template can render it</span>
+                </div>
+                <div class="section-padding circle-points">
+                    <span class="circle">5</span>
+                    <span>Add a return statement to render/redirect/etc.</span>
+                </div>
+            </div>
+            <div class="section-margin">
+                <span>Here is an example of a view in action. Using a function-based view, we can render the HTML detail page for a specific product:</span>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span class="orange">from</span> django.shortcuts <span class="orange">import</span> render
+                    </div>
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">def</span> <span class="blue">my_view</span>(request, product_id):
+                        </span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent2">
+                        <span class="orange">Display specific product details</span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent">
+                        <div class="section-padding">
+                            <span class="circle">1</span> product = <span class="blue">Product</span>.objects.<span class="blue">get</span>(id=product_id) <span class="circle">2</span>
+                        </div>
+                        <div class="section-padding">
+                            <span class="circle">3</span> template = <span class="green">'products/product_details.html'</span>
+                        </div>
+                        <div class="section-padding">
+                            <span class="circle">4</span> context = {<span class="green">'product':</span> product }
+                        </div>
+                        <div class="section-padding">
+                            <span class="circle">5</span> <span class="red">return</span> <span class="blue">render</span>(request, <span class="green">template</span>, context)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
