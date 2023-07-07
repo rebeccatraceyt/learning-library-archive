@@ -1,0 +1,73 @@
+<style>
+    /* code block resets */
+    .code-block {
+        display: flex;
+        justify-content: center;
+    }
+    .code-container {
+        min-width: 100%;
+        padding: 24px;
+        border-radius: 12px;
+        color: var(--text-alt-white);
+        background-color: var(--text-alt-blue);
+    }
+    .code-margin {
+        margin-bottom: 8px;
+    }
+
+    /* code indents resets */
+    .code-indent {
+        padding-left: 20px;
+    }
+    .code-indent2 {
+        padding-left: 24px;
+    }
+    .code-indent3 {
+        padding-left: 36px;
+    }
+    .code-indent4 {
+        padding-left: 36px;
+    }
+
+    /* code text resets */
+    .code-text {
+        font-family: var(--code-font);
+    }
+    .red {
+        color: var(--action-red-100);
+    }
+    .orange {
+        color: var(--accent-orange);
+    }
+    .blue {
+        color: var(--action-blue);
+    }
+    .green {
+        color: var(--accent-green);
+    }
+    .pink {
+        color: var(--accent-pink);
+    }
+</style>
+
+<div class="code-block">
+    <div class="code-text code-container box-shadow">
+        <div class="code-margin">
+            <span class="orange">#example {</span>
+        </div>
+        <div class="code-indent">
+            <span>
+                <span class="blue">display</span>: <span class="green">flex</span>;
+            </span>
+            <br>
+            <span>
+                <span class="blue">padding</span>: <span class="green">20px</span>;
+            </span>
+        </div>
+        <div class="code-margin">
+            <span>
+                <span class="orange">}</span>
+            </span>
+        </div>
+    </div>
+</div>
