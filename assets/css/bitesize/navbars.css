@@ -188,8 +188,8 @@ body {
 .thumbs-row {
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding-bottom: 12px;
+    gap: 8px;
+    padding-bottom: 24px;
 }
 
 .thumbs-row > img {
@@ -233,7 +233,7 @@ body {
     /* Do's and Don'ts styling */
     .thumbs-section {
         display: flex;
-        gap: 16px;
+        gap: 20px;
     }
     .left-col-lg, .right-col.lg {
         max-width: 50%;
