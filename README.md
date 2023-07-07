@@ -39,6 +39,7 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Visual Hierarchy   | &#9745; |  &#9744; |  &#9744;  |          | 
 | Sticky Headers and Footers   | &#9745; |  &#9744; |  &#9744;  |          | 
 | Navbars  | &#9745; |  &#9744; |  &#9744;  |          | 
+| Django Models and Migrations  | &#9745; |  &#9744; |  &#9744;  |          | 
 
 [Back to top ⇧](#table-of-contents)
 

@@ -53,11 +53,12 @@ body {
     color: var(--text-alt-blue);
 }
 
-.alt-heading {
+.alt-text {
     font-family: var(--alt-font);
-    font-weight: 700;
+    color: var(--action-red-100);
     font-size: 20px;
     letter-spacing: 2px;
+    font-weight: 700;
 }
 
 #template-body {
@@ -69,9 +70,15 @@ body {
     background-color: var(--text-alt-white);
 }
 
+.section-margin {
+    margin: 20px auto;
+    padding: 8px 0;
+}
 .section-padding {
     padding: 12px 0;
 }
+
+
 
 /* show/hide styling */
 .sm-only {
@@ -119,8 +126,68 @@ body {
     line-height: 24px;
 }
 
-/* ADD STYLE HERE */
+/* code block resets */
+.code-block {
+    display: flex;
+    justify-content: center;
+}
+.code-container {
+    min-width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    color: var(--text-alt-white);
+    background-color: var(--text-alt-blue);
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.code-margin {
+    margin-bottom: 8px;
+}
 
+/* code indents resets */
+.code-indent {
+    padding-left: 20px;
+}
+.code-indent2 {
+    padding-left: 24px;
+}
+.code-indent3 {
+    padding-left: 36px;
+}
+.code-indent4 {
+    padding-left: 36px;
+}
+
+/* code text resets */
+.code-text {
+    font-family: var(--code-font);
+}
+.red {
+    color: var(--action-red-100);
+}
+.orange {
+    color: var(--accent-orange);
+}
+.blue {
+    color: var(--action-blue);
+}
+.green {
+    color: var(--accent-green);
+}
+.pink {
+    color: var(--accent-pink);
+}
+
+.center-section {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    font-style: italic;
+}
+.center-section > img {
+    width: 24px;
+    height: 24px;
+}
 
 /* media query styling */
 @media only screen and (min-width: 600px) {
@@ -149,5 +216,9 @@ body {
 
     .body {
         padding: 20px 40px;
+    }
+    .code-container {
+        font-size: 14px;
+        overflow-x: hidden;
     }
 }
