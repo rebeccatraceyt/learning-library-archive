@@ -42,6 +42,7 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Django Models and Migrations  | &#9745; |  &#9744; |  &#9744;  |          | 
 | Django Views Explained  | &#9745; |  &#9744; |  &#9744;  |          | 
 | Django Views FBVs  | &#9745; |  &#9744; |  &#9744;  |          | 
+| Django Views CBVs  | &#9745; |  &#9744; |  &#9744;  |          | 
 
 [Back to top ⇧](#table-of-contents)
 

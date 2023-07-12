@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/django-views.css">
+    <title>Django Views CBVs</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Django Views</h1>
+                <span class="alt-text">
+                    Class-Based Views
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <div>
+                <h3 class="section-padding">What are Class-Based Views?</h3>
+                <p class="section-padding">At first glance, Class-Based Views (CBV) might seem more complicated that function-based views, yet they were made to help developers re-use their code as much as possible through inheritance.</p>
+                <p class="section-padding">The code inside the view is mostly the same as in a FBV, but the structure changes a little..</p>
+                <p class="section-padding">Firstly, as the name implies, CBVs are classes, so they need to be defined as such:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">class</span> <span class="blue">ProductView</span>(View):
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h3 class="section-padding">How do we use them?</h3>
+                <p class="section-padding">Inside our class, we define functions to be used. Some function names are automatically registered by Django, like "get" and "post" for GET and POST requests respectively.</p>
+                <p class="section-padding">Therefore, instead of using an "<span class="code-text">if</span>" statement to check for POST inside the request, we can just use these two predefined functions inside our class:
+                </p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">from</span> django.views <span class="orange">import</span> View
+                        </span>
+                    </div>
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">class</span> <span class="blue">ProductView</span>(View):
+                        </span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent2">
+                        <span class="orange">View a product</span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent section-padding">
+                        <span class="orange">def</span> <span class="blue">get</span>(self, request, product_id):
+                        <div class="section-padding code-indent2">
+                            <span>
+                                product = <span class="green">Product</span>.objects.<span class="green">get</span>(id=product_id)
+                            </span> <br>
+                            <span>
+                                comments = products.comments.<span class="green">all</span>()
+                            </span> <br>
+                            <span>
+                                form = <span class="green">CommentForm</span>()
+                            </span> <br>
+                            <span>
+                                template = <span class="green">'products/product_detail.html'</span>
+                            </span> <br>
+                            <span>
+                                context = {
+                            </span> <br>
+                            <span class="code-indent3">
+                                <span class="green">'product'</span>: product,
+                                <span class="green">'comments'</span>: comments,
+                                <span class="green">'form'</span>: form,
+                            </span> <br>
+                            <span>
+                                }
+                            </span> <br>
+                            <span>
+                                <span class="orange">return</span> <span class="blue">render</span>(request, <span class="green">template</span>, context)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="code-indent section-padding">
+                        <span><span class="orange">def</span> <span class="blue">post</span>(self, request, product_id):</span>
+                        <div class="section-padding code-indent2">
+                            <span>
+                                product = <span class="green">Product</span>.objects.<span class="green">get</span>(id=product_id)
+                            </span> <br>
+                            <span>
+                                comments = products.comments.<span class="green">all</span>()
+                            </span> <br>
+                            <span>
+                                form = <span class="green">CommentForm</span>(data=request.<span class="green">POST</span>)
+                            </span> <br>
+                            <span>
+                                template = <span class="green">'products/product_detail.html'</span>
+                            </span> <br>
+                            <span>
+                                context = {
+                            </span> <br>
+                            <span class="code-indent3">
+                                <span class="green">'product'</span>: product,
+                                <span class="green">'comments'</span>: comments,
+                                <span class="green">'form'</span>: form,
+                            </span> <br>
+                            <span>
+                                }
+                            </span> <br>
+                            <span>
+                                <span class="orange">return</span> <span class="blue">render</span>(request, <span class="green">template</span>, context)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <span>
+                    "<span class="code-text">self</span>" is added as a function parameter to inherit the parent class attributes. This can also be used to access values defined outside the function, like this:
+                </span>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">from</span> django.views <span class="orange">import</span> View
+                        </span>
+                    </div>
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">class</span> <span class="blue">ProductView</span>(View):
+                        </span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent2">
+                        <span class="orange">View a product</span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent section-padding">
+                        <span>
+                            template = <span class="green">'products/product_detail.html'</span>
+                        </span> <br>
+                        <span>
+                            <span class="orange">def</span> <span class="blue">get</span>(self, request, product_id):
+                        </span>
+                        <div class="section-padding code-indent2">
+                            <span>
+                                product = <span class="green">Product</span>.objects.<span class="green">get</span>(id=product_id)
+                            </span> <br>
+                            <span>
+                                context = {
+                            </span> <br>
+                            <span class="code-indent3">
+                                <span class="green">'product'</span>: product,
+                            </span> <br>
+                            <span>
+                                }
+                            </span> <br>
+                            <span>
+                                <span class="orange">return</span> <span class="blue">render</span>(request, self.<span class="green">template</span>, context)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <span>
+                    In your <span class="code-text">urls.py</span> file,  you need to add the <span class="code-text">.as_view()</span> function when using a CBV in a path:
+                </span>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="green">path</span> ( 
+                        </span> <br>
+                        <span class="code-indent2">
+                           <span class="blue">'&lt;int:product_id&gt/'</span>, 
+                        </span> <br>
+                        <span class="code-indent2">
+                            views.ProductView.as_view(),
+                        </span> <br>
+                        <span class="code-indent2">
+                           name=<span class="blue">'product_detail'</span> 
+                        </span> <br>
+                        <span>
+                            ),
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h3 class="section-padding">Using generic Class-Based Views</h3>
+                <p class="section-padding">Django offers a plethora of ready-to-use generic CBVs to make our life as easy as possible.</p>
+                <p class="section-padding">That said, each of these generic views performs a very specific function, so it is crucial that they are set up correctly.</p>
+                <p class="section-padding">Most of them share many similarities.</p>
+                <p class="section-padding">For example, <span class="code-text">ListView</span> and <span class="code-text">DetailView</span> can appear almost exactly the same at first glance:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">from</span> django.views.generic <span class="orange">import</span> ListView, DetailView
+                        </span>
+                    </div>
+                    <div class="code-margin section-padding">
+                        <span>
+                            <span class="orange">class</span> <span class="blue">ProductList</span>(ListView):
+                        </span>
+                    
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent2">
+                            <span class="orange">View product list</span>
+                        </div>
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent section-padding">
+                            <span>
+                                model = <span class="blue">Product</span>
+                            </span> <br>
+                            <span>
+                                template = <span class="green">'products/products.html'</span>
+                            </span>
+                        </div>   
+                    </div>
+                    <div class="code-margin section-padding">
+                        <span>
+                            <span class="orange">class</span> <span class="blue">ProductDetail</span>(DetailView):
+                        </span>
+                    
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent2">
+                            <span class="orange">View a product</span>
+                        </div>
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent section-padding">
+                            <span>
+                                model = <span class="blue">Product</span>
+                            </span> <br>
+                            <span>
+                                template = <span class="green">'products/product_detail.html'</span>
+                            </span>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <span>
+                    Both of those views will work with no further functionality added to them, but what exactly do they do?
+                </span>
+            </div>
+            <div class="section-margin">
+                <h3 class="alt-text">Generic List View:</h3>
+                <p class="section-padding">A <span class="code-text">ListView</span> will query the database for all records that match the model provided. The below code will render all Products from the database.</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">from</span> django.views <span class="orange">import</span> ListView
+                        </span> <br>
+                        <span>
+                            <span class="orange">from</span> .models <span class="orange">import</span> Product
+                        </span>
+                    </div>
+                    <div class="code-margin section-padding">
+                        <span>
+                            <span class="orange">class</span> <span class="blue">ProductList</span>(ListView):
+                        </span>
+                    
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent2">
+                            <span class="orange">View product list</span>
+                        </div>
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent section-padding">
+                            <span>
+                                model = <span class="blue">Product</span>
+                            </span> <br>
+                            <span>
+                                template = <span class="green">'products/products.html'</span>
+                            </span>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h3 class="alt-text">Generic Detail View:</h3>
+                <p class="section-padding">A <span class="code-text">DetailView</span> will query the database for a specific record and then render a template on which you can display the details of that record (in this case, a single Product). Note that the URL in your path needs to contain an identifier for the product.</p>
+                <span>
+                    Example <span class="code-text">urls.py</span>
+                </span>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="green">path</span> ( 
+                        </span> <br>
+                        <span class="code-indent2">
+                           <span class="blue">'details/&lt;id:id&gt/'</span>, 
+                        </span> <br>
+                        <span class="code-indent2">
+                            views.ProductDetails.as_view(),
+                        </span> <br>
+                        <span class="code-indent2">
+                           name=<span class="blue">'product_detail'</span> 
+                        </span> <br>
+                        <span>
+                            ),
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <span>
+                    When calling the URL, the template needs to pass the product's id to the view:
+                </span>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span class="blue">{% url 'product_detail' product.id %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <span>
+                    Remember that our <span class="code-text">ListView</span> retrieves all of the product records from our database and renders them on our template. For each one, the above code will generate a unique link to that product's <span class="code-text">product_detail</span> url pattern, which the <span class="code-text">DetailView</span> will then use to query that specific Product record from the database.
+                </span>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">from</span> django.views <span class="orange">import</span> DetailView
+                        </span> <br>
+                        <span>
+                            <span class="orange">from</span> .models <span class="orange">import</span> Product
+                        </span>
+                    </div>
+                    <div class="code-margin section-padding">
+                        <span>
+                            <span class="orange">class</span> <span class="blue">ProductDetail</span>(DetailView):
+                        </span>
+                    
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent2">
+                            <span class="orange">View a product</span>
+                        </div>
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent section-padding">
+                            <span>
+                                model = <span class="blue">Product</span>
+                            </span> <br>
+                            <span>
+                                template = <span class="green">'products/product_detail.html'</span>
+                            </span>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h3 class="section-padding">Using methods with generic views</h3>
+                <p class="section-padding">Even though generic views can be used with just the model and template, they also have provide methods that can be used to add further functionality. </p>
+                <p class="section-padding">A full list of these methods can be found in the <a href="https://docs.djangoproject.com/en/4.1/ref/class-based-views/generic-display/" target="_blank" rel="noopener noreferrer" class="red">Django documentation</a>.</p>
+                <p class="section-padding">For example, if we want to add something to the context so added data will be sent to our template, we can use the <span class="code-text">get_context_data()</span> method:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">from</span> django.views <span class="orange">import</span> DetailView
+                        </span> <br>
+                        <span>
+                            <span class="orange">from</span> .models <span class="orange">import</span> Product
+                        </span>
+                    </div>
+                    <div class="code-margin section-padding">
+                        <span>
+                            <span class="orange">class</span> <span class="blue">ProductDetail</span>(DetailView):
+                        </span>
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent2">
+                            <span class="orange">View a product</span>
+                        </div>
+                        <div class="code-indent">
+                            <span class="orange">"""</span>
+                        </div>
+                        <div class="code-indent section-padding">
+                            <span>
+                                model = <span class="blue">Product</span>
+                            </span> <br>
+                            <span>
+                                template = <span class="green">'products/product_detail.html'</span>
+                            </span>
+                        </div>
+                        <div class="code-indent section-padding">
+                            <div class="section-padding">
+                                <span>
+                                    <span class="orange">def</span> <span class="green">get_context_data</span>(self, **kwargs):
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    <span class="circle">1</span> context = super.().<span class="green">get_context_data</span>(**kwargs)
+                                </span>
+                            </div>
+                            <div class="section-padding">
+                                <span>
+                                    <span class="circle">2</span> context[<span class="blue">'product_on_sale'</span>] = <span class="blue">True</span>
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    <span class="circle">3</span> <span class="orange">return</span> context
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <p class="section-padding">The above code lets us flag products as being on sale, by adding a new key to our context dictionary with the value of true:</p>
+                <div class="section-padding circle-points">
+                    <span class="circle-light">1</span>
+                    <span>We define our context (by getting it from the superclass)</span>
+                </div>
+                <div class="section-padding circle-points">
+                    <span class="circle-light">2</span>
+                    <span>We update the context to indicate this product is on sale</span>
+                </div>
+                <div class="section-padding circle-points">
+                    <span class="circle-light">3</span>
+                    <span>We return our updated context</span>
+                </div>
+            </div>
+            <div class="section-margin">
+                <span>
+                    Then in our template, we can do the following:
+                </span>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            {% <span class="blue">if</span> product_on_sale %}
+                        </span> <br>
+                        <span class="code-indent">&lt;<span class="blue">p</span>&gt</span> <br>
+                        <span class="code-indent3">Product is on sale!</span> <br>
+                        <span class="code-indent">&lt;/<span class="blue">p</span>&gt</span> <br>
+                        <span>
+                            {% <span class="blue">endif</span> %}
+                        </span> 
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin info-block">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_red.svg" alt="Red lightbulb icon with slight tilt">
+                <p>You can find more information on the other available methods for DetailView in the <a href="https://docs.djangoproject.com/en/4.1/ref/class-based-views/generic-display/#detailview" target="_blank" rel="noopener noreferrer" class="red">Django Documentation</a>.</p>
+            </div>
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
