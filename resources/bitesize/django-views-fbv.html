@@ -29,7 +29,7 @@
                 <p class="section-padding">Arguably, the simpler of Django's views is the Function-Based View (FBV).</p>
                 <p class="section-padding">It can be considered simpler because it doesn't rely on any particular class or inheritance from other views.</p>
                 <p class="section-padding">To create an FBV, define a named function and pass the "request" parameter. If your function will accept GET requests, you'll also need to pass in any parameters that will be included in the URL.</p>
-                <p class="section-padding">Example in <span class="code-text">views.py</span>:</p>
+                <p>Example in <span class="code-text">views.py</span>:</p>
             </div>
             <div class="section-margin code-block">
                 <div class="code-text code-container box-shadow">
@@ -41,19 +41,31 @@
                 </div>
             </div>
             <div class="section-margin">
-                <p class="section-padding">Example in <span class="code-text">urls.py</span>:</p>
+                <p>Example in <span class="code-text">urls.py</span>:</p>
             </div>
             <div class="section-margin code-block">
                 <div class="code-text code-container box-shadow">
                     <div class="code-margin">
                         <span>
-                            <span class="green">path</span>(<span class="blue">'&lt;int:product_id&gt/'</span>, views.product_detail, name=<span class="blue">'product_detail'</span>)
+                            <span class="green">path</span> ( 
+                        </span> <br>
+                        <span class="code-indent2">
+                           <span class="blue">'&lt;int:product_id&gt/'</span>, 
+                        </span> <br>
+                        <span class="code-indent2">
+                            views.product_detail,
+                        </span> <br>
+                        <span class="code-indent2">
+                           name=<span class="blue">'product_detail'</span> 
+                        </span> <br>
+                        <span>
+                            ),
                         </span>
                     </div>
                 </div>
             </div>
             <div class="section-margin">
-                <p class="section-padding">Example URL in the template:</p>
+                <p>Example URL in the template:</p>
             </div>
             <div class="section-margin code-block">
                 <div class="code-text code-container box-shadow">
