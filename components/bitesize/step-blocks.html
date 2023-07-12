@@ -1,0 +1,34 @@
+<style>
+    /* number points styling */
+    .circle-points {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .circle, .circle-light {
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        padding: 4px 8px;
+        border: 3px solid var(--action-red-100);
+        font-weight: 900;
+    }
+    .circle {
+        color: var(--text-alt-white);
+    }
+    .circle-light {
+        color: var(--action-red-100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<!-- FOR STEP POINTS -->
+<div class="circle-points">
+    <span class="circle-light">1</span>
+    <span>ADD YOUR STEP HERE</span>
+</div>
+
+<!-- FOR STEPS INSIDE CODE BLOCK -->
+<span class="circle">1</span>
