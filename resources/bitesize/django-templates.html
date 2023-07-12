@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/django-templates.css">
+    <title>Django Templates</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Django Templates</h1>
+                <span class="alt-text">
+                    (explained)
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <div>
+                <h3 class="section-padding">What are templates?</h3>
+                <p class="section-padding">A Django template is a HTML file which contains the structure of the pages we want our users to see.</p>
+                <p class="section-padding">Django uses its own template language, called the Django Template Language (DTL).</p>
+                <p class="section-padding">As we are working with a database in Django, we usually need our website to display data dynamically from the database. An example of this would be a product page in an ecommerce site - we only want to write one HTML file which contains the structure (our template), which will then be used to display many different products.</p>
+                <p class="section-padding">DTL allows us to do this, as we can add variables and logic inside our HTML files, inside defined blocks. This is not possible with standard HTML.</p>
+            </div>
+            <div class="section-margin">
+                <h3 class="section-padding">How do we use template blocks?</h3>
+                <p class="section-padding">Templates use blocks of code, which greatly cuts down on the amount of HTML code we have to write.</p>
+                <p class="section-padding">Blocks are easy to use and offer great flexibility. Here's how to use them:</p>
+            </div>
+            <div class="section-margin arrow-points">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg" alt="red arrow pointing right"/>
+                <p>Create a base template (<span class="code-text">base.html</span>) which contains the general structure/layout of your website (e.g. navbar, footer), but no specific content.</p>
+            </div>
+            <div class="section-margin arrow-points">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg" alt="red arrow pointing right"/>
+                <p>In your <span class="code-text">base.html</span>, add a content block:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            {% <span class="blue">block</span> content %}
+                        </span> <br>
+                        <span>
+                            {% <span class="blue">endblock</span> %}
+                        </span> 
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin arrow-points">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg" alt="red arrow pointing right"/>
+                <p>When creating a new page (e.g. <span class="code-text">products.html</span>), you can now extend <span class="code-text">base.html</span>, which will essentially make this file inherit its code. Write any custom code for this particular page into the content block:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            {% <span class="blue">extends</span> "base.html" %}
+                        </span> <br>
+                        <span>
+                            {% <span class="blue">block</span> content %}
+                        </span> <br>
+                        <span class="code-indent">&lt;<span class="blue">div</span>&gt</span> <br>
+                        <span class="code-indent3">Content goes here</span> <br>
+                        <span class="code-indent">&lt;/<span class="blue">div</span>&gt</span> <br>
+                        <span>
+                            {% <span class="blue">endblock</span> %}
+                        </span> 
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin info-block">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/alert_icon_red.svg" alt="red alert icon in a circle"/>
+                <p>You can name your blocks anything, as long as the names across multiple files are consistent. Give them meaningful names based on how they are used.</p>
+            </div>
+            <div class="section-margin arrow-points">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_red.svg" alt="red arrow pointing right"/>
+                <p>Now when your <span class="code-text">products.html</span> template renders, it will be included inside the <span class="code-text">base.html</span> file (i.e. the content block from <span class="code-text">products.html</span> will replace the empty content block in <span class="code-text">base.html</span>). This will give us a single rendered HTML page.</p>
+            </div>
+        </div>
+        
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
