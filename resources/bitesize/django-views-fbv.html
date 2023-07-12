@@ -18,15 +18,15 @@
             <div id="header-text">
                 <h1 class="text-heading">Django Views</h1>
                 <span class="alt-text">
-                    function-based views
+                    Function-Based Views
                 </span>
             </div>
             <hr id="header-hr" />
         </div>
         <div class="body">
             <div>
-                <h3 class="section-padding">What are function-based views?</h3>
-                <p class="section-padding">Arguably, the simpler of Django's views is the function-based view (FBV).</p>
+                <h3 class="section-padding">What are Function-Based Views?</h3>
+                <p class="section-padding">Arguably, the simpler of Django's views is the Function-Based View (FBV).</p>
                 <p class="section-padding">It can be considered simpler because it doesn't rely on any particular class or inheritance from other views.</p>
                 <p class="section-padding">To create an FBV, define a named function and pass the "request" parameter. If your function will accept GET requests, you'll also need to pass in any parameters that will be included in the URL.</p>
                 <p class="section-padding">Example in <span class="code-text">views.py</span>:</p>
@@ -88,24 +88,24 @@
                         <span class="orange">"""</span>
                     </div>
                     <div class="code-indent">
-                        <span class="green">if</span> request.method == <span class="blue">'POST'</span>:
+                        <span><span class="green">if</span> request.method == <span class="blue">'POST'</span>:</span>
                         <div class="section-padding code-indent2">
-                            # submit a POST request with the new object instance <br>
-                            form = <span class="green">ProductForm</span>(request.<span class="green">POST</span>)
+                            <span># submit a POST request with the new object instance</span> <br>
+                            <span>form = <span class="green">ProductForm</span>(request.<span class="green">POST</span>)</span>
                         </div>
                         <span class="green">else</span>:
                         <div class="code-indent2">
-                            # render a new instance of the form <br>
-                            form = <span class="green">ProductForm</span>()
+                            <span># render a new instance of the form</span> <br>
+                            <span>form = <span class="green">ProductForm</span>()</span>
                         </div>
                         <div class="section-padding">
-                            template = <span class="green">'products/add_product.html'</span>
+                            <span>template = <span class="green">'products/add_product.html'</span></span>
                         </div>
                         <div class="section-padding">
-                            context = {<span class="green">'form'</span>: form}
+                            <span>context = {<span class="green">'form'</span>: form}</span>
                         </div>
                         <div class="section-padding">
-                            <span class="orange">return</span> <span class="blue">render</span>(request, <span class="green">template</span>, context)
+                            <span><span class="orange">return</span> <span class="blue">render</span>(request, <span class="green">template</span>, context)</span>
                         </div>
                     </div>
                 </div>
