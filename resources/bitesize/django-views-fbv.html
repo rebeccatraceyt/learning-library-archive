@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/django-views.css">
+    <title>Django Views FBVs</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Django Views</h1>
+                <span class="alt-text">
+                    function-based views
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <div>
+                <h3 class="section-padding">What are function-based views?</h3>
+                <p class="section-padding">Arguably, the simpler of Django's views is the function-based view (FBV).</p>
+                <p class="section-padding">It can be considered simpler because it doesn't rely on any particular class or inheritance from other views.</p>
+                <p class="section-padding">To create an FBV, define a named function and pass the "request" parameter. If your function will accept GET requests, you'll also need to pass in any parameters that will be included in the URL.</p>
+                <p class="section-padding">Example in <span class="code-text">views.py</span>:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">def</span> <span class="blue">product_detail</span>(request, product_id):
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <p class="section-padding">Example in <span class="code-text">urls.py</span>:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span>
+                            <span class="green">path</span>(<span class="blue">'&lt;int:product_id&gt/'</span>, views.product_detail, name=<span class="blue">'product_detail'</span>)
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <p class="section-padding">Example URL in the template:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span class="blue">{% url 'product_detail' product.id %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h3 class="section-padding">How do we use them?</h3>
+                <p class="section-padding">The function will, by default, handle all types of requests.</p>
+                <p class="section-padding">For that reason, if we want to write code that handles a POST function, we need to add an "if" statement.</p>
+                <p class="section-padding">In the following example, we want to render a form on the template if we receive a GET request, or put the form's contents into our database if we receive a POST request:</p>
+            </div>
+            <div class="section-margin code-block">
+                <div class="code-text code-container box-shadow">
+                    <div class="code-margin">
+                        <span class="orange">from</span> django.shortcuts <span class="orange">import</span> render
+                    </div>
+                    <div class="code-margin">
+                        <span>
+                            <span class="orange">def</span> <span class="blue">add_product</span>(request):
+                        </span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent2">
+                        <span class="orange">Create a new product</span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="orange">"""</span>
+                    </div>
+                    <div class="code-indent">
+                        <span class="green">if</span> request.method == <span class="blue">'POST'</span>:
+                        <div class="section-padding code-indent2">
+                            # submit a POST request with the new object instance <br>
+                            form = <span class="green">ProductForm</span>(request.<span class="green">POST</span>)
+                        </div>
+                        <span class="green">else</span>:
+                        <div class="code-indent2">
+                            # render a new instance of the form <br>
+                            form = <span class="green">ProductForm</span>()
+                        </div>
+                        <div class="section-padding">
+                            template = <span class="green">'products/add_product.html'</span>
+                        </div>
+                        <div class="section-padding">
+                            context = {<span class="green">'form'</span>: form}
+                        </div>
+                        <div class="section-padding">
+                            <span class="orange">return</span> <span class="blue">render</span>(request, <span class="green">template</span>, context)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
