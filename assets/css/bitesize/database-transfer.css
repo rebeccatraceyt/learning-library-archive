@@ -105,6 +105,10 @@ body {
     box-shadow: 0px 4px 8px var(--box-shadow);
     margin: auto;
 }
+#header-sub {
+    display: flex;
+    gap: 4px;
+}
 
 /* footer styling */
 #footer-icon {
@@ -123,8 +127,114 @@ body {
     line-height: 24px;
 }
 
-/* ADD STYLE HERE */
+.sec-container {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
 
+.sec-container > img {
+    max-width: 40%;
+}
+
+/* code block resets */
+.code-block {
+    display: flex;
+    justify-content: center;
+}
+.code-container {
+    min-width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    color: var(--text-alt-white);
+    background-color: var(--text-alt-blue);
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.code-margin {
+    margin-bottom: 8px;
+}
+
+/* code indents resets */
+.code-indent {
+    padding-left: 20px;
+}
+.code-indent2 {
+    padding-left: 24px;
+}
+.code-indent3 {
+    padding-left: 36px;
+}
+.code-indent4 {
+    padding-left: 36px;
+}
+
+/* code text resets */
+.code-text {
+    font-family: var(--code-font);
+}
+.red {
+    color: var(--action-red-100);
+}
+.orange {
+    color: var(--accent-orange);
+}
+.blue {
+    color: var(--action-blue);
+}
+.green {
+    color: var(--accent-green);
+}
+.pink {
+    color: var(--accent-pink);
+}
+
+/* number points styling */
+.circle-points {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.circle, .circle-light {
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    border: 3px solid var(--action-red-100);
+    font-weight: 900;
+}
+.circle {
+    color: var(--text-alt-white);
+    padding: 4px 8px;
+}
+.circle-light {
+    color: var(--action-red-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    font-size: 20px;
+}
+.point-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.inner-point {
+    font-size: 14px;
+}
+.info-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 20px;
+    font-style: italic;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+}
+.ex-img > img {
+    max-width: 100%;
+}
 
 /* media query styling */
 @media only screen and (min-width: 600px) {
@@ -154,4 +264,22 @@ body {
     .body {
         padding: 20px 40px;
     }
+    .sec-container {
+        gap: 16px;
+    }
+    .code-container {
+        font-size: 12px;
+        overflow-x: hidden;
+    }
+    .circle-light {
+        padding: 12px 24px;
+        font-size: 40px;
+        width: 48px;
+        height: 52px;
+    }
+    .circle-points {
+        align-items: center;
+        gap: 12px;
+    }
+
 }

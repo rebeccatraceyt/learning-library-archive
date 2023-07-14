@@ -10,6 +10,8 @@
         border-radius: 12px;
         color: var(--text-alt-white);
         background-color: var(--text-alt-blue);
+        overflow-x: scroll;
+        white-space: nowrap;
     }
     .code-margin {
         margin-bottom: 8px;
@@ -47,6 +49,14 @@
     }
     .pink {
         color: var(--accent-pink);
+    }
+
+    /* media query styling */
+    @media only screen and (min-width: 600px) {
+        .code-container {
+            font-size: 14px;
+            overflow-x: hidden;
+        }
     }
 </style>
 
