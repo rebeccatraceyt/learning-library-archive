@@ -45,7 +45,8 @@ The primary purpose of this repository is to act as a dual-purpose resource, fun
 | Django Views CBVs  | &#9745; |  &#9744; |  &#9744;  |          | 
 | Django Templates  | &#9745; |  &#9744; |  &#9744;  |          | 
 | Database Transfer  | &#9745; |  &#9744; |  &#9744;  |          | 
-| Stripe Errors  | &#9745; |  &#9744; |  &#9744;  |          | 
+| Stripe Errors 400  | &#9745; |  &#9744; |  &#9744;  |          | 
+| Stripe Errors 404 | &#9745; |  &#9744; |  &#9744;  |          | 
 
 [Back to top ⇧](#table-of-contents)
 

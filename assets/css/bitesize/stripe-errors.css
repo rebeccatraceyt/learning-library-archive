@@ -207,9 +207,12 @@ body {
 
 .info-block {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
     gap: 12px;
     padding: 8px 20px;
+    font-size: 14px;
+    font-style: italic;
 }
 
 /* media query styling */
@@ -243,5 +246,10 @@ body {
     .code-container {
         font-size: 14px;
         overflow-x: hidden;
+    }
+    .info-block {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
     }
 }
