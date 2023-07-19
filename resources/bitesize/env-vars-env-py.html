@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/bitesize/env-vars-env-py.css"
+    />
+    <title>Env Vars - Env.py</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../../bitesize.html">Bitesize</a>
+      <a href="../../checklist.html">Checklists</a>
+      <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+      <div id="header">
+        <div id="header-text">
+          <h1 class="text-heading">Env Vars Explainer</h1>
+          <span class="alt-text"> The env.py file </span>
+        </div>
+        <hr id="header-hr" />
+      </div>
+      <div class="body">
+        <div class="section-margin section-container">
+          <span>
+            When developing web apps we sometimes need to use secret API keys or
+            other variables that can’t be exposed publicly. To do this, we store
+            their values in a secret file called <b class="bold">env.py</b>,
+            then import those values elsewhere in our code.
+          </span>
+          <span>
+            Let’s take a look at how to import a secret key into a Django
+            project. First, you will need to create an
+            <b class="bold">env.py</b> file.
+          </span>
+          <span>
+            <em>
+              You can find a checklist
+              <a
+                href="https://drive.google.com/file/d/1IgSoiUkvAK5wGvJp4CC0sAUKyIsmQxqP/view"
+                >here</a
+              >
+              which will guide you through the process.
+            </em>
+          </span>
+        </div>
+        <div class="section-margin">
+          <span>
+            Once set up, we will create an environment variable within
+            <b class="bold">env.py</b> called <b class="bold">SECRET_KEY</b>
+          </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="blue">import</span>
+              <span class="orange">os</span>
+            </div>
+            <div class="code-margin">
+              <span>
+                <span class="orange">os.environ[</span
+                ><span class="pink">'SECRET_KEY'</span
+                ><span class="orange">]</span> =
+                <span class="pink">'%qQa|Z}P9C&+SA%s^,Urfod3zK@^ez'</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="section-margin section-container">
+          <span>
+            As the secret key is used by Django for cryptography, it is vital
+            that we keep its value secret. When generating a secret key, you
+            should use a unique random string of letters, numbers, and
+            characters.
+          </span>
+          <span>
+            We can now access this key from our Django
+            <b class="bold">settings.py</b> file. To do this, we first import
+            the <b class="bold">os</b> module, and then check for and import an
+            <b class="bold">env.py</b> (if it exists). Importing the file causes
+            the code within it to be run, which sets our SECRET_KEY environment
+            variable in the Operating System.
+          </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="blue">import</span>
+              <span class="orange">os</span>
+            </div>
+            <div class="code-margin">
+              <span>
+                <span class="blue">if</span>
+                <span class="orange">os.path.exists(</span
+                ><span class="pink">'env.py'</span
+                ><span class="orange">)</span>:
+              </span>
+            </div>
+            <div class="code-indent">
+              <span class="blue">import</span>
+              <span class="orange">env</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-margin">
+          <span>
+            As our secret variables are now set as OS Environment Variables, we
+            can access them in <b class="bold">settings.py</b> with the
+            following code:
+          </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="green">SECRET_KEY</span> =
+              <span class="orange">os.environ.</span
+              ><span class="blue">get</span><span class="orange">(</span
+              ><span class="pink">'SECRET_KEY'</span
+              ><span class="orange">)</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-margin section-container">
+          <span>
+            We have now imported the value of SECRET_KEY into our
+            <b class="bold">settings.py</b> file, without ever pasting its
+            contents into the file itself! This means our
+            <b class="bold">settings.py</b> file can be safely pushed to Github
+            without fear of our keys being exposed.
+          </span>
+          <span>
+            To check that a variable has been correctly set, we can echo its
+            value in your terminal.
+          </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="green">user@ci-os</span>
+              <span class="blue">/home/user</span>
+              <span>(main) $ echo $SECRET_KEY</span>
+            </div>
+          </div>
+        </div>
+        <div id="end-container">
+          <img
+            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_yellow_left.svg"
+            alt="Yellow lightbulb leaning to the left"
+            id="end-icon"
+          />
+          <div>
+            Setting up your project this way means that sensitive information
+            can be hidden from public view as necessary when pushing your code
+            to GitHub. As long as your env.py file is not pushed, your secrets
+            are safe!
+          </div>
+        </div>
+      </div>
+      <div id="footer-icon">
+        <img
+          src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+          alt="Code Institute logo"
+        />
+      </div>
+    </section>
+  </body>
+</html>
