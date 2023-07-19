@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/bitesize/env-vars-env-py.css"
+    />
+    <title>Env Vars - GitPod</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../../bitesize.html">Bitesize</a>
+      <a href="../../checklist.html">Checklists</a>
+      <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+      <div id="header">
+        <div id="header-text">
+          <h1 class="text-heading">Env Vars Explained</h1>
+          <span class="alt-text">GitPod environment variables</span>
+        </div>
+        <hr id="header-hr" />
+      </div>
+      <div class="body">
+        <div class="section-container">
+          <span>
+            Gitpod allows you to set environment variables for your projects
+            without having to use an env.py file. Try visiting:
+            <a href="https://gitpod.io/user/variables">gitpod.io/variables</a>
+          </span>
+          <span>
+            Here, you can click on <b class="bold-semi">'New Variable'</b> to add an environment
+            variable to your Gitpod environment.
+          </span>
+        </div>
+
+        <div class="section-margin code-block">
+          <div class="code-text img-container code-container box-shadow">
+            <img
+              class="env-image"
+              src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/env_vars_no_vars.png"
+            />
+          </div>
+        </div>
+
+        <div class="section-margin section-container">
+          <span>
+            Once <b class="bold-semi">'New Variable'</b> is clicked you can then add the relevant
+            details in.
+          </span>
+          <span>
+            In this example <b class="bold-semi">'Name'</b> is <b class="bold">'SECRET_KEY'</b> and <b class="bold-semi">'Value'</b> is a random string.
+          </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text img-container code-container box-shadow">
+            <img
+              class="env-image-key"
+              src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/env_vars_secret_key.png"
+            />
+          </div>
+        </div>
+      <div class="section-margin section-container">
+        <span>
+          You will also notice a third field when creating a variable: <b class="bold-semi">'Scope'</b>. This defines which repositories have access to that variable.
+
+        </span>
+        <span>
+          The scope field takes the form of <b class="bold-semi">owner/repository</b>, with <b class="bold-semi">'owner'</b> being the GitHub username and <b class="bold-semi">'repository'</b> being the name of the GitHub repo concerned.
+
+        </span>
+      </div>
+      <div class="section-margin code-block">
+        <div class="code-text img-container code-container box-shadow">
+          <img
+            class="env-image-scope"
+            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/env_vars_scope.png"
+          />
+        </div>
+      </div>
+      <div class="section-margin section-container">
+        <span>
+          You can also set the scope to be a <b class="bold-semi">wildcard</b> with:
+
+        </span>
+      </div>
+      <div class="section-margin code-block">
+        <div class="code-text img-container code-container box-shadow">
+          <img
+            class="env-image-scope"
+            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/env_vars_scope_wildcard.png"
+          />
+        </div>
+      </div>
+      <div class="section-margin section-container">
+        <span>
+          This will allow any repository you open in Gitpod to access that secret variable. Similarly, <b class="bold">your-username/*</b> will allow access to any repository that is stored on your Github account.
+        </span>
+      </div>
+      
+    </div>
+      <div id="footer-icon">
+        <img
+          src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+          alt="Code Institute logo"
+        />
+      </div>
+    </section>
+  </body>
+</html>
