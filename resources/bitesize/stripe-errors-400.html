@@ -42,7 +42,7 @@
                         <div class="code-margin">
                             <span>[29/Jul/2022 14:43:49] “GET /checkout/ HTTP/1.1” 200 30255</span> <br>
                             <span>Bad Request: /checkout/wh/</span> <br>
-                            <span>[29/Jul/2022 14:43:50] <span class="orange">“POST /checkout/wh/ HTTP/1.1” 400 63</span></span>
+                            <span>[29/Jul/2022 14:43:50] <span class="code-red">“POST /checkout/wh/ HTTP/1.1” 400 63</span></span>
                         </div>
                     </div>
                 </div>
@@ -69,13 +69,13 @@
                     <div class="code-text code-container box-shadow">
                         <div class="code-margin">
                             <span>
-                                STRIPE_PUBLIC_KEY = os.environ.get(<span class="orange">'STRIPE_PUBLIC_KEY'</span>, <span class="orange">''</span>) 
+                                STRIPE_PUBLIC_KEY = os.environ.get(<span class="green">'STRIPE_PUBLIC_KEY'</span>, <span class="orange">''</span>) 
                             </span><br>
                             <span>
-                                STRIPE_SECRET_KEY = os.environ.get(<span class="orange">'STRIPE_SECRET_KEY'</span>, <span class="orange">''</span>) 
+                                STRIPE_SECRET_KEY = os.environ.get(<span class="green">'STRIPE_SECRET_KEY'</span>, <span class="orange">''</span>) 
                             </span><br>
                             <span>
-                                STRIPE_WH_SECRET = os.environ.get(<span class="orange">'STRIPE_WH_SECRET'</span>, <span class="orange">''</span>) 
+                                STRIPE_WH_SECRET = os.environ.get(<span class="green">'STRIPE_WH_SECRET'</span>, <span class="orange">''</span>) 
                             </span>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                     <div class="code-text code-container box-shadow">
                         <div class="code-margin">
                             <span>
-                                <span class="blue">user@ci-os /home/user</span> (main) $ echo $STRIPE_SECRET_KEY
+                                <span class="code-blue">user@ci-os /home/user</span> (main) $ echo $STRIPE_SECRET_KEY
                             </span>
                         </div>
                     </div>
@@ -108,12 +108,12 @@
                     <div class="code-text code-container box-shadow">
                         <div class="code-margin">
                             <span>
-                                <span class="blue">if</span> os.path.exists(<span class="orange">'env.py'</span>):
+                                <span class="code-blue">if</span> os.path.exists(<span class="green">'env.py'</span>):
                             </span>
                         </div>
                         <div class="code-indent">
                             <span>
-                                <span class="blue">import</span> env
+                                <span class="code-blue">import</span> env
                             </span>
                         </div>
                     </div>
@@ -123,13 +123,13 @@
                     <div class="code-text code-container box-shadow">
                         <div class="code-margin">
                             <span>
-                                os.environ.setdefault(<span class="orange">'STRIPE_PUBLIC_KEY'</span>, <span class="orange">'pk_test_your_key'</span>)
+                                os.environ.setdefault(<span class="green">'STRIPE_PUBLIC_KEY'</span>, <span class="orange">'pk_test_your_key'</span>)
                             </span><br>
                             <span>
-                                os.environ.setdefault(<span class="orange">'STRIPE_SECRET_KEY'</span>, <span class="orange">'sk_test_your_key'</span>)
+                                os.environ.setdefault(<span class="green">'STRIPE_SECRET_KEY'</span>, <span class="orange">'sk_test_your_key'</span>)
                             </span><br>
                             <span>
-                                os.environ.setdefault(<span class="orange">'STRIPE_WH_SECRET'</span>, <span class="orange">'whsec_your_key'</span>)
+                                os.environ.setdefault(<span class="green">'STRIPE_WH_SECRET'</span>, <span class="orange">'whsec_your_key'</span>)
                             </span>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                     <div class="code-text code-container box-shadow">
                         <div class="code-margin">
                             <span>
-                                <span class="blue">print</span>(<span class="orange">'STRIPE SECRET:'</span>, os.environ.get(<span class="orange">'STRIPE_SECRET_KEY'</span>))
+                                <span class="code-blue">print</span>(<span class="green">'STRIPE SECRET:'</span>, os.environ.get(<span class="green">'STRIPE_SECRET_KEY'</span>))
                             </span>
                         </div>
                     </div>
