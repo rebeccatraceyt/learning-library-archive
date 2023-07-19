@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/bitesize/env-vars-env-py.css"
+    />
+    <title>Config Vars - Heroku</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../../bitesize.html">Bitesize</a>
+      <a href="../../checklist.html">Checklists</a>
+      <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+      <div id="header">
+        <div id="header-text">
+          <h1 class="text-heading">Env Vars Explained</h1>
+          <span class="alt-text">Heroku config vars</span>
+        </div>
+        <hr id="header-hr" />
+      </div>
+      <div class="body">
+        <div class="section-container">
+          <span>
+            The other time you may need to use environmental variables is when
+            you deploy an app to Heroku. For Heroku, they are called 'config
+            vars' and can be found in the settings of the relevant Heroku app
+            you are working on:
+          </span>
+        </div>
+
+        <div class="section-margin code-block">
+          <div class="code-text img-container code-container box-shadow">
+            <img
+              class="env-image-settings"
+              src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/config_settings_heroku.png"
+            />
+          </div>
+        </div>
+        <div class="section-container">
+          <span>
+            There are two ways we can add our config vars to our Heroku app.
+          </span>
+        </div>
+        <div class="section-container section-margin">
+          <h2 class="step-text">1. Via the Heroku Dashboard</h2>
+        </div>
+        <div class="section-container">
+          <span>
+            To add a config var for a Heroku app via the Heroku dashboard, head
+            to your own dashboard and select your app. Then, click on settings
+            and <b class="bold-semi">'Reveal Config Vars':</b>
+          </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text img-container code-container box-shadow">
+            <img
+              class="env-image-vars"
+              src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/config_vars_heroku.png"
+            />
+          </div>
+        </div>
+
+        <div class="section-container">
+          <span>
+            You see any 'secret' vars for the live Heroku app in here. If you
+            click on 'Add' you will be able to add a new secret variable.
+          </span>
+          <span>
+            In our example, the <b class="bold-semi">'KEY'</b> field containing
+            the name of the variable, <b class="bold">'SECRET_KEY'</b> and the
+            <b class="bold-semi">'VALUE'</b> field which as per above example
+            would be <b class="bold">‘my_super_secret_key’</b> :
+          </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text img-container code-container box-shadow">
+            <img
+              class="env-image-secret"
+              src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/config_secret_heroku.png"
+            />
+          </div>
+        </div>
+        <div class="section-container section-margin">
+          <span>
+            This secret variable will then become accessible to just the app it
+            was set in, it can’t be set globally for all Heroku apps.
+          </span>
+        </div>
+
+        <div>
+          <span class="step-text">2. Via the Heroku CLI </span
+          ><span>(command line interface)</span>
+        </div>
+        <div class="section-container section-margin">
+          <span>
+            If you like to do things the hard way and use the CLI, you can
+            update your Heroku app config variables from the Heroku CLI, in your
+            Gitpod workspace, with the following steps:
+          </span>
+          <span> Log in to the Heroku CLI: </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="green">gitpod </span
+              ><span class="blue">/workspace/my-app</span
+              ><span> (main) $ heroku login -i </span>
+            </div>
+          </div>
+        </div>
+        <div class="section-container section-margin">
+          <span>
+            If you have MFA/2FA enabled, you may need to do the following to log
+            in:
+          </span>
+          <ol>
+            <li>Click on Account Settings (under the avatar menu)</li>
+            <li>Scroll down to the API Key section</li>
+            <li>Click ‘Reveal’ and copy the API key</li>
+            <li>Back in your terminal run the above command</li>
+            <li>Enter your email as normal</li>
+            <li>For your password, paste in the API key</li>
+            <li>Hit enter, and that should log you in</li>
+          </ol>
+          <span>
+            When you’re logged in, set the Heroku remote in the CLI:
+          </span>
+        </div>
+
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="green">gitpod </span
+              ><span class="blue">/workspace/my-app</span
+              ><span> (main) $ heroku git:remote -a app_name </span>
+            </div>
+          </div>
+        </div>
+        <div class="section-container section-margin">
+          <span>
+            If your Heroku app was called mynewapp, then the command would read:
+          </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="green">gitpod </span
+              ><span class="blue">/workspace/my-app</span
+              ><span> (main) $ heroku git:remote -a mynewapp </span>
+            </div>
+          </div>
+        </div>
+        <div class="section-container section-margin">
+          <span> Then, add the config var via the CLI with: </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="green">gitpod </span
+              ><span class="blue">/workspace/my-app</span
+              ><span>
+                (main) $ heroku config:set SECRET_KEY=my_secret_key
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="section-container section-margin">
+          <span> To view the config var via the CLI you can use: </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="green">gitpod </span
+              ><span class="blue">/workspace/my-app</span
+              ><span> (main) $ heroku config </span>
+            </div>
+          </div>
+        </div>
+        <div class="section-container section-margin">
+          <span> To remove the config var via the CLI you can use: </span>
+        </div>
+        <div class="section-margin code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="code-margin">
+              <span class="green">gitpod </span
+              ><span class="blue">/workspace/my-app</span
+              ><span> (main) $ heroku config:unset SECRET_KEY </span>
+            </div>
+          </div>
+        </div>
+        <div class="section-container section-margin">
+          <span>
+            Just like in Gitpod variable settings, or in env.py, all secret
+            variable settings needed for the app to run successfully, keys such
+            as Stripe or Cloudinary config keys need to be set as config vars
+            for that app.
+          </span>
+        </div>
+      </div>
+      <div id="footer-icon">
+        <img
+          src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+          alt="Code Institute logo"
+        />
+      </div>
+    </section>
+  </body>
+</html>
