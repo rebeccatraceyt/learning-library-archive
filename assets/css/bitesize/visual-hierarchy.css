@@ -8,6 +8,7 @@
     --alt-font: "Indie Flower", cursive;
 
     --action-red-100: #E84610;
+    --action-red-60: #E8C0B4;
 
     --text-color: #4a4a4f;
     --text-alt-white: #fcfdfd;
@@ -36,13 +37,13 @@ p {
 
 body {
     font-family: var(--body-font);
-    color: var(--text-alt-white);
+    color: var(--text-color);
 }
 
 .text-heading {
     font-family: var(--body-font);
     font-size: 3rem;
-    color: var(--text-alt-white);
+    color: var(--text-alt-blue);
 }
 
 .alt-heading {
@@ -58,7 +59,7 @@ body {
     margin: 20px auto;
 
     border-radius: 12px;
-    background-color: var(--text-alt-blue);
+    background-color: var(--text-alt-white);
 }
 
 /* header styling */
@@ -103,25 +104,25 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
 }
 .card {
-    background-color: var(--accent-grey);
-    color: var(--text-color);
-    padding: 32px 44px;
+    background-color: var(--text-alt-blue);
+    color: var(--text-alt-white);
+    padding: 32px;
     border-radius: 12px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-bottom: 8px;
 }
 .card-text {
     font-size: 12px;
+    margin: 0 auto;
 }
 #red-text {
-    color: var(--action-red-100);
+    color: var(--action-red-60);
+    font-size: 20px;
 }
 
 #section2 {
