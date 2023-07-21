@@ -247,6 +247,16 @@ body {
 #flex-direction-reverse {
     flex-direction: row-reverse;
 }
+#flex-wrap {
+    flex-wrap: wrap;
+}
+#flex-wrap > .flexbox-item,
+#flex-nowrap > .flexbox-item {
+    min-width: 64px;
+}
+#flex-nowrap {
+    overflow-x: scroll;
+}
 
 /* media query styling */
 @media only screen and (min-width: 600px) {
