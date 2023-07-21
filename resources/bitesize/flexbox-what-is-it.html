@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/flexbox.css">
+    <title>Flexbox - What is it?</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Flexbox</h1>
+                <span class="alt-text red">
+                    What is it?
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <p class="section-padding">
+                Implementing an appealing and responsive layout in CSS historically required usage of one or more of the following techniques:
+            </p>
+            <div class="bullet-point">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                <span><span class="bold-text">Block Display</span> – for stacking elements on top of each other</span>
+            </div>
+            <div class="bullet-point">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                <span><span class="bold-text">Inline Block Display</span> – for positioning elements side-by-side</span>
+            </div>
+            <div class="bullet-point">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                <span><span class="bold-text">Tables</span> – simple multi-row & column layouts, at the cost of responsiveness</span>
+            </div>
+            <div class="bullet-point">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                <span><span class="bold-text">Positioning</span> – absolute or relative positioning in relation to other elements</span>
+            </div>
+            <div class="bullet-point">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                <span><span class="bold-text">Floats</span> – floats an element right or left within its parent container</span>
+            </div>
+            <p class="section-padding">
+                None of these methods are optimal for designing the complex, responsive layouts we associate with modern websites.
+            </p>
+            <div class="sec-header">
+                <h2 class="section-padding">Enter Flexbox</h2>
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/tada-right_secondary.svg" alt="Slightly tilted tada icon in blue">
+            </div>
+            <p class="section-padding">
+                The need for a better solution led to the development of the CSS Flexible Box Layout, or Flexbox for short. Note that Flexbox is the name of a module, and not any one CSS property.
+            </p>
+            <p class="section-padding">
+                A simple flexbox layout requires a flex container. You can make any div a flex container by setting its display property to flex. Flex containers will dynamically modify both the size and ordering of their child elements to fill available space. We can control this behaviour by setting the following properties on the flex container:
+            </p>
+            <div class="section-padding">
+                <div class="icon-heading">
+                    <h3 class="alt-text">flex-direction</h3>
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/flex-direction-red.svg" alt="flex-direction icon with four arrows pointing in all directions">
+                </div>
+                <p>
+                    Sets the direction that the child elements will be aligned in (horizontally or vertically). This is called the main axis. The axis perpendicular to this is called the cross axis.
+                </p>
+                <span>
+                    <span class="bold-text">Values:</span> <span class="code-text text-blue">row</span>, <span class="code-text text-blue">row-reverse</span>, <span class="code-text text-blue">column</span>, <span class="code-text text-blue">column-reverse</span>
+                </span>
+            </div>
+            <div class="section-padding">
+                <div class="icon-heading">
+                    <h3 class="alt-text">justify-content</h3>
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/justify-content-red.svg" alt="justify-content icon with four squares in grid format">
+                </div>
+                <p>
+                    Sets the alignment of child elements along the main axis. Generally used to define column spacing (dependent on main axis direction).
+                </p>
+                <span>
+                    <span class="bold-text">Values:</span> <span class="code-text text-blue">flex-start</span>, <span class="code-text text-blue">flex-end</span>, <span class="code-text text-blue">center</span>, <span class="code-text text-blue">space-between</span>, <span class="code-text text-blue">space-around</span>, <span class="code-text text-blue">space-evenly</span>
+                </span>
+            </div>
+            <div class="section-padding">
+                <div class="icon-heading">
+                    <h3 class="alt-text">align-items</h3>
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/align-items-red.svg" alt="align-items icon with four vertical lines in a row">
+                </div>
+                <p>
+                    Sets the alignment of child elements along the cross axis. Generally used to specify how rows should align (dependent on main axis direction).
+                </p>
+                <span>
+                    <span class="bold-text">Values:</span> <span class="code-text text-blue">row</span>, <span class="code-text text-blue">stretch</span>, <span class="code-text text-blue">flex-start</span>, <span class="code-text text-blue">flex-end</span>, <span class="code-text text-blue">center</span>
+                </span>
+            </div>
+            <div class="section-padding">
+                <div class="icon-heading">
+                    <h3 class="alt-text">flex-wrap</h3>
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/flex-wrap-red.svg" alt="flex-wrap icon with three horizontal lines and arrow to symbolize wrapping from top to bottom">
+                </div>
+                <p>
+                    If there are too many elements to fit on the screen, you can set this property to tell your flex container how to handle the overflows. 
+                </p>
+                <span>
+                    <span class="bold-text">Values:</span> <span class="code-text text-blue">nowrap</span>, <span class="code-text text-blue">wrap</span>, <span class="code-text text-blue">wrap-reverse</span>
+                </span>
+            </div>
+            <div class="section-padding">
+                <div class="icon-heading">
+                    <h3 class="alt-text">align-content</h3>
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/align-content-red.svg" alt="align-content icon with two horizontal boxes">
+                </div>
+                <p>
+                    Specifies how to fill additional space on the cross axis if the child elements do not completely fill it.
+                </p>
+                <span>
+                    <span class="bold-text">Values:</span> <span class="code-text text-blue">flex-start</span>, <span class="code-text text-blue">flex-end</span>, <span class="code-text text-blue">center</span>, <span class="code-text text-blue">space-between</span>, <span class="code-text text-blue">space-around</span>, <span class="code-text text-blue">space-evenly</span>, <span class="code-text text-blue">stretch</span>
+                </span>
+            </div>
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
