@@ -7,15 +7,15 @@
     --alt-font: "Indie Flower", cursive;
     --code-font: "Courier Prime", monospace;
 
-    --action-red: #e84610;
-    --action-blue: #23bbbb;
+    --action-red: #E10F09;
+    --action-blue: #23BBBB;
 
-    --text-color: #4a4a4f;
+    --text-color: #4A4A4F;
 
-    --accent-pink: #ff5a60;
-    --accent-orange: #ef8e6e;
-    --accent-green: #64de9d;
-    --accent-blue: #64c3ec;
+    --accent-pink: #FBBABC;
+    --accent-orange: #F3D377;
+    --accent-green: #95E8BC;
+    --accent-blue: #A1D2F5;
 
     --frame-shadow: rgba(0, 0, 0, 0.25);
 }
