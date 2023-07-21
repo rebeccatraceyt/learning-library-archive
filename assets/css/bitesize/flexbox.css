@@ -235,10 +235,17 @@ body {
     font-size: 40px;
     line-height: 48px;
     font-weight: 700;
-    min-width: 64px;
-    min-height: 60px;
+    width: 64px;
+    height: 60px;
     justify-content: center;
     align-items: center;
+}
+
+#flex-direction-col {
+    flex-direction: column;
+}
+#flex-direction-reverse {
+    flex-direction: row-reverse;
 }
 
 /* media query styling */
