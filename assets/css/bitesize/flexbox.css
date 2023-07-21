@@ -255,6 +255,18 @@ body {
 #justify-content-space {
     justify-content: space-around;
 }
+#align-items-center {
+    align-items: center;
+}
+#align-items-stretch {
+    height: 150px;
+    align-items: stretch;
+}
+#align-items-stretch > .flexbox-item {
+    min-height: 100%;
+    align-items: flex-start;
+    padding-top: 6px;
+}
 
 
 /* show/hide styling */
