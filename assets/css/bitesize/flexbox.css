@@ -109,14 +109,6 @@ body {
     color: var(--accent-pink);
 }
 
-/* show/hide styling */
-.sm-only {
-    display: inline-block;
-}
-.lg-only {
-    display: none;
-}
-
 /* header styling */
 #header {
     padding: 20px 0 32px;
@@ -257,6 +249,22 @@ body {
 #flex-nowrap {
     overflow-x: scroll;
 }
+#justify-content-center {
+    justify-content: center;
+}
+#justify-content-space {
+    justify-content: space-around;
+}
+
+
+/* show/hide styling */
+.sm-only {
+    display: inline-block;
+}
+.lg-only {
+    display: none;
+}
+
 
 /* media query styling */
 @media only screen and (min-width: 600px) {
@@ -266,7 +274,7 @@ body {
         display: none;
     }
     .lg-only {
-        display: inline-block;
+        display: flex;
     }
 
     #footer-icon > img {
