@@ -240,7 +240,7 @@ input[type="checkbox"]:checked::before {
     padding-left: 36px;
 }
 .code-indent4 {
-    padding-left: 36px;
+    padding-left: 48px;
 }
 
 
