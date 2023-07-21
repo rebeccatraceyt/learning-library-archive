@@ -8,15 +8,16 @@
     --alt-font: "Indie Flower", cursive;
     --code-font: "Courier Prime", monospace;
 
-    --action-red-100: #E84610;
-    --action-blue: #23bbbb;
+    --action-red-100: #E10F09;
+    --action-blue: #23BBBB;
 
-    --text-alt-white: #fcfdfd;
+    --text-alt-white: #FCFDFD;
     --text-alt-blue: #445261;
 
-    --accent-orange: #efb920;
-    --accent-pink: #ff5a60;
-    --accent-green: #00cc5f;
+    --accent-pink: #FBBABC;
+    --accent-orange: #F3D377;
+    --accent-green: #95E8BC;
+    --accent-blue: #A1D2F5;
 
     --box-shadow: rgba(0, 0, 0, 0.25);
 }
@@ -185,7 +186,7 @@ img {
 }
 
 a {
-    color: var(--ci-action-primary-100, #E84610);
+    color: var(--action-red-100);
     font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
@@ -250,7 +251,7 @@ ol {
 }
 
 .blue {
-    color: var(--action-blue);
+    color: var(--accent-blue);
 }
 
 .green {

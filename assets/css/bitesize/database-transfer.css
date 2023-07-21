@@ -8,19 +8,19 @@
     --alt-font: "Indie Flower", cursive;
     --code-font: "Courier Prime", monospace;
 
-    --action-red-60: #ef8e6e;
-    --action-red-100: #E84610;
-    --action-blue: #23bbbb;
+    --action-red-60: #E8C0B4;
+    --action-red-100: #E10F09;
+    --action-blue: #23BBBB;
 
-    --text-color: #4a4a4f;
-    --text-alt-white: #fcfdfd;
+    --text-color: #4A4A4F;
+    --text-alt-white: #FCFDFD;
     --text-alt-blue: #445261;
 
-    --accent-pink: #ff5a60;
-    --accent-orange: #efb920;
-    --accent-green: #00cc5f;
-    --accent-blue: #009fe3;
-    --accent-grey: #d6d7d8;
+    --accent-pink: #FBBABC;
+    --accent-orange: #F3D377;
+    --accent-green: #95E8BC;
+    --accent-blue: #A1D2F5;
+    --accent-grey: #D6D7D8;
 
     --box-shadow: rgba(0, 0, 0, 0.25);
 }
@@ -180,7 +180,7 @@ body {
     color: var(--accent-orange);
 }
 .blue {
-    color: var(--action-blue);
+    color: var(--accent-blue);
 }
 .green {
     color: var(--accent-green);

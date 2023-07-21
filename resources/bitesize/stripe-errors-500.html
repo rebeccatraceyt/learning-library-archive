@@ -69,16 +69,16 @@
                             <span class="code-indent">File "/workspace/stripe_example/checkout/webhooks.py",</span> <br>
                             <span>line 66, in webhook</span> <br>
                             <span class="code-indent2">response = event_handler(event)</span> <br>
-                            <span class="code-indent code-blue">File "/workspace/stripe_example/checkout/webhook_handler.py",</span> <br>
-                            <span class="code-blue"> line 71, in handle_payment_intent_succeeded</span> <br>
-                            <span class="code-indent2 code-blue">test = intent['data'][0]['email']</span> <br>
+                            <span class="code-indent blue">File "/workspace/stripe_example/checkout/webhook_handler.py",</span> <br>
+                            <span class="blue"> line 71, in handle_payment_intent_succeeded</span> <br>
+                            <span class="code-indent2 blue">test = intent['data'][0]['email']</span> <br>
                             <span class="code-indent">File "/home/gitpod/.pyenv/versions/3.8.11/lib/python3.8/</span> <br>
                             <span>site-packages/stripe/stripe_object.py", line 131, in __getitem__</span> <br>
                             <span class="code-indent2">raise err</span> <br>
                             <span class="code-indent">File "/home/gitpod/.pyenv/versions/3.8.11/lib/python3.8/</span> <br>
                             <span>site-packages/stripe/stripe_object.py", line 119, in __getitem__</span> <br>
                             <span class="code-indent2">return super(StripeObject, self).__getitem__(k)</span> <br>
-                            <span class="code-blue">KeyError: 'data'</span> <br>
+                            <span class="blue">KeyError: 'data'</span> <br>
                             <span>[29/Jul/2022 14:56:05] <span class="code-red">“POST /checkout/wh/ HTTP/1.1” 500 82585</span></span>
                         </div>
                     </div>

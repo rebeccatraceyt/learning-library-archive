@@ -91,10 +91,10 @@ body {
     color: var(--accent-orange);
 }
 .blue {
-    color: var(--action-blue);
-}
-.code-blue {
     color: var(--accent-blue);
+}
+.secondary-blue {
+    color: var(--action-blue);
 }
 .green {
     color: var(--accent-green);
