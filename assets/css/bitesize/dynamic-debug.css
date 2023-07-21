@@ -43,13 +43,13 @@ p {
 
 body {
     font-family: var(--body-font);
-    color: var(--text-alt-white);
+    color: var(--text-color);
 }
 
 .text-heading {
     font-family: var(--body-font);
     font-size: 3rem;
-    color: var(--text-alt-white);
+    color: var(--text-alt-blue);
 }
 
 .alt-heading {
@@ -58,6 +58,11 @@ body {
 
 .code-text {
     font-family: var(--code-font);
+}
+.red {
+    color: var(--action-red-100);
+}
+.code-red {
     color: var(--action-red-60);
 }
 
@@ -67,7 +72,7 @@ body {
     margin: 20px auto;
 
     border-radius: 12px;
-    background-color: var(--text-alt-blue);
+    background-color: var(--text-alt-white);
 }
 
 .section-padding {
@@ -107,7 +112,7 @@ body {
 
 /* main body styling */
 .body {
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 #section1 {
@@ -121,14 +126,13 @@ body {
 #section1-text {
     padding-left: 10px;
 }
-#section1-text > p {
+#sec1-text-1 {
     padding-bottom: 10px;
 }
 
 #section2 {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #section2 span {
@@ -138,6 +142,7 @@ body {
 
 #section2 > img {
     display: none;
+    max-width: 16%;
 }
 
 .point-header {
@@ -155,23 +160,25 @@ body {
     font-size: 1rem;
     padding: 0 8px;
 }
-.point-text .code-text {
-    padding: 20px 0;
+.p-btm {
+    padding-bottom: 20px;
+}
+.p-top {
+    padding-top: 20px;
 }
 
 #section4 {
-    background-color: var(--accent-grey);
-    color: var(--text-color);
-    padding: 20px;
+    min-width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    color: var(--text-alt-white);
+    background-color: var(--text-alt-blue);
+    margin: 12px 0;
 }
 
 #section4-condition {
     padding: 24px 0;
     text-align: center;
-}
-#section4-condition .code-text {
-    color: var(--action-red-100);
-    font-weight: 800;
 }
 
 .point-body-alt {
@@ -190,7 +197,7 @@ body {
 }
 
 .alert-text {
-    color: var(--action-red-60);
+    color: var(--action-red-100);
 }
 
 #section8 {

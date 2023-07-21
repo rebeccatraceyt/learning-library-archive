@@ -22,7 +22,7 @@
                         dynamically change your DEBUG setting without modifying
                         your code. To achieve this, we can make the DEBUG
                         setting dependent on the presence of an environment
-                        variable called DEVELOPMENT, which will enable debug
+                        variable called DEV, which will enable debug
                         mode for us if present.
                     </span>
                 </div>
@@ -37,13 +37,13 @@
                         height="100"
                     />
                     <div id="section1-text">
-                        <p>
+                        <p id="sec1-text-1">
                             Think about a dynamic debug value as a switch you
                             toggle on and off.
                         </p>
                         <p>
                             You do this with a variable called:
-                            <span class="code-text">DEVELOPMENT</span>
+                            <span class="code-text red">DEV</span>
                         </p>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                 </div>
                 <div id="section3" class="section-padding">
                     <div class="point-header">
-                        <p>1. In <span class="code-text">settings.py</span></p>
+                        <p>1. In <span class="code-text red">settings.py</span></p>
                     </div>
                     <div class="point-body">
                         <img
@@ -68,29 +68,27 @@
                         <div class="point-text">
                             <p
                                 >Replace your current DEBUG variable with:</p
-                            ><p class="code-text"
-                                >DEBUG = 'DEVELOPMENT' in os.environ</p
+                            ><p class="code-text red"
+                                >DEBUG = 'DEV' in os.environ</p
                             ><p
                                 >This line of code will conditionally set the
                                 DEBUG variable, depending on the existence of a
-                                DEVELOPMENT variable in your env.py file.</p
+                                DEV variable in your env.py file.</p
                             >
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="section4">
-                <p>The condition we are setting here is:</p>
-                <p id="section4-condition">
-                    If a DEVELOPMENT variable exists in your
-                    <span class="code-text">env.py</span> file, DEBUG will be
-                    <strong>True</strong> for your local development environment
-                </p>
-            </div>
-            <div class="body">
+                <div id="section4">
+                    <p>The condition we are setting here is:</p>
+                    <p id="section4-condition">
+                        If a DEV variable exists in your
+                        <span class="code-text code-red">env.py</span> file, DEBUG will be
+                        <strong>True</strong> for your local development environment
+                    </p>
+                </div>
                 <div id="section5" class="section-padding">
                     <div class="point-header">
-                        <p>2. In <span class="code-text">env.py</span></p>
+                        <p>2. In <span class="code-text red">env.py</span></p>
                     </div>
                     <div class="point-body-alt">
                         <div class="point-body">
@@ -99,22 +97,16 @@
                                 alt="red arrow pointing right"
                             />
                             <div class="point-text">
-                                <p
-                                    >Create a variable named DEVELOPMENT and set its
-                                    value to 1</p
-                                ><p class="code-text"
-                                    >os.environ["DEVELOPMENT"] = "1"</p
-                                ><p
-                                    >DEBUG is now switched on correctly for your
-                                    local environment.</p
-                                >
+                                <p>Create a variable named DEV and set its value to 1</p>
+                                <p class="code-text red p-btm p-top">os.environ["DEV"] = "1"</p>
+                                <p>DEBUG is now switched on correctly for your local environment.</p>
                             </div>
                         </div>
-                            <img
-                                class="point-toggle"
-                                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/toggle-right-fill.svg"
-                                alt="red toggle button showing on setting"
-                            />
+                        <img
+                            class="point-toggle"
+                            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/toggle-right-fill.svg"
+                            alt="red toggle button showing on setting"
+                        />
                     </div>
                 </div>
                 <div id="section6" class="section-padding">
@@ -141,7 +133,7 @@
                 </div>
                 <div id="section7" class="section-padding">
                     <div class="point-header">
-                        <p>3. In your deployment’s environment variables</p>
+                        <p>3. In your deployment's environment variables</p>
                     </div>
                     <div class="point-body-alt">
                         <div class="point-body">
@@ -152,13 +144,13 @@
                             <div class="point-text">
                                 <p
                                     >While you are working on your project and
-                                    debugging you can add the DEVELOPMENT variable
+                                    debugging you can add the DEV variable
                                     into your environment variables</p
                                 ><p
-                                    >You can set the DEVELOPMENT variable
+                                    >You can set the DEV variable
                                     with:</p
-                                ><p class="code-text"
-                                    >DEVELOPMENT = "1"</p
+                                ><p class="code-text red p-top"
+                                    >DEV = "1"</p
                                 >
                             </div>
                         </div>
@@ -180,7 +172,7 @@
                         >
                         <span
                             >On submission there should be
-                            <span class="alert-text">no </span>DEVELOPMENT
+                            <span class="alert-text">no </span>DEV
                             variable in your deployment’s environment
                             variables</span
                         >
@@ -188,7 +180,7 @@
                 </div>
             </div>
             <div id="footer-icon">
-                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-light.png" alt="Code Institute logo - light version for dark backgrounds">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo - light version for dark backgrounds">
             </div>
         </section>
     </body>
