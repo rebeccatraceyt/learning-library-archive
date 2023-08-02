@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/css-positioning.css">
+    <title>CSS Positioning</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">CSS Positioning</h1>
+                <span>
+                    The CSS position property allows you to control the both the position of HTML content, and how that content affects the flow of surrounding content. Some values allow you to use the top, bottom, left, and right values to specify an offset from a default position.
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <h3 class="section-padding">There are five possible position values:</h3>
+            <div class="section-padding">
+                <h4 class="alt-text red">Static</h4>
+                <p>This is the default value. The element is not positioned in any special way - it just follows the flow of the page, and is not affected by top, bottom, left, or right values.</p>
+                <div class="section-padding pos-block">
+                    <div class="pos-container box-shadow">
+                        <div class="pos-item"><p>1</p></div>
+                        <div class="pos-item"><p>2</p></div>
+                        <div class="pos-item"><p>3</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h4 class="alt-text red">Relative</h4>
+                <p>The element is positioned where it would be with static positioning, but offset relative to itself by any values set for top, bottom, left or right. The space reserved for the element is the same as it would be with static positioning. Therefore, the offsets do not move other elements.</p>
+                <div class="section-padding pos-block">
+                    <div class="pos-container box-shadow">
+                        <div class="pos-item"><p>1</p></div>
+                        <div id="pos-relative" class="pos-item"><p>2</p></div>
+                        <div class="pos-item"><p>3</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h4 class="alt-text red">Absolute</h4>
+                <p>The element is taken out of the flow of the document and there is no space reserved for it. The element is positioned relative to its nearest ancestor. If there is no ancestor, it uses the document body. The element scrolls with the ancestor element.</p>
+                <div class="section-padding pos-block">
+                    <div class="pos-container box-shadow">
+                        <div class="pos-item"><p>1</p></div>
+                        <div id="pos-absolute" class="pos-item"><p>2</p></div>
+                        <div class="pos-item"><p>3</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h4 class="alt-text red">Fixed</h4>
+                <p>The element is taken out of the flow of the document and there is no space reserved for it. The element is positioned relative to the viewport, and will stay in the same place even if the page is scrolled.</p>
+                <div class="section-padding pos-block">
+                    <div class="pos-container box-shadow">
+                        <div id="pos-fixed-box">
+                            <div class="pos-item"><p>1</p></div>
+                            <div class="pos-item"><p>2</p></div>
+                            <div class="pos-item lg-only"><p>3</p></div>
+                        </div>
+                        <div id="pos-fixed-text">
+                            <p>Beneath the cerulean sky, a world awakens. Streets buzz with the hum of activity, a mosaic of lives intertwined. A bakery's aroma weaves tales of warmth, drawing in patrons with promises of flaky pastries. Artists sketch dreams onto canvases, while buses hum along, carrying stories through the veins of the city.</p>
+                            <p class="section-padding">Coffee shops echo with laughter, friendships forged over shared moments. The park becomes a stage, children's laughter the soundtrack of innocence. Neon signs flicker to life, casting a kaleidoscope onto the urban canvas. Bookstore shelves cradle tales both old and new, whispering of adventures yet to unfold.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding info-block">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/alert_icon_red.svg" alt="red alert icon in a circle"/>
+                    <p>Because a fixed element is positioned relative to the viewport (it always stays in the same place on the page) we can only simulate the fixed position in this example.</p>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h4 class="alt-text red">Sticky</h4>
+                <p>A sticky element will have either relative or fixed positioning depending on the user’s scroll position. If the element is moved to a defined offset position in the viewport, it sticks to that position (becomes fixed). Otherwise, it scrolls with the content (relative).</p>
+                <div class="section-padding pos-block">
+                    <div id="pos-overflow" class="pos-container box-shadow">
+                        <div id="pos-sticky-box">
+                            <div class="pos-item"><p>1</p></div>
+                            <div class="pos-item lg-only"><p>2</p></div>
+                            <div class="pos-item lg-only"><p>3</p></div>
+                        </div>
+                        <div>
+                            <p>Beneath the cerulean sky, a world awakens. Streets buzz with the hum of activity, a mosaic of lives intertwined. A bakery's aroma weaves tales of warmth, drawing in patrons with promises of flaky pastries. Artists sketch dreams onto canvases, while buses hum along, carrying stories through the veins of the city.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
