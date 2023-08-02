@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/bitesize/flexbox.css" />
+    <title>Flexbox - using order</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../../bitesize.html">Bitesize</a>
+      <a href="../../checklist.html">Checklists</a>
+      <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+      <div id="header">
+        <div id="header-text">
+          <h1 class="text-heading">Flexbox</h1>
+          <span class="alt-text red"> Using Flex-basis </span>
+        </div>
+        <hr id="header-hr" />
+      </div>
+      <div class="body">
+        <p>
+          <b class="code-text">Flex-basis</b> sets the initial size of an item.
+          An obvious question is “how does that differ from just setting a
+          normal width on the item?” In short, unlike normal widths, the width
+          set by <b class="code-text">flex-basis</b> will still remain
+          responsive across different screen sizes.
+        </p>
+        <p class="section-padding">
+          For example, if you set a fixed width of 200px on a normal element, it
+          will remain that size, even if the screen becomes too small to display
+          it without causing horizontal overflow. By using
+          <b class="code-text">flex-basis</b>, the element will remain 200px
+          until the screen gets too small to contain it – then it will shrink
+          down to fit the available space. Neat!
+        </p>
+        <p class="section-padding">
+          As always, we’ll set this property on one of our elements directly in
+          the HTML:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <span
+                >&lt;<span class="blue">div</span>
+                <span class="green">class</span>=<span class="pink"
+                  >”flex-container”</span
+                >&gt</span
+              >
+            </div>
+            <div class="code-indent3">
+              <span
+                >&lt;<span class="blue">div</span
+                ></span
+                >&gt1&lt;/<span class="blue">div</span>&gt</span
+              >
+              <br />
+              <span
+                >&lt;<span class="blue">div</span
+                ></span
+                >&gt2&lt;/<span class="blue">div</span>&gt</span
+              >
+              <br />
+              <span
+                >&lt;<span class="blue">div </span
+                ><span class="green">style</span>=<span class="pink"
+                  >"flex-basis: 200px;"</span
+                >&gt3&lt;/<span class="blue">div</span>&gt</span
+              >
+              <br />
+              <span
+                >&lt;<span class="blue">div</span
+                ></span
+                >&gt4&lt;/<span class="blue">div</span>&gt</span
+              >
+              <br />
+            </div>
+            <div class="code-margin">
+              <span>&lt;/<span class="blue">div</span>&gt</span> <br />
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+          Our output will then reflect this, with the third element being 200px wide:
+        </p>
+        <div class="flex-block flex-margin">
+          <div class="flex-container box-shadow">
+            <div class="flexbox-item">
+              <p>1</p>
+            </div>
+            <div class="flexbox-item">
+              <p>2</p>
+            </div>
+            <div style="flex-basis: 200px" class="flexbox-item">
+              <p>3</p>
+            </div>
+            <div class="flexbox-item">
+              <p>4</p>
+            </div>
+          </div>
+        </div>
+        <p class="section-margin">
+          Our flex container still has available space for items on larger screens. Remember, this element has been given a <b class="code-text">flex-basis</b> of 200px:
+        </p>
+        
+        <div id="end-container">
+          <img
+            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_yellow_left.svg"
+            alt="Yellow lightbulb leaning to the left"
+            id="end-icon"
+          />
+          <div>
+            You can experiment with the effect <b class="code-text">flex-basis</b> has on element 3, by making the screen size smaller.  You can test on a smaller device or use the browser inspector tools and see what happens!
+          </div>
+        </div>
+      </div>
+
+      <div id="footer-icon">
+        <img
+          src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+          alt="Code Institute logo"
+        />
+      </div>
+    </section>
+  </body>
+</html>
