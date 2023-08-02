@@ -360,4 +360,8 @@ body {
         font-size: 14px;
         overflow-x: hidden;
     }
+
+    .flex-shrink-lg {
+        width: 120px;
+    }
 }
