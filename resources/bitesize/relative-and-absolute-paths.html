@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/bitesize/html-paths.css" />
+    <title>HTML Paths: Relative & Absolute</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../../bitesize.html">Bitesize</a>
+      <a href="../../checklist.html">Checklists</a>
+      <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+      <div id="header">
+        <div id="header-text">
+          <h1 class="text-heading">HTML Paths</h1>
+          <span class="alt-text red"> Relative & Absolute paths </span>
+        </div>
+        <hr id="header-hr" />
+      </div>
+      <div class="body">
+        <p class="section-padding">
+          We often need to use paths when writing HTML code - either for loading
+          an external CSS or JS file, or when embedding an image using an img
+          element. You may write a filepath in one of two ways:
+          <span class="bold-text">Absolute</span> or
+          <span class="bold-text">Relative</span>.
+        </p>
+        <h2 class="sec-header">Absolute paths</h2>
+        <p class="section-padding">
+          An absolute path contains the full path to a file, starting from a
+          root directory. As an example, consider the following project
+          structure:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="file-structure-block">
+              <div class="code-indent">
+                <img
+                  src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/html_directory.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+          The absolute path to the CSS file would be:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <span class="blue">/mysite/assets/css/style.css</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+          The root directory in this case is mysite/.
+        </p>
+        <p class="section-padding">
+          To include the <b class="code-text">style.css</b> file in <b class="code-text">index.html</b> using an absolute path, we
+          could use the following code:
+        </p>
+
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <div>
+                <span
+                  >&lt;<span class="blue">link</span>
+                  <span class="green">rel</span>=<span class="pink"
+                    >”stylesheet”</span
+                  ><span class="green"> href</span>=<span class="pink"
+                    >”/assets/css/styles.css”</span
+                  ></span
+                  >&gt</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+          The ‘/’ at the start of the path indicates that the rest of the path
+          is relative to the root, which will making it an absolute path.
+        </p>
+        <h2 class="sec-header">Relative paths</h2>
+        <p class="section-padding">
+          Relative paths are relative to the current directory. If we refer to the project structure above, the relative path from <b class="code-text">mysite/</b> to <b class="code-text">style.css</b> is:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <span class="blue">./assets/css/style.css</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+          In our HTML file, this would be:
+
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <div>
+                <span
+                  >&lt;<span class="blue">link</span>
+                  <span class="green">rel</span>=<span class="pink"
+                    >”stylesheet”</span
+                  ><span class="green"> href</span>=<span class="pink"
+                    >”./assets/css/styles.css”</span
+                  ></span
+                  >&gt</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+          Note that we start the path with ./ This indicates that the path starts in the current directory. Omitting this would cause the CSS file not to load on certain servers.
+
+        </p>
+
+        
+      </div>
+
+      <div id="footer-icon">
+        <img
+          src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+          alt="Code Institute logo"
+        />
+      </div>
+    </section>
+  </body>
+</html>
