@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/bitesize/flexbox.css" />
+    <title>Flexbox - using order</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../../bitesize.html">Bitesize</a>
+      <a href="../../checklist.html">Checklists</a>
+      <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+      <div id="header">
+        <div id="header-text">
+          <h1 class="text-heading">Flexbox</h1>
+          <span class="alt-text red"> Using Align-Self </span>
+        </div>
+        <hr id="header-hr" />
+      </div>
+      <div class="body">
+        <p>
+          The <b class="code-text">align-self</b> property does almost exactly the same thing that the <b class="code-text">align-items</b> property does on flex containers. The difference is that <b class="code-text">align-items</b> will affect all of the flex items within the flex container, whereas <b class="code-text">align-self</b> can be used to set the alignment of specific flex items.
+        </p>
+        <p class="section-padding">
+          We won’t go in-depth with this property as we’ve covered most of the concepts on the <b class="code-text">align-items</b> card, but we will briefly set the value on the flex item(s) we want to align:
+        </p>
+        <p class="section-padding">
+          As always, we’ll set this property on one of our elements directly in
+          the HTML:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <span
+                >&lt;<span class="blue">div</span>
+                <span class="green">class</span>=<span class="pink"
+                  >”flex-container-fixed-height”</span
+                >&gt</span
+              >
+            </div>
+            <div class="code-indent3">
+              <span
+                >&lt;<span class="blue">div </span
+                ><span class="green">style</span>=<span class="pink"
+                >"align-self: flex-end;"</span
+              ></span
+                >&gt1&lt;/<span class="blue">div</span>&gt</span
+              >
+              <br />
+              <span
+                >&lt;<span class="blue">div</span
+                ></span
+                >&gt2&lt;/<span class="blue">div</span>&gt</span
+              >
+              <br />
+              <span
+                >&lt;<span class="blue">div </span
+                ><span class="green">style</span>=<span class="pink"
+                  >"align-self: center;"</span
+                >&gt3&lt;/<span class="blue">div</span>&gt</span
+              >
+              <br />
+              <span
+                >&lt;<span class="blue">div</span
+                ></span
+                >&gt4&lt;/<span class="blue">div</span>&gt</span
+              >
+              <br />
+            </div>
+            <div class="code-margin">
+              <span>&lt;/<span class="blue">div</span>&gt</span> <br />
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+          The output to that will be an item centrally aligned on the cross axis:
+        </p>
+        <div class="flex-block flex-margin">
+          <div class="flex-container-fixed-height box-shadow">
+            <div style="align-self: flex-end;" class="flexbox-item-align">
+              <p>1</p>
+            </div>
+            <div class="flexbox-item-align">
+              <p>2</p>
+            </div>
+            <div style="align-self: center;" class="flexbox-item-align-self">
+              <p>3</p>
+            </div>
+            <div class="flexbox-item-align">
+              <p>4</p>
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+          This property has most use when working with either a fixed size container, or items that have differing heights. 
+        </p>
+        <p class="section-padding">
+          For the purposes of this demo we have set the container min-height to 120px.  
+        </p>
+        
+        <div id="end-container">
+          <img
+            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_yellow_left.svg"
+            alt="Yellow lightbulb leaning to the left"
+            id="end-icon"
+          />
+          <div>
+            You can experiment with <b class="code-text">align-self</b> in the the browser inspector tools, editing the values given to the style in the HTML!
+          </div>
+        </div>
+      </div>
+
+      <div id="footer-icon">
+        <img
+          src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+          alt="Code Institute logo"
+        />
+      </div>
+    </section>
+  </body>
+</html>

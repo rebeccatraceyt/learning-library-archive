@@ -243,6 +243,16 @@ body {
     background-color: var(--action-blue);
 }
 
+.flex-container-fixed-height {
+    display: flex;
+    gap: 12px;
+    min-width: 100%;
+    min-height: 120px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--action-blue);
+}
+
 .flexbox-item {
     display: flex;
     color: var(--text-alt-blue);
@@ -267,6 +277,44 @@ body {
     height: 60px;
     justify-content: center;
     align-items: center;
+}
+
+.flexbox-item-align {
+    display: flex;
+    color: var(--text-alt-blue);
+    background-color: var(--text-alt-white);
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    width: 64px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox-item-align-self {
+    display: flex;
+    color: var(--text-alt-blue);
+    background-color: var(--text-alt-white);
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    width: 64px;
+    justify-content: center;
+    align-items: center;
+}
+
+#end-container {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+#end-icon {
+    max-width: 80%;
+    padding-right: 20px;
+    width: 40%;
 }
 
 #flex-direction-col {
