@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/global-variables.css">
+    <title>Global Variables</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Global Variables</h1>
+                <p class="alt-heading red section-padding">
+                    Are they really that bad?
+                </p>
+                <span>
+                    You'll have almost certainly heard by now that "global variables are a bad thing." The problem is that a lot of programmers will repeat that exact mantra without explaining why. The truth is that in the context of the projects you'll be building on this course, global variables are probably perfectly fine. 
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <div>
+                <h2>Global vs. Local variables</h2>
+                <p class="section-padding">
+                    Before we begin, it is important to distinguish the difference between global and local variables:
+                </p>
+                <h3 class="alt-heading red section-padding">
+                    Global
+                </h3>
+                <p>
+                    Variables that are accessible from any-where in your code
+                </p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">const</span> <span class="blue">globalVar</span> = <span class="green">5</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="alt-heading red section-padding">
+                    Local
+                </h3>
+                <p>
+                    Variables that are only accessible from within the function
+                </p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">function</span> <span class="blue">myFunction</span><span class="orange">() {</span>
+                            </span>
+                        </div>
+                        <div class="code-indent">
+                            <span>
+                                <span class="code-red">const</span> <span class="blue">localVar</span> = <span class="green">5</span>
+                            </span>
+                        </div>
+                        <div class="code-margin">
+                            <span><span class="orange">}</span>;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h2>A global example</h2>
+                <p class="section-padding">
+                    Consider this - if you create a variable at the very top of your JS file called <span class="code-text">timeZone</span> and set its value to <span class="code-text">"UTC"</span>, that's a global variable:
+                </p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">const</span> <span class="blue">timeZone</span> = <span class="green">"UTC"</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section-padding">
+                    This makes sense as a globally accessible value, because you can define it once, use it in lots of functions, and if you decide later on that you want to change the time zone, you just have to change one single variable.
+                </p>
+                <p class="section-padding">
+                    In fact, it is inevitable that you'll need to create variables that can be accessed from anywhere in your code. Larger scale settings that will need to be accessed across a range of functions. If you're coding a physics simulation, for example, there are certain things that will be needed throughout the codebase - the force gravity exerts on objects, for example.
+                </p>
+                <p class="section-padding">
+                    This is a fact of coding that's unavoidable. Almost all codebases will have a list of constant values stored somewhere which manage various pieces of behaviour across the application. Your Django projects have a <span class="code-text">settings.py</span> file, for example.
+                </p>
+            </div>
+            <div class="section-margin">
+                <h2>So, what’s the problem?</h2>
+                <p class="section-padding">
+                    The problem with global variables arises if you're using external libraries. Suppose you've got your variable called timeZone and you import an external library to help with something like Daylight Savings conversions. The problem is, this library might also have its own variable called timeZone.
+                </p>
+                <p class="section-padding">
+                    And because your timeZone variable is global, it will be accessible everywhere, including in that other library's codebase. Now you've got a problem - the two variables are going to clash and cause unexpected behaviour in your code. And that's why global variables are frowned upon. By their very nature, they're global - not just to your JS files, but any other JS file loaded by your HTML page. And for that reason they can clash with other variables.
+                </p>
+                <p class="section-padding">
+                    But this doesn't change the fact that we mentioned earlier. Pretty much every project will require certain variables to be widely accessible. There are multiple ways to achieve this without making them fully global. You can wrap all of your code in a function, <a href="https://stackoverflow.com/a/2613647" target="_blank" rel="noopener noreferrer" class="red">take this Stack Overflow thread</a> for example, which is a somewhat hacky alternative to giving it its own namespace.
+                </p>
+            </div>
+            <div class="section-margin">
+                <h2>How can we work with global variables?</h2>
+                <p class="section-padding">
+                    The simplest approach by far is just to recognise why global variables are considered to be "bad," and work around that. In the case of student projects, it likely won't be an issue as you'll be importing a limited number of (if any) external libraries.
+                </p>
+                <p class="section-padding">
+                    For example, you can pick variable names that you know won't clash, or even plan for this by prepending them with some sort of unique identifier:
+                </p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">const</span> <span class="blue">_MYPROJECT_GRAVITY</span> = <span class="green">-9.81</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section-padding">
+                    So there you go - global variables aren't inherently bad because they're bad coding practice - they're bad because they can pollute your global namespace.
+                </p>
+            </div>
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
