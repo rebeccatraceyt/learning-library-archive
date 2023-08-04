@@ -119,10 +119,90 @@
         </div>
         <p class="section-padding">
           Note that we start the path with ./ This indicates that the path starts in the current directory. Omitting this would cause the CSS file not to load on certain servers.
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div class="file-structure-block">
+              <div class="code-indent">
+                <img
+                  src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/directory_complex.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <p class="section-padding">
+          If we want to load our style.css file into contact.html, we can use the same absolute path as earlier. The absolute path has not changed:
 
         </p>
-
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <span class="blue">/mysite/assets/css/style.css</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+        We can import it using the same code as before:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <div>
+                <span
+                  >&lt;<span class="blue">link</span>
+                  <span class="green">rel</span>=<span class="pink"
+                    >”stylesheet”</span
+                  ><span class="green"> href</span>=<span class="pink"
+                    >”/assets/css/styles.css”</span
+                  ></span
+                  >&gt</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+        However, the relative path is different, as the path is now relative to a different directory (contact, in this case). 
+        </p>
+        <p class="section-padding">
+        The relative path from contact/ to style.css is:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <span class="blue">../assets/css/style.css</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-padding">
+          Note that we now start with two full stops: ../ 
+        </p>
         
+        <p class="section-padding">
+          This indicates that we should go up one level in our directory structure. In this case, this will move us up to the mysite/ directory.  From there, we can traverse back down into assets, then css, then <b class="code-text">style.css</b>.
+        </p>
+        <p class="section-padding">
+          We can also use this syntax in our HTML file:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <div>
+              <div>
+                <span
+                  >&lt;<span class="blue">link</span>
+                  <span class="green">rel</span>=<span class="pink"
+                    >”stylesheet”</span
+                  ><span class="green"> href</span>=<span class="pink"
+                    >”../assets/css/styles.css”</span
+                  ></span
+                  >&gt</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="footer-icon">
