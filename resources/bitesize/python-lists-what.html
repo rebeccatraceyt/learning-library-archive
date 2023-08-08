@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/bitesize/python-lists.css" />
+    <title>Python List Comprehension</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../../bitesize.html">Bitesize</a>
+      <a href="../../checklist.html">Checklists</a>
+      <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+      <div id="header">
+        <div id="header-text">
+          <h1 class="text-heading">Python List Comprehension</h1>
+          <span class="alt-text red">What is it? </span>
+          <p class="section-padding">
+            List comprehension is a Pythonic method of creating lists. List
+            comprehensions allow us to efficiently create lists in fewer lines
+            of code than other methods. A major benefit of list comprehension is
+            that it can be used to create and filter lists in just a single line
+            of code.
+          </p>
+          <p class="section-padding">
+            Now we know what the concept is, how do we go about using it? Let’s
+            dive in and take a look!
+          </p>
+          <hr id="header-hr" />
+        </div>
+      </div>
+      <div class="body">
+        <p class="section-padding">
+          Let’s suppose we have a list of names, and for whatever reason, we
+          want to copy the names to a new list. A naive solution to this problem
+          would would be to use a standard <b class="code-text">‘for’</b> loop
+          which runs through the list of names and appends them to a new list:
+        </p>
+
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <span
+              ><span class="blue">names </span>=
+              <span class="pink">['Barry, 'Anika', 'Zuri', 'Tomas']</span></span
+            >
+            <br />
+            <span
+              ><span class="blue">new_names_list</span> =
+              <span class="pink">[]</span></span
+            >
+            <br />
+            <br />
+            <span
+              ><span class="orange">for </span><span class="blue">name </span
+              ><span class="orange">in </span
+              ><span class="blue"> names</span>:</span
+            >
+            <div class="code-indent4">
+              <span
+                ><span class="blue">new_names_list</span>.<span class="orange"
+                  >append(</span
+                ><span class="blue">name</span
+                ><span class="orange">)</span></span
+              >
+            </div>
+            <br />
+            <span
+              ><span class="orange">print(</span
+              ><span class="blue">new_names_list</span
+              ><span class="orange">)</span></span
+            >
+          </div>
+        </div>
+        <p class="section-padding">This will result in the below output:</p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <span
+              ><span class="pink"
+                >['Barry, 'Anika', 'Zuri', 'Tomas']</span
+              ></span
+            >
+          </div>
+        </div>
+
+        <p class="section-padding">
+          The output is correct, so you may be wondering what’s wrong with the
+          above code? Well, there’s nothing technically wrong with it. It does
+          the job just fine.
+        </p>
+        <p class="section-padding">
+          However, it doesn’t leverage all of the language features Python makes
+          available to us. Python emphasises less-cluttered syntax, which allows
+          us to do more with less code, while maintaining readability. This
+          style of coding is referred as Pythonic, and Pythonic code is
+          sometimes described as being “beautiful.”
+        </p>
+        <p class="section-padding">
+          So, let’s put that claim to the test! Take a look at the following
+          code, which achieves the same result as our first example:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <span
+              ><span class="blue">names </span>=
+              <span class="pink">['Barry, 'Anika', 'Zuri', 'Tomas']</span></span
+            >
+            <br />
+            <br />
+            <span
+              ><span class="blue">new_names_list</span> =
+              <span class="pink">[</span><span class="blue">name </span
+              ><span class="orange">for </span><span class="blue">name </span
+              ><span class="orange">in </span><span class="blue">names</span
+              ><span class="pink">]</span></span
+            >
+            <br />
+            <br />
+            <span
+              ><span class="orange">print(</span
+              ><span class="blue">new_names_list</span
+              ><span class="orange">)</span></span
+            >
+          </div>
+        </div>
+        <p class="section-padding">Our result is the exact same:</p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <span
+              ><span class="pink"
+                >['Barry, 'Anika', 'Zuri', 'Tomas']</span
+              ></span
+            >
+          </div>
+        </div>
+
+        <p class="section-padding">
+          We’ve managed to take the previous for-loop approach and turn it into
+          a single line of code, which does the exact same thing. Beautiful, no?
+        </p>
+        <p class="section-padding">
+          The structure of a list comprehension looks like this:
+        </p>
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+            <span
+              ><span class="pink">[</span><span class="blue">expression </span
+              ><span class="orange">for </span><span class="blue">member </span
+              ><span class="orange">in </span><span class="blue">iterable</span
+              ><span class="pink">]</span></span
+            >
+            <br />
+          </div>
+        </div>
+        <p class="section-padding">
+          When starting out, it is generally easier to read the expressions
+          within a list comprehension from right to left. In the above, let’s
+          start with: 
+          <br>
+          <b class="code-text">for member in iterable</b> (this maps to
+          <b class="code-text">for name in names</b> in our concrete example
+          above).
+          <br>
+          This is a simple for loop, and tells Python to loop through
+          the members in our list.
+        </p>
+        <p class="section-padding">
+          The <b class="code-text">expression</b> (the first instance of
+          <b class="code-text">name</b> in the concrete example), is what will
+          be put into our new list. By saying
+          <b class="code-text">name for name</b>, we are telling Python that we
+          want the names copied exactly as they are.
+        </p>
+        <p class="section-padding">
+          In other words, the code
+          <b class="code-text">[name for name in names]</b> tells Python to loop
+          through the names list, and create a new list out of each name within
+          it.
+        </p>
+        <p class="section-padding">
+          This can be a bit confusing to get your head around at first, but as
+          we look at more examples in the next few cards, it will become
+          clearer.
+        </p>
+      </div>
+
+      <div id="footer-icon">
+        <img
+          src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+          alt="Code Institute logo"
+        />
+      </div>
+    </section>
+  </body>
+</html>
