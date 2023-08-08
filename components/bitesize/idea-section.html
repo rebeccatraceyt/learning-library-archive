@@ -1,0 +1,40 @@
+<style>
+    /* Idea point reset */
+    .idea-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        flex-direction: column;
+    }
+    .idea-img {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+    .idea-text {
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    /* media query styling */
+    @media only screen and (min-width: 600px) {
+        .idea-img {
+            align-items: flex-end;
+        }
+        .idea-img > img {
+            width: 20%;
+        }
+    }
+</style>
+
+<div class="section-margin idea-section">
+    <div class="idea-img">
+        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_yellow_left.svg" alt="Yellow lightbulb icon tilted left">
+        <p class="alt-heading red">Debugging Tip!</p>
+    </div>
+    <div class="idea-text">
+        <span>Add your idea/tip/note here</span> 
+    </div>
+</div>
