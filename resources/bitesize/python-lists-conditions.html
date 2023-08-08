@@ -17,17 +17,21 @@
       <div id="header">
         <div id="header-text">
           <h1 class="text-heading">Python List Comprehension</h1>
-          <span class="alt-text red">What is it? </span>
+          <span class="alt-text red">Conditions in comprehensions </span>
           <p class="section-padding">
-            List comprehension is a Pythonic method of creating lists. List comprehensions allow us to efficiently create lists in fewer lines of code than other methods. A major benefit of list comprehension is that it can be used to create and filter lists in just a single line of code.
-          </p>
-          <p class="section-padding">
-            Now we know what the concept is, how do we go about using it? Let’s dive in and take a look!
+            We’ve seen the power of expressions in list comprehensions, but we can also use conditionals. For example, if we want result to only contain elements which meet a certain criterion, we can specify this in our comprehension. Let’s see this in action!
           </p>
           <hr id="header-hr" />
         </div>
       </div>
       <div class="body">
+        <p class="section-padding">
+          Let’s have a look at the <b class="code-text">‘names’</b> list from our first example. This time around, rather than just copying all the names to a new list, we only want to copy the ones that don’t start with the letter <b class="code-text">‘T.’</b>
+        </p>
+        <p class="section-padding">
+          Here’s an approach using a basic <b class="code-text">‘for’</b> loop:
+
+        </p>
         <div class="code-block">
           <div class="code-text code-container box-shadow">
               <span><span class="blue">names </span>= <span class="pink">['Barry, 'Anika', 'Zuri', 'Tomas']</span
@@ -64,7 +68,7 @@
           </div>
         </div>
         <p class="section-padding">
-          All we’re doing is running through the list of names, checking if the first letter is ‘T’ and, if it isn’t, adding it to the new names list. As expected, we get the same list of names, just without Tomas (sorry, Tomas).
+          All we’re doing is running through the list of names, checking if the first letter is <b class="code-text">‘T’</b> and, if it isn’t, adding it to the new names list. As expected, we get the same list of names, just without Tomas (sorry, Tomas).
         </p>
         <div class="code-block">
           <div class="code-text code-container box-shadow">
@@ -121,143 +125,49 @@
 
         <div class="code-block">
           <div class="code-text code-container box-shadow">
-              <span><span class="blue">numbers </span>= <span class="pink">['1, '22', '5', '65', '23', '42', 8]</span
+              <span><span class="blue">numbers </span>= <span class="pink">[1, 22, 5, 65, 23, 42, 8]</span
                   ></span>
                   <br>
                   <br>
-                  <span><span class="blue">new_names_list</span> = <span class="pink"
+                  <span><span class="blue">new_nums_list</span> = <span class="pink"
                     >[</span
                   >
                   <span class="blue">i </span><span class="orange">if </span><span class="blue">i </span
-                    ><span class="orange">in </span><span class="blue">names </span
-                      ><span class="orange">if </span><span class="blue">name</span
-                          ><span class="pink">[</span><span class="orange">0</span
-                            ><span class="pink">] </span>!= <span class="pink">'T'</span><span class="pink">]</span></span>
+                    >&gt<span class="pink"> 10 </span><span class="blue">else </span
+                      ><span class="pink">0 </span><span class="orange">for </span
+                          ><span class="blue">i </span><span class="orange">in </span
+                            ><span class="blue">numbers </span><span class="pink">] </span></span>
+                            <br>
+                            <br>
+                            <span><span class="orange"
+                              >print(</span
+                            ><span class="blue">new_nums_list</span><span class="orange"
+                            >)</span>
 
           </div>
         </div>
         <p class="section-padding">
-          The ‘/’ at the start of the path indicates that the rest of the path
-          is relative to the root, which will making it an absolute path.
-        </p>
-        <h2 class="sec-header">Relative paths</h2>
-        <p class="section-padding">
-          Relative paths are relative to the current directory. If we refer to the project structure above, the relative path from <b class="code-text">mysite/</b> to <b class="code-text">style.css</b> is:
-        </p>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-            <div>
-              <span class="blue">./assets/css/style.css</span>
-            </div>
-          </div>
-        </div>
-        <p class="section-padding">
-          In our HTML file, this would be:
+          Here, we are looking to run through the list of numbers and, if the number is greater than 10, append it to the new nums list. However, if the number isn’t greater than 10, we want to change the number to 0 instead, then append the 0 to the list. Let’s see the output for a better idea of what that looks like:
 
         </p>
         <div class="code-block">
           <div class="code-text code-container box-shadow">
-            <div>
-              <div>
-                <span
-                  >&lt;<span class="blue">link</span>
-                  <span class="green">rel</span>=<span class="pink"
-                    >”stylesheet”</span
-                  ><span class="green"> href</span>=<span class="pink"
-                    >”./assets/css/styles.css”</span
-                  ></span
-                  >&gt</span
-                >
-              </div>
-            </div>
+            <span><span class="pink">[0, 22, 0, 65, 23, 42, 0]</span
+              ></span>
           </div>
         </div>
         <p class="section-padding">
-          Note that we start the path with ./ This indicates that the path starts in the current directory. Omitting this would cause the CSS file not to load on certain servers.
-        </p>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-            <div class="file-structure-block">
-              <div class="code-indent">
-                <img
-                  src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/directory_complex.svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <p class="section-padding">
-          If we want to load our style.css file into contact.html, we can use the same absolute path as earlier. The absolute path has not changed:
+          As we can see, the 1, 5 and 8 from the original list have been changed to 0 in the new list because they were less than 10, as the <b class="code-text">‘if’</b> statement specified.
+
 
         </p>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-            <div>
-              <span class="blue">/mysite/assets/css/style.css</span>
-            </div>
-          </div>
-        </div>
         <p class="section-padding">
-        We can import it using the same code as before:
-        </p>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-            <div>
-              <div>
-                <span
-                  >&lt;<span class="blue">link</span>
-                  <span class="green">rel</span>=<span class="pink"
-                    >”stylesheet”</span
-                  ><span class="green"> href</span>=<span class="pink"
-                    >”/assets/css/styles.css”</span
-                  ></span
-                  >&gt</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="section-padding">
-        However, the relative path is different, as the path is now relative to a different directory (contact, in this case). 
-        </p>
-        <p class="section-padding">
-        The relative path from contact/ to style.css is:
-        </p>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-            <div>
-              <span class="blue">../assets/css/style.css</span>
-            </div>
-          </div>
-        </div>
-        <p class="section-padding">
-          Note that we now start with two full stops: ../ 
+          To summarise: if you’re just checking values, the conditional check goes at the end of your list comprehension; if you are looking to change values based on the conditional, it goes after the expression.
+
+
         </p>
         
-        <p class="section-padding">
-          This indicates that we should go up one level in our directory structure. In this case, this will move us up to the mysite/ directory.  From there, we can traverse back down into assets, then css, then <b class="code-text">style.css</b>.
-        </p>
-        <p class="section-padding">
-          We can also use this syntax in our HTML file:
-        </p>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-            <div>
-              <div>
-                <span
-                  >&lt;<span class="blue">link</span>
-                  <span class="green">rel</span>=<span class="pink"
-                    >”stylesheet”</span
-                  ><span class="green"> href</span>=<span class="pink"
-                    >”../assets/css/styles.css”</span
-                  ></span
-                  >&gt</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       <div id="footer-icon">
