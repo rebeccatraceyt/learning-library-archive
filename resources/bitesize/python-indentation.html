@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/python-indentation.css">
+    <title>Python Indentation</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Python Indentation</h1>
+                <span>
+                    Unlike JavaScript, Python doesn't use brackets to specify where blocks of code (e.g. function bodies, conditional blocks, and loops) begin and end. It uses indentation (using four spaces, to comply with PEP 8).
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <h2 class="section-padding">Let’s have a look at some examples:</h2>
+            <div class="section-margin">
+                <h4 class="alt-heading red">Function blocks:</h4>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                1 <span class="blue">def</span> <span class="code-red">my_function</span><span class="green">():</span>
+                            </span>
+                            <br>
+                            <span>
+                                2 <span class="code-indent">
+                                    <span class="blue">num</span> = <span class="orange">2</span>
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                3 <span class="code-indent">
+                                    <span class="blue">str</span> = f<span class="orange">"number is equal to</span>{<span class="blue">num</span>}<span class="orange">"</span>
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                4 <span class="code-indent">
+                                    <span class="code-red">return</span> <span class="blue">str</span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bullet-point section-padding">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                    <span>The colon at the end of line 1 indicates the start of an indented block</span>
+                </div>
+                <div class="bullet-point section-padding">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                    <span>Lines 2 and 3 are part of the function as they have 4 spaces before them (i.e. they are indented)</span>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h4 class="alt-heading red">If statements:</h4>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                1 <span class="blue">if</span> num &lt; <span class="orange">10</span>:
+                            </span>
+                            <br>
+                            <span>
+                                2 <span class="code-indent">
+                                    <span class="code-red">print</span>(<span class="green">"number is less than 10"</span>)
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                3 <span class="blue">elif</span> num &gt; <span class="orange">10</span>:
+                            </span>
+                            <br>
+                            <span>
+                                4 <span class="code-indent">
+                                    <span class="code-red">print</span>(<span class="green">"number is greater than 10"</span>)
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                5 <span class="blue">else</span>:
+                            </span>
+                            <br>
+                            <span>
+                                6 <span class="code-indent">
+                                    <span class="code-red">print</span>(<span class="green">"number is equal to 10"</span>)
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                7 <span class="code-red">print</span>(<span class="green">"this line is not indented!"</span>)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bullet-point section-padding">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                    <span>The code on line 2 is indented, so it is part of the if block (line 1)</span>
+                </div>
+                <div class="bullet-point section-padding">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                    <span>The same applies to the elif and else blocks</span>
+                </div>
+                <div class="bullet-point section-padding">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                    <span>Line 7 is not indented, so it is not part of the else block</span>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text">Here’s an example of incorrectly indented if statement:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    1 <span class="blue">if</span> num &lt; <span class="orange">10</span>:
+                                </span>
+                                <br>
+                                <span>
+                                    2 <span class="code-indent">
+                                        <span class="pink">print</span>(<span class="green">"number is less than 10"</span>)
+                                    </span>
+                                </span>
+                                <br>
+                                <span>
+                                    3 <span class="code-indent">
+                                        <span class="blue curly-underline">elif</span> num &gt; <span class="orange">10</span>:
+                                    </span> 
+                                </span>
+                                <br>
+                                <span>
+                                    4 <span class="code-indent">
+                                        <span class="pink">print</span>(<span class="green">"number is greater than 10"</span>)
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bullet-point section-padding">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                        <span>The elif should not be indented here. It needs to be vertically aligned with the if statement on line 1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h4 class="alt-heading red">Nested Statements:</h4>
+                <p class="section-padding">For nested statements you indent by another 4 spaces:</p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                1 <span class="blue">if</span> num &lt; <span class="orange">10</span>:
+                            </span>
+                            <br>
+                            <span>
+                                2 <span class="code-indent">
+                                    <span class="code-red">print</span>(<span class="green">"number is less than 10"</span>)
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                3 <span class="code-indent">
+                                    <span class="blue">if</span> num &gt; <span class="orange">5</span>:
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                4 <span class="code-indent2">
+                                    <span class="code-red">print</span>(<span class="green">"number is greater than 5"</span>)
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                5 <span class="code-indent2">
+                                    <span class="blue">if</span> num == <span class="orange">6</span>:
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                6 <span class="code-indent3">
+                                    <span class="code-red">print</span>(<span class="green">"number is equal to 6"</span>)
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                7 <span class="code-indent2">
+                                    <span class="blue">elif</span> num == <span class="orange">7</span>:
+                                </span>
+                            </span>
+                            <br>
+                            <span>
+                                7 <span class="code-indent3">
+                                    <span class="code-red">print</span>(<span class="green">"number is equal to 7"</span>)
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bullet-point section-padding">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                    <span>Each time you nest a statement, you indent the nested code block.</span>
+                </div>
+            </div>
+            <div class="section-margin idea-section">
+                <div class="idea-img">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_yellow_left.svg" alt="Yellow lightbulb icon tilted left">
+                    <p class="alt-heading red">Debugging Tip!</p>
+                </div>
+                <div class="idea-text">
+                    <span>If your code is not working as expected, a good debugging tip is to use a Python validator to ensure there are no indentation errors.</span> 
+                    <span>You can use the <a href="https://pep8ci.herokuapp.com/" target="_blank" rel="noopener noreferrer" class="red">Code Institute Python Validator</a> to do this!</span>
+                </div>
+            </div>
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
