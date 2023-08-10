@@ -261,7 +261,7 @@ body {
     border-radius: 50%;
     width: 34px;
     height: 34px;
-    border: 3px solid var(--action-red-100);
+    border: 2px solid var(--action-red-100);
     font-weight: 900;
 }
 .circle {
@@ -269,7 +269,6 @@ body {
     padding: 4px 8px;
 }
 .circle-light {
-    color: var(--action-red-100);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -341,7 +340,7 @@ body {
 
     .circle-light {
         padding: 12px 24px;
-        font-size: 40px;
+        font-size: 36px;
         width: 48px;
         height: 52px;
     }
