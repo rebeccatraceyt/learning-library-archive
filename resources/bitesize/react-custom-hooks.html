@@ -44,11 +44,12 @@
       <p class="section-padding">
         Our files will be called:
       </p>
-      
+      <div class="section-padding">
       <div class="code-block">
         <div class="code-text code-container box-shadow">
           <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_directory.svg" alt="React directory">
         </div>
+      </div>
       </div>
       <div class="section-padding">
       <h3>The useDocumentTitle hook</h3>
@@ -63,21 +64,24 @@
           <span>First, we import any react hooks that we need, and export our custom hook for use. The <b class="code-text">useEffect</b> hook replaces React's lifecycle methods for <b class="code-text">componentWillMount</b> and <b class="code-text">componentWillUnmount</b>.
           </span>
         </div>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_1.svg" alt="React code block step 1">
+        <div class="section-padding">
+          <div class="code-block">
+            <div class="code-text code-container box-shadow">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_1.svg" alt="React code block step 1">
+            </div>
           </div>
         </div>
         
-
         <div class="section-padding circle-points">
           <span class="circle-light">2</span>
           <span>Next, we retrieve the original document title and store it. This will allow us to revert back to it when our component unmounts. We need to do this outside of the hook in the main scope.
           </span>
         </div>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_2.svg" alt="React code block step 2">
+        <div class="section-padding">
+          <div class="code-block">
+            <div class="code-text code-container box-shadow">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_2.svg" alt="React code block step 2">
+            </div>
           </div>
         </div>
         <div class="section-padding circle-points">
@@ -85,9 +89,11 @@
           <span>We can then add the <b class="code-text">useEffect</b> function and its clean-up return function, which gets called when the component unmounts.
           </span>
         </div>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_3.svg" alt="React code block step 3">
+        <div class="section-padding">
+          <div class="code-block">
+            <div class="code-text code-container box-shadow">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_3.svg" alt="React code block step 3">
+            </div>
           </div>
         </div>
         <div class="section-padding circle-points">
@@ -95,9 +101,11 @@
           <span>The hook will accept the new document title a parameter. We will update the page title in the <b class="code-text">useEffect</b> method when the component is about to mount.
           </span>
         </div>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_4.svg" alt="React code block step 4">
+        <div class="section-padding">
+          <div class="code-block">
+            <div class="code-text code-container box-shadow">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_4.svg" alt="React code block step 4">
+            </div>
           </div>
         </div>
         <div class="section-padding circle-points">
@@ -105,9 +113,11 @@
           <span>In our clean-up return function, we will set the document title back to the original. This will be called when the component is about to unmount. We only want the <b class="code-text">useEffect</b> hook to run when the title is changed, so we must add the “title” variable to our <b class="code-text">useEffect</b> dependency array.
           </span>
         </div>
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_5.svg" alt="React code block step 5">
+        <div class="section-padding">
+          <div class="code-block">
+            <div class="code-text code-container box-shadow">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_5.svg" alt="React code block step 5">
+            </div>
           </div>
         </div>
    
@@ -116,12 +126,116 @@
         <span>To use our new hook, we simply need to import it into the component we want to use it in, and pass in the a new name for our document title.
         </span>
       </div>
+      <div class="section-padding">
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_6.svg" alt="React code block step 6">
+          </div>
+        </div>
+      </div>
+
+    <div class="section-padding">
+      <div class="section-margin">
+      <hr id="divider-hr" />
+    </div>
+      <h3>The useOnlineStatus hook</h3>
+    
+      <p class="section-padding">
+        This custom hook will return a boolean value indicating whether the current user is online or offline. This could be used to hide a component if the user is not connected to the internet.
+
+      </p>
+      </div>
+      <div class="section-padding circle-points">
+        <span class="circle-light">1</span>
+        <span>Again, we will start by importing any react hooks we need and exporting our custom  hook. We need to import <b class="code-text">useState</b> and <b class="code-text">useEffect</b> for this custom hook.
+        </span>
+      </div>
+      <div class="section-padding">
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_online_step_1.svg" alt="React code block step 1">
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="section-padding circle-points">
+        <span class="circle-light">2</span>
+        <span>We will now add two things: our <b class="code-text">useState</b> hook (which contains a variable with a default value of null), and a setter function, which will be used to set the value of the state. This state will hold a boolean value, used to indicate the user's <b class="code-text">onlineStatus</b>. The hook’s return statement will return that boolean value.
+        </span>
+      </div>
+      <div class="section-padding">
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_online_step_2.svg" alt="React code block step 2">
+          </div>
+        </div>
+      </div>
+      <div class="section-padding circle-points">
+        <span class="circle-light">3</span>
+        <span>Next, we add a <b class="code-text">useEffect</b> hook which will run just before the component mounts and set the initial state, based on whether the user is online or offline.
+        </span>
+      </div>
+      <div class="section-padding">
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_online_step_3.svg" alt="React code block step 3">
+          </div>
+        </div>
+      </div>
+      <div class="section-padding circle-points">
+        <span class="circle-light">4</span>
+        <span>We will add a second  hook to handle this. In it, we will add 2 event listeners, one to listen for the user being online, and another to listen for the user going offline. When either of these event listeners fire, update the <b class="code-text">onlineStatus</b> state. When the state changes, it will update the component that the hook is being used in.
+          <br>
+          <br>
+          We now have a problem - what if the user’s online status changes while the component is still mounted? </span>
+
+        </span>
+      </div>
+      <div class="section-padding">
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_online_step_4.svg" alt="React code block step 4">
+          </div>
+        </div>
+      </div>
+      <div class="section-padding circle-points">
+        <span class="circle-light">5</span>
+        <span>We need to remove any event listeners before the component unmounts. As before, we do this in the <b class="code-text">useEffect</b> clean-up return function.
+        </span>
+      </div>
+      <div class="section-padding">
+        <div class="code-block">
+          <div class="code-text code-container box-shadow">
+              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_online_step_5.svg" alt="React code block step 5">
+          </div>
+        </div>
+      </div>
+ 
+    <div class="section-padding circle-points">
+      <span class="circle-light">6</span>
+      <span>Our custom hook is now ready to be used. We can import the hook and assign it to a variable in our component, which will hold a boolean value. We can decide whether we show our component based on that boolean value.
+      </span>
+    </div>
+
+    <div class="section-padding">
       <div class="code-block">
         <div class="code-text code-container box-shadow">
-            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_step_6.svg" alt="React code block step 6">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_hooks_online_step_6.svg" alt="React code block step 6">
         </div>
       </div>
     </div>
+    <div class="section-margin idea-section">
+      <div class="idea-img">
+        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_yellow_left.svg" alt="Yellow lightbulb icon tilted left">
+          
+      </div>
+      <div class="idea-text">
+          <span>To test it out, try setting yourself offline and back online, and watch the component hide and show based on your network status!</span> 
+      </div>
+  </div>
+    
+  </div>
 
       <div id="footer-icon">
         <img
