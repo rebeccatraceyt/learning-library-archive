@@ -155,6 +155,39 @@ body {
     height: 24px;
 }
 
+ /* Idea point reset */
+ .idea-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.idea-img {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.idea-text {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    text-align: justify;
+}
+
+#divider-hr {
+    max-width: 688px;
+    height: 0px;
+
+    border: 2px solid rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 4px 8px var(--box-shadow);
+}
+
+/* media query styling */
+@media only screen and (min-width: 600px) {
+    .idea-img {
+        align-items: flex-end;
+    }
+}
+
 /* footer styling */
 #footer-icon {
     display: flex;
@@ -198,6 +231,8 @@ body {
 }
 
 .code-container {
+    display: flex;
+    justify-content: center;
     min-width: 100%;
     padding: 24px;
     border-radius: 12px;
@@ -251,7 +286,7 @@ body {
     display: none;
 }
 
-/* number points styling */
+/* number points styling - React & Python versions */
 .circle-points {
     display: flex;
     align-items: flex-start; 
@@ -266,14 +301,12 @@ body {
 }
 .circle {
     color: var(--text-alt-white);
-    padding: 4px 8px;
+    
 }
 .circle-light {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4px 12px;
-    font-size: 20px;
 }
 .point-container {
     display: flex;
@@ -295,6 +328,10 @@ body {
 }
 .ex-img > img {
     max-width: 100%;
+}
+
+.code-container > img {
+    padding: 2%;
 }
 
 
@@ -331,6 +368,8 @@ body {
     }
 
     .code-container {
+        display: flex;
+        justify-content: center;
         font-size: 14px;
     }
 
