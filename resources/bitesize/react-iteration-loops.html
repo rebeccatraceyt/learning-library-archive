@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/react-iteration-loops.css">
+    <title>React Iteration (loops)</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">React Iteration</h1>
+                <span class="alt-heading red">
+                    (loops)
+                </span>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <div>
+                <h2>Maps</h2>
+                <p class="section-padding">
+                    When using React, JavaScript’s <span class="code-text">Array.prototype.map</span> is the most common type of loop you will encounter, and is the one you will use 99% of the time. It is generally used to iterate over the indices of an array and return a new array of JSX, one for each index. Let's inspect how “<span class="code-text">map</span>” actually works in React before going any further:
+                </p>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">Map will take an existing array, and loop over each index</p>
+                    <p >The map function itself takes a callback function as an argument</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">const</span> <span class="blue">myArray</span> = [<span class="green">'Seán'</span>, <span class="green">'John'</span>, <span class="green">'Rebecca'</span>, <span class="green">'Ger'</span>];
+                                </span>
+                                <br>
+                                <span>
+                                    <span class="code-red">const</span> <span class="blue">newArray</span> = <span class="blue">myArray</span>.<span class="orange">map(</span>() => {}<span class="orange">)</span>; <span class="grey">// loops over each index</span>
+                                </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">Map takes 3 parameters which are implicitly passed to the callback function:</p>
+                    <p >All three parameters are optional, but usually at least the first is needed.</p>
+                    <div class="section-padding circle-points-container">
+                        <div class="circle-points">
+                            <span class="circle-light">1</span>
+                            <span>
+                                The element at the current index in the loop.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">2</span>
+                            <span>
+                                The current index in the loop (an integer).
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">3</span>
+                            <span>
+                                The entire array that the map function is looping over.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">const</span> <span class="blue">myArray</span> = [<span class="green">'Seán'</span>, <span class="green">'John'</span>, <span class="green">'Rebecca'</span>, <span class="green">'Ger'</span>,];
+                                </span>
+                                <br>
+                                <span>
+                                    <span class="code-red">const</span> <span class="blue">newArray</span> = <span class="blue">myArray</span>.<span class="orange">map(</span>(<span class="blue">element</span>, <span class="blue">index</span>, <span class="blue">array</span>) => {}<span class="orange">)</span>;
+                                </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">Map requires a return value for each iteration</p>
+                    <p>In this case, we will return a paragraph for each index. When complete, a new array of JSX will be stored in the newArray variable.</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">const</span> <span class="blue">newArray</span> = <span class="blue">myArray</span>.<span class="orange">map(</span>(<span class="blue">element</span>, <span class="blue">index</span>) => {
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span>
+                                    <span class="code-red">return</span> &lt;p <span class="blue">key</span>={<span class="green">`names-${index}`</span>}&gt; <span class="green">{</span>element<span class="green">}</span> is at index <span class="green">{</span>index<span class="green">}</span> &lt;/p&gt;
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    }<span class="orange">)</span>;
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h2>The <span class="code-text">key</span> Prop</h2>
+                <p class="section-padding"> 
+                    You will notice the “<span class="code-text">key</span>” property on the &lt;p&gt; element in the above example. A unique key is required for the outermost JSX element. 
+                </p>
+                <p class="section-padding">
+                    React uses the key prop to create a relationship between the component and the DOM element. It uses this relationship to determine whether or not the component should be re-rendered.
+                </p>
+                <p class="section-padding">
+                    In this example, we will give it a custom name and an index number. Assigning only the index number is not enough in most cases, as you may have other DOM elements with duplicate keys. If this happens, React will not know which component to re-render.
+                </p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                &lt;p <span class="blue">key</span>={<span class="green">`names-${index}`</span>}&gt;
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h2>Adding the array to the JSX</h2>
+                <p class="section-padding"> 
+                    You can add an array of JSX to a React component in a few different ways:
+                </p>
+                <div class="section-margin">
+                    <p class="bold-text lrg-text section-padding">As a variable:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">const</span> <span class="blue">newArray</span> = <span class="blue">myArray</span>.<span class="orange">map(</span>(<span class="blue">element</span>, <span class="blue">index</span>) => {
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span>
+                                    <span class="code-red">return</span> &lt;p <span class="blue">key</span>={<span class="green">`names-${index}`</span>}&gt; <span class="green">{</span>element<span class="green">}</span> is at index <span class="green">{</span>index<span class="green">}</span> &lt;/p&gt;
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    }<span class="orange">)</span>;
+                                </span>
+                            </div>
+                            <br>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">return</span> (
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent2">
+                                { <span class="blue">newArray</span> }
+                            </div>
+                            <div class="code-indent">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    );
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-margin">
+                    <p class="bold-text lrg-text section-padding">Directly in the JSX:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">return</span> (
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent2">{</div>
+                            <div class="code-indent3">
+                                <span class="blue">myArray</span>.<span class="orange">map(</span>(<span class="blue">element</span>, <span class="blue">index</span>) => {
+                            </div>
+                            <div class="code-indent4">
+                                <span class="code-red">return</span> &lt;p <span class="blue">key</span>={<span class="green">`names-${index}`</span>}&gt; <span class="green">{</span>element<span class="green">}</span> is at index <span class="green">{</span>index<span class="green">}</span> &lt;/p&gt;
+                            </div>
+                            <div class="code-indent3">
+                                <span>
+                                    }<span class="orange">)</span>;
+                                </span>
+                            </div>
+                            <div class="code-indent2">}</div>
+                            <div class="code-indent">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    );
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-margin">
+                    <p class="bold-text lrg-text section-padding">Or even as a function call:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">const</span> <span class="blue">myFunc</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span>
+                                    <span class="code-red">const</span> <span class="blue">myArray</span> = [<span class="green">'Seán'</span>, <span class="green">'John'</span>, <span class="green">'Rebecca'</span>, <span class="green">'Ger'</span>];
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span>
+                                    <span class="code-red">return</span> <span class="blue">myArray</span>.<span class="orange">map(</span>(<span class="blue">element</span>, <span class="blue">index</span>) => {
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span class="code-red">return</span> &lt;p <span class="blue">key</span>={<span class="green">`myKeyName-${index}`</span>}&gt; <span class="green">{</span>element<span class="green">}</span> is at index <span class="green">{</span>index<span class="green">}</span> &lt;/p&gt;
+                            </div>
+                            <div class="code-indent">
+                                <span>
+                                    }<span class="orange">)</span>;
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span class="orange">}</span>;
+                            </div>
+                            <br>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">return</span> (
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent2">
+                                { <span class="green">myFunc()</span> }
+                            </div>
+                            <div class="code-indent">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    );
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="section-margin">
+                <h2>Iterating an object</h2>
+                <p class="section-padding">
+                    What if you have an object instead of an array? You may have a very large object that was returned from a database or an API. You may not want to type out a lot of JSX when you can do it in just a few lines of code.  
+                </p>
+                <p class="section-padding">
+                    We will still use map, but since map is a method of the Array prototype, we first need to <span class="bold-text">convert all the keys of the object to an array and map over them</span>.
+                </p>
+                <p class="section-padding">
+                    Here we are iterating over a small object, but the same principle applies to larger objects:
+                </p>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example code:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">export const</span> <span class="blue">Loops</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span>
+                                    <span class="code-red">const</span> <span class="blue">myFunc</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span>
+                                    <span class="circle">1</span> <span class="code-red">const</span> <span class="blue">myObject</span> = { <span class="blue">name</span>: <span class="green">'Seán'</span>, <span class="blue">age</span>: <span class="green">'99'</span>, <span class="blue">eyes</span>: <span class="green">'Blue'</span> };
+                                </span>
+                            </div>
+                            <br>
+                            <div class="code-indent">
+                                <span>
+                                    <span class="circle">2</span> <span class="code-red">return</span> <span class="blue">Object</span>.<span class="orange">keys</span>(<span class="blue">myObject</span>).<span class="orange">map(</span>(<span class="blue">key</span>, <span class="blue">index</span>) => {
+                                </span>
+                            </div>
+                            <div class="code-indent4">
+                                <span class="code-red">return</span> &lt;p <span class="blue">key</span>=<span class="green">{</span>index<span class="green">}</span>&gt; <span class="green">{</span>key<span class="green">}</span>: <span class="green">{</span>myObject<span class="orange">[</span>key<span class="orange">]</span><span class="green">}</span> &lt;/p&gt;
+                            </div>
+                            <div class="code-indent3">
+                                <span>
+                                    }<span class="orange">)</span>;
+                                </span>
+                            </div>
+                            <div class="code-indent">
+                                <span class="orange">}</span>;
+                            </div>
+                            <br>
+                            <div class="code-indent">
+                                <span>
+                                    <span class="code-red">return</span> (
+                                </span>
+                            </div>
+                            <div class="code-indent2">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent2">
+                                <span class="circle">3</span> { <span class="green">myFunc()</span> }
+                            </div>
+                            <div class="code-indent2">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent">
+                                <span>
+                                    );
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span class="orange">
+                                    };
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example output:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text alt-code-container box-shadow">
+                            <span class="circle-light">4</span>
+                            <div class="code-indent3">
+                                <p>name: Sean</p>
+                                <p>age: 99</p>
+                                <p>eyes: Blue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example explained:</p>
+                    <div class="section-padding circle-points-container">
+                        <div class="circle-points">
+                            <span class="circle-light">1</span>
+                            <span>
+                                We create the object we will iterate over.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">2</span>
+                            <span>
+                                We create an array of the object’s keys using the <span class="code-text">Object.keys()</span> method, then using method chaining we loop/map over the keys and create a new array of JSX to display.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">3</span>
+                            <span>
+                                We call the function to return the array which will be spread into the JSX.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">4</span>
+                            <span>
+                                The result is displayed on the webpage.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-margin">
+                <h2>Iterating an array of objects</h2>
+                <p class="section-padding">
+                    We can use the map method once again to iterate an array of objects. The currently iterated object will be passed as a parameter. In the below example, it is called “ <span class="code-text">object</span>” for brevity.
+                </p>
+                <p class="section-padding">
+                    We use dot syntax to access the key values in the object.
+                </p>
+
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example code:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">export const</span> <span class="blue">Loops</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">1</span> <span class="code-red">const</span> <span class="blue">myArrayOfObjects</span> = <span class="orange">[</span>
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>
+                                    { <span class="blue">name</span>: <span class="green">'Seán'</span>, <span class="blue">age</span>: <span class="green">'99'</span> },
+                                </span>
+                                <br>
+                                <span>
+                                    { <span class="blue">name</span>: <span class="green">'Ger'</span>, <span class="blue">age</span>: <span class="green">'98'</span> }
+                                </span>
+                            </div>
+                            <div class="code-indent2">
+                                <span class="orange">]</span>;
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">2</span> <span class="code-red">const</span> <span class="blue">myFunc</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>
+                                    <span class="blue">myArrayOfObjects</span>.<span class="orange">map(</span>(<span class="blue">object</span>, <span class="blue">index</span>) => {
+                                </span>
+                            </div>
+                            <div class="code-indent4">
+                                <span>
+                                    <span class="code-red">return</span> &lt;p&gt; <span class="blue">{</span>object.<span class="green">name</span><span class="blue">}</span> is <span class="blue">{</span>object.<span class="green">age</span><span class="blue">}</span> &lt;/p&gt;
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>
+                                    }<span class="orange">)</span>;
+                                </span>
+                            </div>
+                            <div class="code-indent2">
+                                <span class="orange">}</span>;
+                            </div>
+                            <br>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">3</span> <span class="code-red">return</span> (
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent4">
+                                { <span class="green">myFunc()</span> }
+                            </div>
+                            <div class="code-indent3">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent2">
+                                <span>
+                                    );
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span class="orange">
+                                    };
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example output:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text alt-code-container box-shadow">
+                            <span class="circle-light">4</span>
+                            <div class="code-indent3">
+                                <p>Sean is 99</p>
+                                <p>Ger is 98</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example explained:</p>
+                    <div class="section-padding circle-points-container">
+                        <div class="circle-points">
+                            <span class="circle-light">1</span>
+                            <span>
+                                We create the array that will contain the objects we'll need.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">2</span>
+                            <span>
+                                We use JSX to return each array object. Dot syntax is used to access the object's key values.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">3</span>
+                            <span>
+                                We call the function to return the array of objects.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">4</span>
+                            <span>
+                                The result is displayed on the webpage.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-margin">
+                <h2>Adding items to an array in useState</h2>
+                <p class="section-padding">
+                    Each update to <span class="code-text">useState</span> must be a new object. As such, in order to push a new item into an array, we can use the spread operator. We can spread the original array into the new array, followed by any other values we want to add.
+                </p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">const</span> [<span class="blue">myArray</span>, <span class="blue">setMyArray</span>] = <span class="green">useState</span><span class="orange">(</span>[]<span class="orange">)</span>;
+                            </span>
+                            <br>
+                            <span>
+                                <span class="green">setMyArray</span><span class="orange">(</span>[...<span class="green">myArray</span>, <span class="code-red">'Item to be added to myArray'</span>]<span class="orange">)</span>;
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section-padding">
+                    There are times in React where you may need to use a callback function. The old state value will be implicitly passed to the callback function as an argument.
+                </p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">const</span> [<span class="blue">myArray</span>, <span class="blue">setMyArray</span>] = <span class="green">useState</span><span class="orange">(</span>[]<span class="orange">)</span>;
+                            </span>
+                            <br>
+                            <span>
+                                <span class="green">setMyArray</span><span class="orange">(</span><span class="blue">oldArray</span> => [...<span class="green">oldArray</span>, <span class="code-red">'Item to be added'</span>]<span class="orange">)</span>;
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section-padding">
+                    As an example, let's see how we could use this in a component.
+                </p>
+                <p class="section-padding">
+                    We will set an empty array to the <span class="code-text">useState</span>, and assign a click handler to a button.
+                </p>
+                <p class="section-padding">
+                    Each time the button is clicked, the <span class="code-text">setMyArray</span> update method will set a new array containing the old array values and any new values you wish to add.
+                </p>
+                <p class="section-padding">
+                    When the state has updated, React will re-render the component which will cause the <span class="code-text">myFunc</span> function to run again, this time displaying the update array items.
+                </p>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example code:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">import</span> <span class="orange">{</span> useState <span class="orange">}</span> <span class="code-red">from</span> <span class="green">'react'</span>;
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">export const</span> <span class="blue">Loops</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">1</span> <span class="code-red">const</span> [<span class="blue">myArray</span>, <span class="blue">setMyArray</span>] = <span class="green">useState</span>(<span class="orange">[]</span>);
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">2</span> <span class="code-red">const</span> <span class="blue">handleClick</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>
+                                    <span class="green">setMyArray</span><span class="orange">(</span>[...<span class="green">myArray</span>, <span class="code-red">`</span><span class="blue">${</span>myArray.<span class="green">length</span> + 1<span class="blue">}</span> <span class="code-red">Clicks`</span>]<span class="orange">)</span>;
+                                </span>
+                            </div>
+                            <div class="code-indent2">
+                                <span class="orange">}</span>;
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">3</span> <span class="code-red">const</span> <span class="blue">myFunc</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>
+                                    <span class="blue">myArray</span>.<span class="orange">map(</span><span class="blue">element</span> => &lt;p <span class="blue">key</span>=<span class="green">{</span>element<span class="green">}</span>&gt; <span class="green">{</span>element<span class="green">}</span> &lt;/p&gt;<span class="orange">)</span>;
+                                </span>
+                            </div>
+                            <div class="code-indent2">
+                                <span class="orange">}</span>;
+                            </div>
+                            <br>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">4</span> <span class="code-red">return</span> (
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent4">
+                                <span>
+                                    &lt;button <span class="grey">onClick</span>=<span class="blue">{</span><span class="green">handleClick</span><span class="blue">}</span>&gt; Increase Clicks &lt;/button&gt;
+                                </span>
+                                <br>
+                                <span>
+                                    { <span class="green">myFunc()</span> }
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent2">
+                                <span>
+                                    );
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span class="orange">
+                                    };
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example output:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text alt-code-container box-shadow">
+                            <span class="circle-light">5</span>
+                            <div class="code-indent3">
+                                <button class="ex-btn">Increase Clicks</button>
+                                <p>1 Clicks</p>
+                                <p>2 Clicks</p>
+                                <p>3 Clicks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example explained:</p>
+                    <div class="section-padding circle-points-container">
+                        <div class="circle-points">
+                            <span class="circle-light">1</span>
+                            <span>
+                                We create the array and the array update method for the <span class="code-text">useState</span> Hook.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">2</span>
+                            <span>
+                                We create the click handler, which sets a new array to state on each triggered event (when the button is clicked).
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">3</span>
+                            <span>
+                                We use the function to render an array of JSX elements.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">4</span>
+                            <span>
+                                We use JSX to create a button and inject our handler. We return the function to render each object of the array.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">5</span>
+                            <span>
+                                The result is displayed on the webpage.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-margin">
+                <h2>
+                    Removing items from an array in useState
+                </h2>
+                <p class="section-padding">
+                    Removing an item is a little more tricky, but the <span class="code-text">Array.prototype.filter</span> method is a great use case.
+                </p>
+                <p>Filter, like map, returns a new array which is needed for React state changes.</p>
+                <p>Given a list of names, let's remove the string “Sean” from the array example below:</p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">const</span> [<span class="blue">myArray</span>, <span class="blue">setMyArray</span>] = <span class="green">useState</span><span class="orange">(</span>[<span class="code-red">'Seán'</span>, <span class="code-red">'Rebecca'</span>, <span class="code-red">'Ger'</span>]<span class="orange">)</span>;
+                            </span>
+                            <br>
+                            <span>
+                                <span class="green">setMyArray</span><span class="orange">(</span>myArray.<span class="green">filter</span><span class="blue">(</span>(<span class="blue">element</span>, <span class="blue">index</span>) => element !== <span class="code-red">'Seán'</span><span class="blue">)</span><span class="orange">)</span>;
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section-padding">
+                    When React notices the state change, it will re-render your component.
+                </p>
+            </div>
+
+            <div class="section-margin">
+                <h2>
+                    Adding items to an object in useState
+                </h2>
+                <p class="section-padding">
+                    Much like an array, we also need to provide a new object to <span class="code-text">useState</span>. The click handler will set the state by spreading the old object values and any additional key/value pairs into a new object.
+                </p>
+
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example code:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">export const</span> <span class="blue">Loops</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-indent2">
+                                <span>
+                                    <span class="code-red">const</span> [<span class="blue">myObject</span>, <span class="blue">setMyObject</span>] = <span class="green">useState</span>(<span class="orange">[]</span>);
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">1</span> <span class="code-red">const</span> <span class="blue">handleClick</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>
+                                    <span class="green">setMyObject</span><span class="orange">(</span>{...<span class="green">myObject</span>, <span class="blue">name</span>: <span class="code-red">'Seán'</span>}<span class="orange">)</span>;
+                                </span>
+                            </div>
+                            <div class="code-indent2">
+                                <span class="orange">}</span>;
+                            </div>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">2</span> <span class="code-red">const</span> <span class="blue">myFunc</span> = () => <span class="orange">{</span>
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>
+                                    <span class="blue">Object</span>.<span class="orange">keys(</span>myObject<span class="orange">)</span>.<span class="orange">maps(</span>key => &lt;p <span class="blue">key</span>=<span class="green">{</span>key<span class="green">}</span>&gt; <span class="green">{</span>myObject<span class="code-red">[</span>key<span class="code-red">]</span><span class="green">}</span> &lt;/p&gt;<span class="orange">)</span>;
+                                </span>
+                            </div>
+                            <div class="code-indent2">
+                                <span class="orange">}</span>;
+                            </div>
+                            <br>
+                            <div class="code-margin">
+                                <span>
+                                    <span class="circle">3</span> <span class="code-red">return</span> (
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent4">
+                                <span>
+                                    &lt;button <span class="grey">onClick</span>=<span class="blue">{</span><span class="green">handleClick</span><span class="blue">}</span>&gt; Add Name &lt;/button&gt;
+                                </span>
+                                <br>
+                                <span>
+                                    { <span class="green">myFunc()</span> }
+                                </span>
+                            </div>
+                            <div class="code-indent3">
+                                <span>&lt;&gt;</span>
+                            </div>
+                            <div class="code-indent2">
+                                <span>
+                                    );
+                                </span>
+                            </div>
+                            <div class="code-margin">
+                                <span class="orange">
+                                    };
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example output:</p>
+                    <div class="code-block section-padding">
+                        <div class="code-text alt-code-container box-shadow">
+                            <span class="circle-light">4</span>
+                            <div class="code-indent3">
+                                <button class="ex-btn">Add Name</button>
+                                <p>Seán</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding">
+                    <p class="bold-text lrg-text section-padding">The example explained:</p>
+                    <div class="section-padding circle-points-container">
+                        <div class="circle-points">
+                            <span class="circle-light">1</span>
+                            <span>
+                                We create the click handler, which will set a new object into state
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">2</span>
+                            <span>
+                                The function will render an array of JSX elements
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">3</span>
+                            <span>
+                                We use JSX to create a button and inject our handler. We return the function to render each object of the array.
+                            </span>
+                        </div>
+                        <div class="circle-points">
+                            <span class="circle-light">4</span>
+                            <span>
+                                The result is displayed on the webpage.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-margin">
+                <h2>
+                    Removing items from an object in useState
+                </h2>
+                <p class="section-padding">
+                    To remove items from an object, we can simply make a copy of the object in state, delete the key, and return the updated copy.
+                </p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">const</span> [<span class="blue">myObject</span>, <span class="blue">setMyObject</span>] = <span class="green">useState</span>(<span class="orange">{</span><span class="blue">name</span>: <span class="code-red">'Seán'</span>, <span class="blue">age</span>: <span class="code-red">'99'</span><span class="orange">}</span>);
+                            </span>
+                        </div>
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">const</span> <span class="blue">handleClick</span> = () => <span class="orange">{</span>
+                            </span>
+                        </div>
+                        <div class="code-indent">
+                            <span>
+                                <span class="code-red">let</span> <span class="blue">newObject</span> = {...<span class="green">myObject</span>};
+                            </span>
+                            <br>
+                            <span>
+                                delete <span class="blue">newObject</span>[<span class="code-red">'name'</span>];
+                            </span>
+                            <br>
+                            <span>
+                                <span class="green">setMyObject</span>(<span class="blue">newObject</span>);
+                            </span>
+                        </div>
+                        <div class="code-margin">
+                            <span class="orange">}</span>;
+                        </div>
+                    </div>
+                </div>
+                <p class="section-padding">
+                    We can also destructure the old object by separating the key to remove from the rest of the object.
+                </p>
+                <div class="code-block section-padding">
+                    <div class="code-text code-container box-shadow">
+                        <div class="code-margin">
+                            <span>
+                                <span class="code-red">const</span> <span class="blue">handleClick</span> = () => <span class="orange">{</span>
+                            </span>
+                        </div>
+                        <div class="code-indent">
+                            <span>
+                                <span class="green">setMyObject</span>(<span class="blue">oldObject</span> => <span class="orange">{</span>
+                            </span>
+                        </div>
+                        <div class="code-indent2">
+                            <span>
+                                <span class="code-red">const</span>{<span class="blue">name</span>, ...<span class="blue">remaining</span>} = <span class="blue">oldObject</span>;
+                            </span>
+                            <br>
+                            <span>
+                                <span class="code-red">return</span> remaining;
+                            </span>
+                        </div>
+                        <div class="code-indent">
+                            <span class="orange">}</span>);
+                        </div>
+                        <div class="code-margin">
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-margin">
+                <h2>
+                    Updating keys in an object in useState
+                </h2>
+                <p class="section-padding">
+                    Updating a key’s value is much the same as adding a new key, with the slight difference that the key to update already exists. Therefore, its value will be overwritten.
+                </p>
+            </div>
+
+            <div class="section-margin final-section">
+                <h3 class="red">Happy Iterating!</h3>
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/tada-right_secondary.svg" alt="Slightly tilted tada icon in blue">
+            </div>
+
+        </div>
+
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
