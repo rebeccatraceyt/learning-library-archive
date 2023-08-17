@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="../../assets/css/bitesize/common-errors.css"
+        />
+        <title>Common Errors: No Reverse Match</title>
+    </head>
+    <body>
+        <nav>
+            <a href="../../bitesize.html">Bitesize</a>
+            <a href="../../checklist.html">Checklists</a>
+            <a href="../../flashcards.html">Flash</a>
+        </nav>
+        <section id="template-body" class="box-shadow">
+            <div id="header">
+                <div id="header-text">
+                    <h1 class="text-heading">Common Errors</h1>
+                    <span class="alt-heading red">
+                        Django - No Reverse Match
+                    </span>
+                </div>
+                <hr id="header-hr" />
+            </div>
+            <div class="body">
+                <div class="first-section">
+					<p class="section-padding">
+                        One of the most common Django errors that you’re likely to encounter is the “<span class="code-text bold-text">No Reverse Match</span>” error. It is quite simple to resolve once you know what causes it, so let’s have a look! 
+					</p>
+					<p class="section-padding">
+                        Let's take a hypothetical path for signing up to our Django site:
+					</p>
+                    <div class="code-block">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="green">path</span>(<span class="blue">‘accounts/register/’</span>, views.register),
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="section-padding">
+                        In this case, the URL can be accessed by going to:
+                    </p>
+                    <div class="code-block">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    mysite.com/accounts/register
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="section-padding">
+                        So if you want to link to that in your app, you can say:
+                    </p>
+                    <div class="code-block">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">return</span> <span class="green">redirect</span>(<span class="blue">‘accounts/register/’</span>)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="section-padding">
+                        Imagine you have a huge website, and you've done that on 100 pages. 
+                        But now you decide you want to change the URL.
+                        Instead of <span class="code-text bold-text">accounts/<span class="red">register</span></span>, you want it to be <span class="code-text bold-text">accounts/<span class="red">signup</span></span>. 
+                        Nightmare - you've now got to go through all 100 links and update them!
+                    </p>
+                    <p class="section-padding">
+                        Which is where we can make life easier for ourselves with reverse. If we declare the path using a name like this:
+                    </p>
+                    <div class="code-block">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="green">path</span>(<span class="blue">‘accounts/register/’</span>, views.register, name<span class="blue">=’register’</span>),
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="section-padding">
+                        We can now link to the path using the name parameter, by using reverse. When you say:
+                    </p>
+                    <div class="code-block">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="code-red">return</span> <span class="green">redirect</span>(<span class="green">reverse</span>(<span class="blue">‘register’</span>))
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="section-padding">
+                        Django will look for a path with the name “<span class="code-text bold-text">register</span>”, and return that. So you can now change the URL for the path:
+                    </p>
+                    <div class="code-block">
+                        <div class="code-text code-container box-shadow">
+                            <div class="code-margin">
+                                <span>
+                                    <span class="green">path</span>(<span class="blue">‘accounts/signup/’</span>, views.register, name<span class="blue">=’register’</span>),
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="section-padding">
+                        But because your path’s name is still <span class="code-text bold-text">‘register’</span>, and your 100 links all redirect to <span class="bold-text code-text">reverse('register')</span>, you don't have to update any of them!
+                    </p>
+                    <p class="section-padding">
+                        If you are getting an error which tells you that <span class="bold-text">no reverse match has been found</span>, it means that you're trying to link to a path that doesn't have a name value set up in your <span class="code-text bold-text">urls.py</span> file. 
+                    </p>
+                    <p class="section-padding">
+                        Check your <span class="code-text bold-text">urls.py</span> and ensure that all of your paths have name values, and that one of them matches the name shown in your error message.
+                    </p>
+                </div>
+                <div class="section-margin">
+                    <div class="idea-heading">
+                        <h2>
+                            Let’s try an example!
+                        </h2>
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/lightbulb_yellow.svg" alt="Yellow lightbulb icon tilted left">
+                    </div>
+                    <div class="section-padding">
+                        <p class="section-padding alt-heading red">
+                            The error message:
+                        </p>
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        Reverse for 'product_detail' with arguments '('',)' not found.
+                                    </span>
+                                    <br>
+                                    <span>
+                                        1 pattern(s) tried: ['products/product_detail/(?P<pk>[0-9]+)/$']
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-padding">
+                        <p class="alt-heading red">
+                            What does it mean?
+                        </p>
+                        <p class="section-padding">
+                            The <span class="bold-text code-text">reverse(path_name)</span> method is used to return the path of a named URL pattern from <span class="bold0-text code-tex">urls.py</span>. In this example, the path name is <span class="code-text bold-text">‘product_detail’</span>. 
+                        </p>
+                        <p class="section-padding">
+                            This returned path will include any arguments that the URL pattern needs to pass into the view when it is called. The error shows us that no arguments have been passed in when reversing the <span class="code-text bold-text">‘product_detail’</span> path. 
+                        </p>
+                        <p class="section-padding">
+                            Without this argument, no matching URL patterns can be found, and the view cannot be called. It’s essentially the same error that would result from the following code:
+                        </p>
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        <span class="code-red">def</span> <span class="green">my_function</span>(required_argument):
+                                    </span>
+                                    <br>
+                                    <span class="code-indent">
+                                        <span class="code-red">return</span> required_argument
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="green">my_function</span>() <span class="grey"># no argument passed in!</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-padding">
+                        <p class="alt-heading red">
+                            How do we troubleshoot?
+                        </p>
+                        <p class="section-padding">
+                            To troubleshoot this, we would investigate how our data gets passed from the template, through <span class="code-text bold-text">urls.py</span>, and into our view.
+                        </p>
+                        <p class="small-txt">
+                            (We've used colour-coding to highlight the relationship between information)
+                        </p>
+                        <p class="section-padding">
+                            In our template, we are accessing the <span class="code-text bold-text">‘product_detail’</span> path and passing in <span class="code-text bold-text">‘product.pk’</span>:
+                        </p>
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        &lt;a href=”{% url ‘<span class="orange">product_detail</span>’ <span class="green">product.pk</span> %}”&gt;More info&lt;/a&gt;
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="section-padding">
+                            In <span class="code-text bold-text">products/urls.py</span>, the path named <span class="code-text bold-text">‘product_detail’</span> expects an argument called <span class="code-text bold-text">'pk'</span> and should call the <span class="code-text bold-text">‘product_detail’</span> view:
+                        </p>
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        urlpatterns = [
+                                    </span>
+                                    <br>
+                                    <span class="code-indent">
+                                        path(‘products/product_detail/<span class="green">&lt;int:pk&gt;</span>/’,
+                                    </span>
+                                    <br>
+                                    <span class="code-indent2">
+                                        views.<span class="pink">product_detail</span>,
+                                    </span>
+                                    <br>
+                                    <span class="code-indent2">
+                                        name='<span class="orange">product_detail</span>'),
+                                    </span>
+                                    <br>
+                                    <span class="code-indent">
+                                        path(‘products/’, views.products, name=‘all_products’),
+                                    </span>
+                                    <br>
+                                    <span>
+                                        ]
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="section-padding">
+                            In <span class="code-text bold-text">products/views.py</span>, the function is expecting the <span class="code-text bold-text">‘pk’</span> argument, which it will use to retrieve a product with that primary key from the database:
+                        </p>
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        def <span class="pink">product_detail</span>(request, <span class="green">pk</span>):
+                                    </span>
+                                    <br>
+                                    <span class="code-indent">
+                                        <span class="blue">product</span> = Product.objects.get(pk=<span class="green">pk</span>)
+                                    </span>
+                                    <br>
+                                    <span class="code-indent grey">
+                                        # add your logic here
+                                    </span>
+                                    <br>
+                                    <span class="code-indent">
+                                        return render(request, ‘product-detail.html’, {‘product’: <span class="blue">product</span>})
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="section-padding">
+                            Nothing seems to be missing, so what could be causing this? Let’s return to the template where we are trying to use the URL path:
+                        </p>
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        {% for product in products %}
+                                    </span>
+                                    <br>
+                                    <span class="code-indent">
+                                        &lt;div&gt;
+                                    </span>
+                                    <br>
+                                    <span class="code-indent2">
+                                        &lt;h3&gt;{{ product.name }}&lt;/h3&gt;
+                                    </span>
+                                    <br>
+                                    <span class="code-indent2">
+                                        &lt;img src=”{{ product.image.url }} /&gt;
+                                    </span>
+                                    <br>
+                                    <span class="code-indent2">
+                                        &lt;small&gt;{{ product.price }}&lt;/small&gt;
+                                    </span>
+                                    <br>
+                                    <span class="code-indent">
+                                        &lt;/div&gt;
+                                    </span>
+                                    <br>
+                                    <span>
+                                        {% endfor %}
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <span>
+                                        &lt;a href=”{% url '<span class="orange">product_detail</span>' <span class="green">product.pk</span> %}”&gt;More info&lt;/a&gt;
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="section-padding">
+                            Having passed the <span class="bold-text code-text">‘products’</span> queryset our your template via the context dictionary in the view, we loop over it and represent each iteration with the <span class="bold-text code-text">‘product’</span> variable. 
+                        </p>
+                        <p class="section-padding">
+                            However, the <span class="bold-text code-text">‘product.pk’</span> in our link to <span class="bold-text">‘More info’</span> falls outside of the loop and will therefore render as nothing. If there is no <span class="bold-text code-text">‘product’</span>, the resulting URL will be missing the variable required by the <span class="code-text bold-text">product_detail</span> path in <span class="code-text bold-text">urls.py</span>, leading to an error.
+                        </p>
+                    </div>
+                    <div class="section-padding">
+                        <p class="alt-heading red">
+                            How do we fix it?
+                        </p>
+                        <p class="section-padding">
+                            The fix in this scenario is to simply move the link inside the for loop so that <span class="bold-text code-text">‘product.pk’</span> is available.
+                        </p>
+                        <p class="section-padding">
+                            Most errors of this type will be caused by failing to provide an argument when you create a link in your template using:
+                        </p>
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        &lt;a href=”{% url ‘<span class="orange">path_name</span>’ <span class="green">argument</span> %}”&gt;Example&lt;/a&gt;
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="section-padding">
+                            You can temporarily delete (rather than commenting out) a troublesome link in a template to confirm that it is causing the error. If the page loads successfully without the link then you can be sure that it is the culprit. 
+                        </p>
+                    </div>
+                </div>
+                <div id="note-section" class="section-margin">
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/alert_icon_red.svg"
+                        alt="red alert icon in a circle"
+                    />
+                    <div class="point-body">
+                        <span id="alert-heading">
+                            Remember:
+                        </span>
+                        <br class="lg-only">
+                        <span>
+                            This is just one specific example of code that could cause a No Reverse Match error. Any combination of not calling a named path or not passing in the required variables will result in this error.
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div id="footer-icon">
+                <img
+                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+                    alt="Code Institute logo"
+                />
+            </div>
+        </section>
+    </body>
+</html>
