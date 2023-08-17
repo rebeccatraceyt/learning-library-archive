@@ -230,6 +230,11 @@ body {
     justify-content: center;
 }
 
+.code-block-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .code-container {
     display: flex;
     justify-content: flex-start;
@@ -286,47 +291,6 @@ body {
     display: none;
 }
 
-/* number points styling - React & Python versions */
-.circle-points {
-    display: flex;
-    align-items: flex-start; 
-    gap: 8px;
-}
-.circle, .circle-light {
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    padding: 4px 8px;
-    border: 2px solid var(--action-red-100);
-    font-weight: 900;
-}
-.circle {
-    color: var(--text-alt-white);
-    
-}
-.circle-light {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.point-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.inner-point {
-    font-size: 14px;
-}
-.info-block {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 20px;
-    font-style: italic;
-    flex-direction: column;
-    text-align: center;
-    font-size: 14px;
-}
 .ex-img > img {
     max-width: 100%;
 }
@@ -370,7 +334,6 @@ body {
 
     .code-container {
         display: flex;
-        justify-content: center;
         font-size: 14px;
         overflow-x: auto;
     }
@@ -379,13 +342,4 @@ body {
         width: 120px;
     }
 
-    .circle-light {
-        padding: 12px 24px;
-        font-size: 36px;
-        width: 48px;
-        height: 52px;
-    }
-    .circle-points {
-        gap: 12px;
-    }
 }
