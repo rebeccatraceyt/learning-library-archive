@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/bitesize/clearing-cache.css">
+    <title>Resolving Cache Issues</title>
+</head>
+<body>
+    <nav>
+        <a href="../../bitesize.html">Bitesize</a>
+        <a href="../../checklist.html">Checklists</a>
+        <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <section id="template-body" class="box-shadow">
+        <div id="header">
+            <div id="header-text">
+                <h1 class="text-heading">Resolving Cache Issues</h1>
+            </div>
+            <hr id="header-hr" />
+        </div>
+        <div class="body">
+            <div>
+                <h2>What is the browser cache?</h2>
+                <p class="section-padding">
+                    Did you know that your web browser saves static assets from the sites you’ve visited into a temporary storage area called the cache? When you first visit a webpage, the site’s HTML, CSS, JS, and even some of the images will be saved into your browser’s cache.
+                </p>
+                <p class="section-padding">
+                    Why? To speed up future loading - if you visit the same webpage multiple times, caching prevents the entire page having to be loaded each time, which saves on bandwidth for both you and the host of the website you’re visiting.
+                </p>
+                <div class="info-block">
+                    <div class="info-container">
+                        <p class="info-text">Remember: login cookies and localstorage data are not stored in the cache</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-margin">
+                <h2>Why you may need to clear the cache</h2>
+                <p class="section-padding">
+                    The cache is a useful tool when combined with a completed, deployed website. However, it can cause trouble for a coder who is making frequent changes to their site’s static assets.
+                </p>
+                <p class="section-padding">
+                    A common issue arises when a programmer updates their site’s CSS, but the changes do not display when they reload the webpage. This is because the browser has cached a previous version of the CSS, and has not loaded the new version.
+                </p>
+                <p class="section-padding">
+                    If you have made updates to your codebase that are not appearing on your site, clearing the cache may resolve this.
+                </p>
+            </div>
+            <div class="section-margin">
+                <h2>How to empty cache and hard reload:</h2>
+                <p class="section-padding">
+                    In this example, we will be using the recommended Browser, Google Chrome. For steps to follow on alternative browsers, you can use <a href="https://help.codehs.com/en/articles/4951972-how-to-clear-your-browser-cache-and-hard-refresh" target="_blank" rel="noopener noreferrer" class="red">this helpful guide to Browser Cache</a>.
+                </p>
+                
+                <div class="section-margin step-block">
+                    <div class="circle-points">
+                        <span class="circle-light">1</span>
+                        <span>Open Developer Tools by right-clicking on your mouse and selecting <span class="bold-text">'Inspect'</span> or pressing the <span class="bold-text">F12</span> button</span>
+                    </div>
+                    <img class="block-img box-shadow" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/clear-cache-inspect.png" alt="Example right-click menu on Chrome Browser">
+                </div>
+
+                <div class="section-margin step-block">
+                    <div class="circle-points">
+                        <span class="circle-light">2</span>
+                        <span>Click and hold down the Reload button. From the drop-down select <span class="bold-text">'Empty Cache and Hard Reload'</span>.</span>
+                    </div>
+                    <img class="block-img box-shadow" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/clear-cache-refresh.png" alt="Example of Browser cache menu on Chrome Browser">
+                </div>
+            </div>
+
+            <div class="section-margin">
+                <h2>
+                    How to disable your cache:
+                </h2>
+                <p class="section-padding">
+                    Your browser’s Developer Tools will include an option to disable the cache. Note that this only applies when your Developer Tools are open. To do this:
+                </p>
+                <div class="section-margin step-block2">
+                    <div class="circle-points">
+                        <span class="circle-light">1</span>
+                        <span>
+                            Open your browser's Developer Tools
+                        </span>
+                    </div>
+                    <div class="circle-points">
+                        <span class="circle-light">2</span>
+                        <span>
+                            Navigate to the "Network" tab
+                        </span>
+                    </div>
+                    <div class="circle-points">
+                        <span class="circle-light">3</span>
+                        <span>
+                            Check the "Disable Cache" checkbox
+                        </span>
+                    </div>
+                    <div class="circle-points">
+                        <span class="circle-light">4</span>
+                        <span>
+                            Reload your page as normal (with Developer Tools still open).
+                        </span>
+                    </div>
+                </div>
+                <div class="info-block section-margin">
+                    <img class="block-img box-shadow" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/clear-cache-network.png" alt="Example of DevTools Network menu on Chrome Browser">
+                </div>
+            </div>
+            
+            <div class="section-margin">
+                <h2>
+                    Using incognito/private mode:
+                </h2>
+                <p class="section-padding">
+                    A quick way of bypassing your browser’s cache for testing purposes is to use an incognito (Chrome) or private (Firefox) window. These windows do not cache data, nor do they store cookies or browsing history. To open an incognito or private window:
+                </p>
+                <div class="info-block">
+                    <div class="info-container cmd-container">
+                        <div class="cmd-block">
+                            <span>Chrome:</span><br>
+                            <span><span class="bold-text">PC</span>: CTRL + SHIFT + N</span><br>
+                            <span><span class="bold-text">MAC</span>: CMD + SHIFT + N</span>
+                        </div>
+                        <div class="cmd-block">
+                            <span>Firefox:</span><br>
+                            <span><span class="bold-text">PC</span>: CTRL + SHIFT + P</span><br>
+                            <span><span class="bold-text">MAC</span>: CMD + SHIFT + P</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="footer-icon">
+            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
+        </div>
+    </section>
+</body>
+</html>
+
+
