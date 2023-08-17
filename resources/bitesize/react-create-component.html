@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/css/bitesize/react-create-component.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/bitesize/react-create-component.css"
+    />
     <title>React - Create a Component</title>
   </head>
   <body>
@@ -18,155 +21,192 @@
         <div id="header-text">
           <h1 class="text-heading">Creating a React Component</h1>
           <p class="section-padding">
-            In this guide, we will make a new React component in both function and class-based styles.
-            We will then import the component, and learn how we can pass props to the component and display it in the JSX
+            In this guide, we will make a new React component in both function
+            and class-based styles. We will then import the component, and learn
+            how we can pass props to the component and display it in the JSX
           </p>
           <hr id="header-hr" />
         </div>
       </div>
       <div class="body">
-      <p class="section-padding">
-        First, make sure you have a directory to put your new component in. We will use the “components” directory:
-      </p>
-      <div class="section-padding">
-      <div class="code-block-left">
-        <div class="code-text code-container box-shadow">
-          <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/light_react_component_directory.svg" alt="React directory">
+        <p class="section-padding">
+          First, make sure you have a directory to put your new component in. We
+          will use the “components” directory:
+        </p>
+        <div class="section-padding">
+          <div class="code-block-left">
+            <div class="code-text code-container box-shadow">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/light_react_component_directory.svg"
+                alt="React directory"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
-      <div class="section-padding">
-      <p class="section-padding">
-         Terminal command:
-      </p>
-      </div>
-      <div class="section-padding">
+        <div class="section-padding">
+          <p class="section-padding">Terminal command:</p>
+        </div>
+        <div class="section-padding">
           <div class="code-block">
             <div class="code-text code-container box-shadow">
-                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/terminal_path_mkdir.svg" alt="React mkdir terminal command">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/terminal_path_mkdir.svg"
+                alt="React mkdir terminal command"
+              />
             </div>
           </div>
         </div>
         <p class="section-padding">
-         Create a new JavaScript file in your chosen directory. We will call this file “MyComponent.js”:
+          Create a new JavaScript file in your chosen directory. We will call
+          this file “MyComponent.js”:
         </p>
         <div class="section-padding">
           <div class="code-block">
             <div class="code-text code-container box-shadow">
-                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/light_react_component_file.svg" alt="Reach touch file creation">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/light_react_component_file.svg"
+                alt="React component file dir"
+              />
             </div>
           </div>
         </div>
-        <p class="section-padding">
-         Terminal command:
-        </p>
+        <p class="section-padding">Terminal command:</p>
         <div class="section-padding">
           <div class="code-block">
             <div class="code-text code-container box-shadow">
-                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/terminal_path_touch.svg" alt="Reach terminal command touch">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/terminal_path_touch.svg"
+                alt="React terminal command touch"
+              />
             </div>
           </div>
         </div>
         <h3>Now let’s put this file to use!</h3>
         <p class="section-padding">
-          First, we’ll need to import our new component file into the parent component:
-         </p>
-         <div class="section-padding">
+          First, we’ll need to import our new component file into the parent
+          component:
+        </p>
+        <div class="section-padding">
           <div class="code-block">
             <div class="code-text code-container box-shadow">
-                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_component_app.svg" alt="Reach terminal command touch">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/react_component_app.svg"
+                alt="React component structure"
+              />
             </div>
           </div>
         </div>
         <p class="section-padding">
           The above code simply imports the component from its respective file.
-          We then add the component as a Component Element Tag to the JSX. 
+          We then add the component as a Component Element Tag to the JSX.
           Remember that component tags are usually self-closing.
-         </p>
-         <p class="section-padding">
-          Next, we can create either a function-based or class-based component. 
+        </p>
+        <p class="section-padding">
+          Next, we can create either a function-based or class-based component.
           Let’s take a look at how to create these!
         </p>
         <div class="section-padding">
           <span class="alt-text red">Function-based</span>
         </div>
         <p class="section-padding">
-          Function-based components require much less code than class-based ones. If the function will be stateless (i.e. without using React Hooks), then in newer versions of React we don't need to import React at the top of the file.
+          Function-based components require much less code than class-based
+          ones. If the function will be stateless (i.e. without using React
+          Hooks), then in newer versions of React we don't need to import React
+          at the top of the file.
         </p>
         <p class="section-padding">
-          We just need to create and export a new arrow function expression, and then we can return the JSX.
-
+          We just need to create and export a new arrow function expression, and
+          then we can return the JSX.
         </p>
         <div class="section-padding">
           <div class="code-block">
             <div class="code-text code-container box-shadow">
-                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/export_component.svg" alt="Reach terminal command touch">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/export_component.svg"
+                alt="React export component"
+              />
             </div>
           </div>
         </div>
         <div class="section-padding">
-        <span class="alt-text red">Class-based</span>
+          <span class="alt-text red">Class-based</span>
         </div>
         <p class="section-padding">
-          We will need to import the Component class from the React library, which our custom class uses as its superclass. We will also need to export the class so that it can be imported into another file.
+          We will need to import the Component class from the React library,
+          which our custom class uses as its superclass. We will also need to
+          export the class so that it can be imported into another file.
         </p>
         <p class="section-padding">
-          A constructor is not needed here, but we will add one to highlight that if a constructor is used, you must initialize the superclasses constructor also, passing in any props received.
-
-
+          A constructor is not needed here, but we will add one to highlight
+          that if a constructor is used, you must initialize the superclasses
+          constructor also, passing in any props received.
         </p>
         <p class="section-padding">
           Finally, we call the render method and return our JSX code:
-
         </p>
         <div class="section-padding">
           <div class="code-block">
             <div class="code-text code-container box-shadow">
-                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/render_component.svg" alt="Reach terminal command touch">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/render_component.svg"
+                alt="React render component"
+              />
             </div>
           </div>
         </div>
         <div class="section-padding">
-        <h3>Adding props</h3>
-        
-        <p class="section-padding">
-          We can pass props to both function and class-based components. The industry standard is to destructure the props in the receiving component. In the parent component, we will add a prop and value:
+          <h3>Adding props</h3>
 
+          <p class="section-padding">
+            We can pass props to both function and class-based components. The
+            industry standard is to destructure the props in the receiving
+            component. In the parent component, we will add a prop and value:
+          </p>
+        </div>
+        <div class="section-padding">
+          <div class="code-block">
+            <div class="code-text code-container box-shadow">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/component_type.svg"
+                alt="React props example"
+              />
+            </div>
+          </div>
+        </div>
+
+        <p class="section-padding">
+          We can destructure the props inside the parenthesis of our
+          function-based component, and then use it in the JSX as a normal
+          variable.
         </p>
+
+        <div class="section-padding">
+          <div class="code-block">
+            <div class="code-text code-container box-shadow">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/export_component_2.svg"
+                alt="React destructuring props"
+              />
+            </div>
+          </div>
+        </div>
+
+        <p class="section-padding">
+          In a class-based view, the destructuring happens in the render method.
+          As this is a class, we must use the “this” keyword to gain access to
+          the class props:
+        </p>
+        <div class="section-padding">
+          <div class="code-block">
+            <div class="code-text code-container box-shadow">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/render_component.svg"
+                alt="React destructuring in render method"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="section-padding">
-        <div class="code-block">
-          <div class="code-text code-container box-shadow">
-              <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/component_type.svg" alt="Reach terminal command touch">
-          </div>
-        </div>
-      </div>
-        
-        <p class="section-padding">
-          We can destructure the props inside the parenthesis of our function-based component, and then use it in the JSX as a normal variable.
-        </p>
-        
-        
-        <div class="section-padding">
-          <div class="code-block">
-            <div class="code-text code-container box-shadow">
-                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/export_component_2.svg" alt="Reach terminal command touch">
-            </div>
-          </div>
-        </div>
-        
-
-        <p class="section-padding">
-          In a class-based view, the destructuring happens in the render method. As this is a class, we must use the “this” keyword to gain access to the class props:
-        </p>
-        <div class="section-padding">
-          <div class="code-block">
-            <div class="code-text code-container box-shadow">
-                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/render_component.svg" alt="Reach terminal command touch">
-            </div>
-          </div>
-        </div>
-  </div>
 
       <div id="footer-icon">
         <img
