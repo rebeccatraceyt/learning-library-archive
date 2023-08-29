@@ -48,12 +48,19 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    text-align: justify;
 }
 
-#page-title {
+#page-title > h1 {
     font-weight: 800;
-    font-size: 2.5em;
+    font-size: 2.25em;
+}
+
+.sm-note {
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 16px;
 }
 
 .flashcard-row {
@@ -88,11 +95,14 @@ body {
 }
 
 .text-heading {
-    font-family: var(--alt-font);
-    font-size: 1.5rem;
-    color: var(--action-red-100);
     width: 100%;
     font-weight: 600;
+}
+.text-heading > h2 {
+    font-family: var(--alt-font);
+    font-size: 1.75rem;
+    color: var(--action-red-100);
+
 }
 
 .flashcard-container {
@@ -101,10 +111,20 @@ body {
     min-width: 100%;
 }
 
+/* bullet point resets */
+.bullet-point {
+    display: flex;
+    align-items: flex-start;
+    margin: 16px 0;
+}
+
 
 @media only screen and (min-width: 1024px) {
     #page-heading {
-        padding: 40px 40px 20px;
+        padding: 40px 80px 20px;
+    }
+    .sm-note {
+        display: none;
     }
     .flashcard-row {
         flex-direction: row;
@@ -117,7 +137,7 @@ body {
         min-height: 580px;
     }
     #single-flashcard {
-        width: 92%;
+        width: 84%;
         max-width: 1080px;
     }
     .header {
