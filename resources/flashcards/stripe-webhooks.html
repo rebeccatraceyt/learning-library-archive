@@ -54,6 +54,15 @@
                         efficient.</span
                     >
                 </div>
+                <div class="bullet-point">
+                    <img
+                        src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg"
+                        alt="blue arrow pointing right"
+                    />
+                    <span>
+                        Just like any other type of functionality, Stripe Webhooks have the potential to break. This flashcard offers a detailed guide on where to start troubleshooting (and the likely cause), when that happens:
+                    </span>
+                </div>
             </div>
             <div class="sm-note">
                 <p>
@@ -62,147 +71,362 @@
                 </p>
             </div>
         </div>
-        <div id="single-flashcard" class="flashcard-body box-shadow">
-            <div class="header">
-                <img
-                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
-                    alt="Code Institute logo"
-                />
-                <div class="text-heading">
-                    <h2>Stripe Webhooks</h2>
+        <div id="flashcards">
+            <div class="flashcard-row">
+                <div class="flashcard-body box-shadow">
+                    <div class="header">
+                        <h2>
+                            Error: 400
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+                        <div class="box-container box-header">
+                            <div class="box-item box-title">
+                                <span>Status</span>
+                            </div>
+                            <div class="box-item box-right">
+                                <span>400</span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Symptoms</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-alert-circle.svg"
+                                    alt="blue alert icon with exclamation mark in a circle"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>Bad request on checkout</span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Cause</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-lightbulb.svg"
+                                    alt="blue lightbulb icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>Environment variables</span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Solution</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-check.svg"
+                                    alt="blue checkmark icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Check your keys are accessible <br/>
+                                    (<a href="#" target="_blank" rel="noopener noreferrer" class="red" >learn how to do that here</a>)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="flashcard-container box-shadow">
-                <table class="responsive-table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Status</th>
-                            <th scope="col">Symptoms</th>
-                            <th scope="col">Likely cause</th>
-                            <th scope="col">Solution</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row" data-label="Status">400</td>
-                            <td data-label="Symptoms">
-                                Bad request on checkout
-                            </td>
-                            <td data-label="Likely cause">
-                                Environment variables
-                            </td>
-                            <td data-label="Solution">
-                                Check your keys <br class="sm-only" />
-                                are accessible <br class="sm-only" />
-                                (learn how to do that <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="red"
-                                >here</a
-                            >)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" data-label="Status">401 or 403</td>
-                            <td data-label="Symptoms">
-                                Webhook URL <br class="sm-only" />
-                                (checkout/wh/) not <br class="sm-only" />
-                                accessed in the terminal
-                            </td>
-                            <td data-label="Likely cause">
-                                Server port is not public
-                            </td>
-                            <td data-label="Solution">
-                                Set local server <br class="sm-only" />
-                                port to public <br class="sm-only" />
-                                (learn how to do that <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="red"
-                                >here</a
-                            >)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" data-label="Status">404</td>
-                            <td data-label="Symptoms">
-                                Webhook URL <br class="sm-only" />
-                                (checkout/wh/) not <br class="sm-only" />
-                                accessed in the terminal
-                            </td>
-                            <td data-label="Likely cause">
-                                Incorrect endpoint URL
-                            </td>
-                            <td data-label="Solution">
-                                Check endpoint is using <br class="sm-only" />
-                                updated local server URL <br class="sm-only" />
-                                (learn how to do that <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="red"
-                                >here</a
-                            >)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" data-label="Status">500</td>
-                            <td data-label="Symptoms">
-                                Webhook URL <br class="sm-only" />
-                                (checkout/wh/) not <br class="sm-only" />
-                                accessed in the terminal
-                            </td>
-                            <td data-label="Likely cause">
-                                An error in your code
-                            </td>
-                            <td data-label="Solution">
-                                Reading the error may <br class="sm-only" />
-                                give indication on <br class="sm-only" />
-                                how to debug <br class="sm-only" />
-                                (learn how to do that
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="red"
-                                    >here</a
-                                >)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" data-label="Status">500</td>
-                            <td data-label="Symptoms">Duplicate Orders</td>
-                            <td data-label="Likely cause">
-                                Existing order cannot <br class="sm-only" />
-                                be found in <br class="sm-only" />
-                                webhook_handler.py <br class="sm-only" />
-                                due to inconsistent <br class="sm-only" />
-                                address, grand_total, etc
-                            </td>
-                            <td data-label="Solution">
-                                Ensure order details <br class="sm-only" />
-                                do not change after the <br class="sm-only" />
-                                intent is created <br class="sm-only" />
-                                on the checkout page
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" data-label="Status">500</td>
-                            <td data-label="Symptoms">
-                                Heroku-only duplicate orders
-                            </td>
-                            <td data-label="Likely cause">
-                                Signals for OrderLineItem <br class="sm-only" />
-                                updates are not unique
-                            </td>
-                            <td data-label="Solution">
-                                Give signals unique names
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="flashcard-body box-shadow">
+                    <div class="header">
+                        <h2>
+                            Error: 401 or 403
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+                        <div class="box-container box-header">
+                            <div class="box-item box-title">
+                                <span>Status</span>
+                            </div>
+                            <div class="box-item box-right">
+                                <span>401 or 403</span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Symptoms</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-alert-circle.svg"
+                                    alt="blue alert icon with exclamation mark in a circle"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Webhook URL (checkout/wh/) not accessed in the terminal
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Cause</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-lightbulb.svg"
+                                    alt="blue lightbulb icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Server port is not public
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Solution</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-check.svg"
+                                    alt="blue checkmark icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Set local server port to public <br/>
+                                    (<a href="#" target="_blank" rel="noopener noreferrer" class="red" >learn how to do that here</a>)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-body box-shadow">
+                    <div class="header">
+                        <h2>
+                            Error: 404
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+                        <div class="box-container box-header">
+                            <div class="box-item box-title">
+                                <span>Status</span>
+                            </div>
+                            <div class="box-item box-right">
+                                <span>404</span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Symptoms</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-alert-circle.svg"
+                                    alt="blue alert icon with exclamation mark in a circle"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Webhook URL (checkout/wh/) not accessed in the terminal
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Cause</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-lightbulb.svg"
+                                    alt="blue lightbulb icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Incorrect endpoint URL
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Solution</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-check.svg"
+                                    alt="blue checkmark icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Check endpoint is using updated local server URL <br/>
+                                    (<a href="#" target="_blank" rel="noopener noreferrer" class="red" >learn how to do that here</a>)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-body box-shadow">
+                    <div class="header">
+                        <h2>
+                            Error: 500
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+                        <div class="box-container box-header">
+                            <div class="box-item box-title">
+                                <span>Status</span>
+                            </div>
+                            <div class="box-item box-right">
+                                <span>500</span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Symptoms</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-alert-circle.svg"
+                                    alt="blue alert icon with exclamation mark in a circle"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Webhook URL (checkout/wh/) not accessed in the terminal
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Cause</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-lightbulb.svg"
+                                    alt="blue lightbulb icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    An error in your code
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Solution</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-check.svg"
+                                    alt="blue checkmark icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Reading the error may give indication on how to debug  <br/>
+                                    (<a href="#" target="_blank" rel="noopener noreferrer" class="red" >learn how to do that here</a>)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-body box-shadow">
+                    <div class="header">
+                        <h2>
+                            Error: 500
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+                        <div class="box-container box-header">
+                            <div class="box-item box-title">
+                                <span>Status</span>
+                            </div>
+                            <div class="box-item box-right">
+                                <span>500</span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Symptoms</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-alert-circle.svg"
+                                    alt="blue alert icon with exclamation mark in a circle"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Duplicate Orders
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Cause</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-lightbulb.svg"
+                                    alt="blue lightbulb icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Existing order cannot be found in webhook_handler.py due to inconsistent address, grand_total, etc
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Solution</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-check.svg"
+                                    alt="blue checkmark icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Ensure order details do not change after the intent is created on the checkout page
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-body box-shadow">
+                    <div class="header">
+                        <h2>
+                            Error: 500
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+                        <div class="box-container box-header">
+                            <div class="box-item box-title">
+                                <span>Status</span>
+                            </div>
+                            <div class="box-item box-right">
+                                <span>500</span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Symptoms</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-alert-circle.svg"
+                                    alt="blue alert icon with exclamation mark in a circle"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Heroku-only duplicate Orders
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Cause</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-lightbulb.svg"
+                                    alt="blue lightbulb icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Signals for OrderLineItem updates are not unique
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-container box-border">
+                            <div class="box-item box-title">
+                                <span>Solution</span>
+                                <img
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/stripe-check.svg"
+                                    alt="blue checkmark icon"
+                                />
+                            </div>
+                            <div class="box-item box-right">
+                                <span>
+                                    Give signals unique names
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

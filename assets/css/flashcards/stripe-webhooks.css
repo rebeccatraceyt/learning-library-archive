@@ -55,6 +55,13 @@ body {
     font-size: 2.25em;
 }
 
+/* bullet point resets */
+.bullet-point {
+    display: flex;
+    align-items: flex-start;
+    margin: 16px 0;
+}
+
 .sm-note {
     font-style: italic;
     font-size: 12px;
@@ -65,17 +72,20 @@ body {
 
 .flashcard-row {
     display: flex;
-    flex-direction: column;
     gap: 12px;
+    flex-flow: row wrap;
 }
 
 .flashcard-body {
-    width: 92%;
-    display: flex;
+    max-width: 92%;
     padding: 20px;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    gap: 20px;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
 
     margin: 20px auto;
 
@@ -83,134 +93,67 @@ body {
     background-color: var(--text-alt-white);
 }
 
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-}
-
-.header > img {
-    max-width: 28%;
-}
-
-.text-heading {
-    width: 100%;
+.header > h2 {
     font-weight: 600;
-}
-.text-heading > h2 {
     font-family: var(--alt-font);
     font-size: 1.75rem;
     color: var(--action-red-100);
 }
+
 
 .red {
     color: var(--action-red-100);
 }
 
 .flashcard-container {
-    padding: 20px;
-    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
     min-width: 100%;
 }
 
-/* bullet point resets */
-.bullet-point {
+.box-header {
+    background-color: var(--text-alt-blue);
+    color: var(--text-alt-white);
+    border-radius: 4px 4px 0 0;
+}
+
+.box-container {
     display: flex;
-    align-items: flex-start;
-    margin: 16px 0;
-}
-
-/* 
-table resets 
-credit to: https://codepen.io/mohammed2raja/pen/NWaeGvG
-*/
-.responsive-table {
-    border-collapse: collapse;
     width: 100%;
-    table-layout: fixed;
+    padding: 8px 12px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 8px;
 }
 
-.responsive-table tr {
-    padding: 0.35em;
-}
-
-.responsive-table th,
-.responsive-table td {
-    word-wrap: break-word;
-    padding: 0.625em;
+.box-border {
     border: 1px solid var(--accent-grey);
 }
 
-.responsive-table th {
-    font-size: 0.85em;
-    letter-spacing: 0.1em;
+.box-title {
     text-transform: uppercase;
     font-weight: 900;
-    text-align: left;
+    letter-spacing: 1.25px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
-/* show/hide styling */
-.sm-only {
-    display: inline-block;
+.box-title > img {
+    width: 20px;
+    height: 20px;
 }
 
-@media screen and (max-width: 600px) {
-    .responsive-table {
-        border: 0;
-    }
-
-    .responsive-table tbody td[scope="row"] {
-        background-color: var(--text-blue);
-        color: var(--text-alt-white);
-    }
-
-    .responsive-table thead {
-        display: none;
-    }
-
-    .responsive-table tr {
-        display: block;
-        margin-bottom: 0.625em;
-    }
-
-    .responsive-table td {
-        display: block;
-        font-size: 0.8em;
-        text-align: right;
-    }
-    .responsive-table td::before {
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
+.box-right {
+    text-align: right;
 }
 
-@media only screen and (min-width: 601px) {
-    .responsive-table thead {
-        display: contents;
-    }
-
-    .responsive-table tr:first-child th {
-        border-top: 0;
-    }
-    .responsive-table tr:last-child td {
-        border-bottom: 0;
-    }
-    .responsive-table tr td:first-child,
-    .responsive-table tr th:first-child {
-        border-left: 0;
-        width: 16%;
-    }
-    .responsive-table tr td:last-child,
-    .responsive-table tr th:last-child {
-        border-right: 0;
-    }
-
-    /* show/hide styling */
-    .sm-only {
-        display: none;
+@media only screen and (min-width:768px){
+    .flashcard-body {
+        min-height: 140px;
+        flex-basis: 0%;
+        max-width: 45%;
     }
 }
 
@@ -221,33 +164,17 @@ credit to: https://codepen.io/mohammed2raja/pen/NWaeGvG
     .sm-note {
         display: none;
     }
+    #flashcards {
+        padding: 0px 40px;
+    }
     .flashcard-row {
         flex-direction: row;
         padding: 20px 40px;
         gap: 24px;
     }
     .flashcard-body {
-        width: 50%;
-        padding: 40px;
-        min-height: 580px;
-    }
-    #single-flashcard {
-        width: 84%;
-        max-width: 1080px;
-    }
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        align-self: stretch;
-        gap: 16px;
-    }
-    .header > img {
-        order: 2;
-        max-width: 16%;
-    }
-    .text-heading {
-        order: 1;
-        margin-top: 40px;
+        min-width: 420px;
+        max-width: 420px;
+        flex-basis: 24%;
     }
 }
