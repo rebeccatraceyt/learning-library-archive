@@ -1,122 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../assets/css/flashcards/css-selectors.css" />
-        <title>Multi Flashcard Template</title>
-    </head>
-    <body>
-        <nav>
-            <a href="../../bitesize.html">Bitesize</a>
-            <a href="../../checklist.html">Checklists</a>
-            <a href="../../flashcards.html">Flash</a>
-        </nav>
-        <div id="page-heading">
-            <div id="page-title">CSS SELECTORS</div>
-            <div id="page-info">
-                Lorem ipsum dolor sit amet consectetur. Vulputate rutrum urna turpis blandit ut mattis in at. Lacus faucibus id ut urna integer posuere. Diam enim morbi habitasse bibendum fringilla donec vulputate. Vitae sed lorem egestas volutpat vitae ac gravida varius. Blandit imperdiet lectus ut consectetur tincidunt nisl. Arcu nulla non tellus tempor amet tortor elementum ullamcorper nibh. Turpis lacus aliquam consequat nibh.
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="../../assets/css/flashcards/multi-flashcard.css" />
+    <title>CSS Selectors</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../../bitesize.html">Bitesize</a>
+      <a href="../../checklist.html">Checklists</a>
+      <a href="../../flashcards.html">Flash</a>
+    </nav>
+    <div id="page-heading">
+        <div id="page-title">
+            <h1>
+                CSS Selectors
+            </h1>
+        </div>
+        <div id="page-info">
+            <div class="bullet-point">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                <span>
+                    Lorem ipsum dolor sit amet consectetur. Vulputate rutrum urna turpis blandit ut mattis in at. 
+                </span>
+            </div>
+            <div class="bullet-point">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                <span>
+                    Lacus faucibus id ut urna integer posuere. Diam enim morbi habitasse bibendum fringilla donec vulputate. 
+                </span>
+            </div>
+            <div class="bullet-point">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                <span>
+                    Vitae sed lorem egestas volutpat vitae ac gravida varius. Blandit imperdiet lectus ut consectetur tincidunt nisl. 
+                </span>
+            </div>
+            <div class="bullet-point">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                <span>
+                    Arcu nulla non tellus tempor amet tortor elementum ullamcorper nibh. Turpis lacus aliquam consequat nibh.
+                </span>
             </div>
         </div>
-        <div id="flashcards">
-            <div class="flashcard-row">
-                <div class="flashcard-body box-shadow">
-                    <div class="header">
-                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
-                        <div class="text-heading">
-                            What are CSS selectors?
-                        </div>
-                    </div>
-                    <div class="flashcard-container box-shadow">
-                        <div class="section-padding">
-                        CSS Selectors are used to declare which HTML elements a particular style should be applied to
-                        </div>
-                        <br/>
-                        <div class="code-block">
-                            <div class="code-text code-container box-shadow">
-                                <div class="code-margin">
-                                    <span class="orange">.title-text {</span>
-                                </div>
-                                <div class="code-indent">
-                                    <span>
-                                        <span class="blue">font-family</span>: <span class="green">'Montserrat', 'Sans-serif'</span>;
-                                    </span>
-                                    <br>
-                                    <span>
-                                        <span class="blue">font-weight</span>: <span class="green">400</span>;
-                                    </span>
-                                </div>
-                                <div class="code-margin">
-                                    <span>
-                                        <span class="orange">}</span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
+    </div>
+    <div id="flashcards">
+      <div class="flashcard-row">
+        <div class="flashcard-body box-shadow">
+          <div class="header">
+            <h2>What are CSS selectors?</h2>
+          </div>
+          <div class="flashcard-container">
+            <!-- CODE BLOCK -->
+            <div class="code-block">
+              <div class="code-text code-container box-shadow">
+                <div class="code-margin">
+                  <span>/* Selector */ </span>
+                  <br />
+                  <br />
+                  <span class="orange">.title-text {</span>
                 </div>
-                <div class="flashcard-body box-shadow">
-                    <div class="header">
-                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
-                        <div class="text-heading">
-                            Element selectors
-                        </div>
-                    </div>
-                    <div class="flashcard-container box-shadow">
-                        Element selectors target basic HTML elements by their tag type. For example, paragraphs and headings.
-                    </div>
+                <div class="code-indent">
+                  <span>
+                    <span>/* Property: Value; */ </span>
+                    <br />
+                    <br />
+                    <span class="blue">font-family</span>:
+                    <span class="green">'Montserrat'</span>;
+                  </span>
+                  <br />
+                  <span>
+                    <span class="blue">font-weight</span>:
+                    <span class="green">400</span>;
+                  </span>
                 </div>
+                <div class="code-margin">
+                  <span>
+                    <span class="orange">}</span>
+                  </span>
+                </div>
+              </div>
             </div>
-            <div class="flashcard-row">
-                <div class="flashcard-body box-shadow">
-                    <div class="header">
-                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
-                        <div class="text-heading">
-                            Class selectors 
-                        </div>
-                    </div>
-                    <div class="flashcard-container box-shadow">
-                        Class selectors target multiple elements with a certain class. They are written using a full stop, then the class name.
-                    </div>
-                </div>
-                <div class="flashcard-body box-shadow">
-                    <div class="header">
-                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
-                        <div class="text-heading">
-                            ID Selectors 
-                        </div>
-                    </div>
-                    <div class="flashcard-container box-shadow">
-                        ID selectors target a single element with a certain id. They are written using a hash symbol, then the ID name.
-                    </div>
-                </div>
+            <div class="bullet-point">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg"
+                alt="blue arrow pointing right"
+              />
+
+              <span>
+                CSS Selectors are used to declare which HTML elements a
+                particular style should be applied to
+              </span>
             </div>
-            <div class="flashcard-row">
-                <div class="flashcard-body box-shadow">
-                    <div class="header">
-                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
-                        <div class="text-heading">
-                            Descendant selectors 
-                        </div>
-                    </div>
-                    <div class="flashcard-container box-shadow">
-                        Descendant selectors target elements in a hierarchical fashion. On the right, we target all list item elements which are descendants of unordered lists. Descendants of ordered lists are not affected.
-                    </div>
-                </div>
-                <div class="flashcard-body box-shadow">
-                    <div class="header">
-                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo">
-                        <div class="text-heading">
-                            Pseudo Selectors 
-                        </div>
-                    </div>
-                    <div class="flashcard-container box-shadow">
-                        Pseudo selectors target elements that are in a certain state of activity. 
-                    </div>
-                </div>
+            <div class="bullet-point">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg"
+                alt="blue arrow pointing right"
+              />
+
+              <span>
+                There are different types of selectors for targeting elements in
+                different ways.
+              </span>
             </div>
+            <div class="bullet-point">
+              <img
+                src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg"
+                alt="blue arrow pointing right"
+              />
+
+              <span>
+                The types of selector we'll cover in this deck include Element
+                Selector, Class Selector, ID selector, Pseudo-selector.
+              </span>
+            </div>
+          </div>
         </div>
-    </body>
+        <div class="flashcard-body box-shadow">
+            <div class="header">
+              <h2>Element selectors</h2>
+            </div>
+            <div class="flashcard-container">
+              <!-- CODE BLOCK -->
+              <div class="code-block">
+                <div class="code-text code-container box-shadow">
+                  <div class="code-margin">
+                    <span>/* Selector */ </span>
+                    <br />
+                    <br />
+                    <span class="orange">p {</span>
+                  </div>
+                  <div class="code-indent">
+                    <span>
+                      <span>/* Property: Value; */ </span>
+                      <br />
+                      <br />
+                      <span class="blue">color</span>:
+                      <span class="code-red">red</span>;
+                    </span>
+                    <br />
+                    <span>
+                      <span class="blue">font-weight</span>:
+                      <span class="green">400</span>;
+                    </span>
+                  </div>
+                  <div class="code-margin">
+                    <span>
+                      <span class="orange">}</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="bullet-point">
+                <img
+                  src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg"
+                  alt="blue arrow pointing right"
+                />
+  
+                <span>
+                  Element selecotrs target basic HTML elements by their tag type.  For example, paragraphs and headings tags.
+                </span>
+              </div>
+              <div class="bullet-point">
+                <img
+                  src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg"
+                  alt="blue arrow pointing right"
+                />
+  
+                <span>
+                  In the example the corresponding HTML you would be targeting would look like this:
+                </span>
+                
+                
+              </div>
+              <div class="inline-example">
+                <span class="code-text bold-text">
+                    <span><</span>p>Hello I am Red!<<span>/p></span>
+                </span>
+              </div>
+              <div class="bullet-point">
+                <img
+                  src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg"
+                  alt="blue arrow pointing right"
+                />
+  
+                <span>
+                  The resulting text on the page would look like this:
+                </span>
+                
+                
+              </div>
+              
+              <div class="inline-example">
+  
+                <img
+                  src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/red_code.svg"
+                  alt="code example red text" class="img-example-text"
+                />
+
+              </div>
+              
+            </div>
+          </div>
+    </div>
+  </body>
 </html>
