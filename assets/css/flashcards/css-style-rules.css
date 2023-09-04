@@ -164,6 +164,12 @@ body {
     padding-left: 48px;
 }
 
+#info-text {
+    font-style: italic;
+    padding: 12px 20px;
+    text-align: center;
+}
+
 @media only screen and (min-width: 1024px) {
     #page-heading {
         padding: 40px 80px 20px;
