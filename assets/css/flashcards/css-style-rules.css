@@ -105,7 +105,7 @@ body {
     padding-top: 16px;
 }
 
-.flashcard-body {
+.flashcard {
     width: 92%;
     max-width: 420px;
     padding: 20px;
@@ -117,6 +117,12 @@ body {
 
     border-radius: 12px;
     background-color: var(--text-alt-white);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.flashcard:hover {
+    transform: scale(1.05);
 }
 
 .header > h2 {
@@ -178,7 +184,7 @@ body {
         display: none;
     }
 
-    .flashcard-body {
+    .flashcard {
         max-width: 420px;
     }
 

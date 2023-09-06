@@ -76,7 +76,7 @@ body {
     flex-flow: row wrap;
 }
 
-.flashcard-body {
+.flashcard {
     max-width: 92%;
     padding: 20px;
     display: flex;
@@ -91,6 +91,12 @@ body {
 
     border-radius: 12px;
     background-color: var(--text-alt-white);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.flashcard:hover {
+    transform: scale(1.05);
 }
 
 .header > h2 {
@@ -150,7 +156,7 @@ body {
 }
 
 @media only screen and (min-width:768px){
-    .flashcard-body {
+    .flashcard {
         min-height: 140px;
         flex-basis: 0%;
         max-width: 45%;
@@ -172,7 +178,7 @@ body {
         padding: 20px 40px;
         gap: 24px;
     }
-    .flashcard-body {
+    .flashcard {
         min-width: 420px;
         max-width: 420px;
         flex-basis: 24%;
