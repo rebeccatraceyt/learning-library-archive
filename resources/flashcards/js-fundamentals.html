@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../assets/css/flashcards/js-fundamentals.css" />
+        <title>JavaScript Fundamentals</title>
+    </head>
+    <body>
+        <nav>
+            <a href="../../bitesize.html">Bitesize</a>
+            <a href="../../checklist.html">Checklists</a>
+            <a href="../../flashcards.html">Flash</a>
+        </nav>
+        <div id="page-heading">
+            <div id="page-title">
+                <h1>
+                    JavaScript Fundamentals
+                </h1>
+            </div>
+            <div id="page-info">
+                <div class="bullet-point">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                    <span>
+                        These flashcards cover a range of JavaScript fundamentals to help you build a solid understanding of the essentials comprehensively.
+                    </span>
+                </div>
+                <div class="bullet-point">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                    <span>
+                        The flashcards break down complex concepts in an easy-to-understand format, making your learning process efficient and effective.
+                    </span>
+                </div>
+                <div class="bullet-point">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                    <span>
+                        We are committed to keeping these flashcards current, so be sure to check back frequently for access to new content!
+                    </span>
+                </div>
+            </div>
+            <div class="sm-note">
+                <p>
+                    * Note: Flashcards are optimised for larger screens due to their compact design. 
+                </p>
+            </div>
+        </div>
+        <div id="flashcards">
+            <h2 class="sec-header">Functions and Scope</h2>
+            <div class="flashcard-row">
+                <div class="flashcard box-shadow">
+                    <div class="header">
+                        <h2>
+                            Vanilla functions
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+        
+                        <!-- CODE BLOCK -->
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        <span class="blue">function</span> <span class="green">greet</span>(<span class="code-red">name</span>) <span class="orange">{</span> 
+                                    </span>
+                                </div>
+                                <div class="code-indent">
+                                    <span>
+                                        <span class="blue">let</span> message = <span class="code-red">`Hi, </span>${<span class="green">name</span>}<span class="code-red">!`</span>;
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="blue">return</span> message;
+                                    </span>
+                                </div>
+                                <div class="code-margin">
+                                    <span>
+                                        <span class="orange">}</span>
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <span>
+                                        <span class="blue">let</span> result = <span class="green">greet</span>(<span class="code-red">“Ada“</span>);
+                                    </span>
+                                    <br>
+                                    <span class="blue">console</span>.log(<span class="code-red">result</span>);
+                                    <br>
+                                    <span class="grey">
+                                        // Output: Hi, Ada!
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- STEPS -->
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The function is defined with the <span class="code-text bold-text">function</span> keyword, followed by the function name (<span class="code-text bold-text">greet</span>). 
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                Inside the parentheses <span class="code-text bold-text">()</span>, the parameter is specified (<span class="code-text bold-text">name</span>).
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                Inside the curly braces <span class="code-text bold-text">{}</span> the function body defines the code to be executed.
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The <span class="code-text bold-text">return</span> statement is the value the function will produce when called.
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The function is called with a passing argument (<span class="code-text bold-text">Ada</span>)
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The result of the function call is stored in the <span class="code-text bold-text">result</span> variable.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard box-shadow">
+                    <div class="header">
+                        <h2>
+                            Arrow functions
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+        
+                        <!-- CODE BLOCK -->
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        <span class="blue">const</span> <span class="green">greet</span> = (<span class="code-red">name</span>) => <span class="orange">{</span> 
+                                    </span>
+                                </div>
+                                <div class="code-indent">
+                                    <span>
+                                        <span class="blue">let</span> message = <span class="code-red">`Hi, </span>${<span class="green">name</span>}<span class="code-red">!`</span>;
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="blue">return</span> message;
+                                    </span>
+                                </div>
+                                <div class="code-margin">
+                                    <span>
+                                        <span class="orange">}</span>
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <span>
+                                        <span class="blue">let</span> result = <span class="green">greet</span>(<span class="code-red">“Ada“</span>);
+                                    </span>
+                                    <br>
+                                    <span class="blue">console</span>.log(<span class="code-red">result</span>);
+                                    <br>
+                                    <span class="grey">
+                                        // Output: Hi, Ada!
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- STEPS -->
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The <span class="code-text bold-text">const</span> keyword defines a constant variable (<span class="code-text bold-text">greet</span>) and assigns it an arrow function.
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The function takes one parameter, inside the parentheses <span class="code-text bold-text">()</span> (<span class="code-text bold-text">name</span>).
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                Inside the curly braces <span class="code-text bold-text">{}</span> the function body defines the code to be executed.
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The <span class="code-text bold-text">return</span> statement is the value the function will produce when called.
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The function is called with a passing argument (<span class="code-text bold-text">Ada</span>)
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The result of the function call is stored in the <span class="code-text bold-text">result</span> variable.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard box-shadow">
+                    <div class="header">
+                        <h2>
+                            Single-Line Arrow functions
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+        
+                        <!-- CODE BLOCK -->
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        <span class="blue">const</span> <span class="green">addNum</span>(<span class="code-red">a</span>, <span class="code-red">b</span>) => <span class="code-red">a</span> + <span class="code-red">b</span>;
+                                    </span>
+                                </div>
+                                <div class="code-margin">
+                                    <span>
+                                        <span class="blue">let</span> sum = <span class="green">addNum</span>(<span class="code-red">6</span>, <span class="code-red">4</span>);
+                                    </span>
+                                    <br>
+                                    <span class="blue">console</span>.log(<span class="code-red">sum</span>);
+                                    <br>
+                                    <span class="grey">
+                                        // Output: 10
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- STEPS -->
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The <span class="code-text bold-text">const</span> keyword defines a constant variable (<span class="code-text bold-text">addNum</span>) and assigns it an arrow function.
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The function takes two parameters, (<span class="code-text bold-text">a + b</span>), inside the parentheses <span class="code-text bold-text">()</span>, and returns their sum.
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                The function is called with two passing arguments (<span class="code-text bold-text">6, 4</span>), then computes the <span class="code-text bold-text">sum</span> of these values, storing in the sum variable.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="sec-header">Operators and Expressions</h2>
+            <div class="flashcard-row">
+                <div class="flashcard box-shadow">
+                    <div class="header">
+                        <h2>
+                            JavaScript Spread Operator
+                        </h2>
+                    </div>
+                    <div class="flashcard-container">
+                        <h3 class="code-margin">Without Spread Operator</h3>
+
+                        <!-- CODE BLOCK -->
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        <span class="blue">let</span> <span class="orange">arr1</span> = [<span class="code-red">1, 2, 3</span>];
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="blue">let</span> <span class="green">arr2</span> = <span class="orange">arr1</span>;
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="green">arr2</span>.<span class="code-red">push</span>(<span class="code-red">4</span>);
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <span>
+                                        <span class="blue">console</span>.log(<span class="code-red">'array 1 = '</span>, <span class="orange">arr1</span>);
+                                    </span>
+                                    <br>
+                                    <span class="grey">
+                                        // Output: array 1 = 1 2 3 4
+                                    </span>
+                                    <br><br>
+                                    <span>
+                                        <span class="blue">console</span>.log(<span class="code-red">'array 2 = '</span>, <span class="green">arr2</span>);
+                                    </span>
+                                    <br>
+                                    <span class="grey">
+                                        // Output: array 2 = 1 2 3 4
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- STEPS -->
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                In this example, <span class="code-text bold-text">arr1</span> and <span class="code-text bold-text">arr2</span> both refer to the same array
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                Any changes made to <span class="code-text bold-text">arr2</span> will also affect <span class="code-text bold-text">arr1</span>, because they are essentially two references pointing to the same array.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flashcard box-shadow">
+                    <div class="header">
+                        <h2>JavaScript Spread Operator</h2>
+                    </div>
+                    <div class="flashcard-container">
+                        <h3 class="code-margin">With Spread Operator</h3>
+
+                        <!-- CODE BLOCK -->
+                        <div class="code-block">
+                            <div class="code-text code-container box-shadow">
+                                <div class="code-margin">
+                                    <span>
+                                        <span class="blue">let</span> <span class="orange">arr3</span> = [<span class="code-red">4, 5, 6</span>];
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="blue">let</span> <span class="green">arr4</span> = [...<span class="orange">arr3</span>];
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="green">arr4</span>.<span class="code-red">push</span>(<span class="code-red">7</span>);
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <span>
+                                        <span class="blue">console</span>.log(<span class="code-red">'array 3 = '</span>, <span class="orange">arr3</span>);
+                                    </span>
+                                    <br>
+                                    <span class="grey">
+                                        // Output: array 3 = 4 5 6
+                                    </span>
+                                    <br><br>
+                                    <span>
+                                        <span class="blue">console</span>.log(<span class="code-red">'array 4 = '</span>, <span class="green">arr4</span>);
+                                    </span>
+                                    <br>
+                                    <span class="grey">
+                                        // Output: array 4 = 4 5 6 7
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- STEPS -->
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                In this example, <span class="code-text bold-text">arr1</span> and <span class="code-text bold-text">arr2</span> both refer to the same array
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                Any changes made to <span class="code-text bold-text">arr2</span> will also affect <span class="code-text bold-text">arr1</span>, because they are essentially two references pointing to the same array.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

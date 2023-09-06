@@ -62,7 +62,6 @@ body {
     margin: 16px 0;
 }
 
-
 /* text resets */
 .code-text {
     font-family: var(--code-font);
@@ -106,18 +105,26 @@ body {
     padding-top: 16px;
 }
 
+.sec-header {
+    padding: 20px;
+}
+
 .flashcard-row {
     display: flex;
-    flex-direction: column;
     gap: 12px;
+    flex-flow: row wrap;
 }
 
 .flashcard {
-    width: 92%;
+    max-width: 92%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
 
     margin: 20px auto;
 
@@ -177,12 +184,24 @@ body {
     padding-left: 48px;
 }
 
+@media only screen and (min-width:768px){
+    .flashcard {
+        min-height: 140px;
+        flex-basis: 0%;
+        max-width: 45%;
+    }
+}
+
 @media only screen and (min-width: 1024px) {
     #page-heading {
         padding: 40px 80px 20px;
     }
     .sm-note {
         display: none;
+    }
+
+    .sec-header {
+        padding: 40px 80px 20px;
     }
 
     .flashcard-row {
@@ -192,7 +211,9 @@ body {
     }
 
     .flashcard {
+        min-width: 420px;
         max-width: 420px;
+        flex-basis: 24%;
     }
 
     .code-container {
