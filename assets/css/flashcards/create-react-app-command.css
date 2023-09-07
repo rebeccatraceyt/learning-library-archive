@@ -176,7 +176,7 @@ body {
     border-radius: 8px;
     color: var(--text-alt-white);
     background-color: var(--text-alt-blue);
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
 }
 .code-margin {
