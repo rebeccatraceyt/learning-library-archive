@@ -73,22 +73,26 @@ body {
 
 .flashcard-row {
     display: flex;
-    flex-direction: column;
     gap: 12px;
+    flex-flow: row wrap;
 }
 
 .flashcard {
-    width: 92%;
+    max-width: 92%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+
     margin: 20px auto;
 
     border-radius: 12px;
     background-color: var(--text-alt-white);
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Hover effect */
@@ -178,12 +182,36 @@ body {
     color: var(--accent-green);
 }
 
+#selector-list {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
 .img-example-text {
-    max-width: 60%;
+    max-width: 80%;
 }
 
 .inline-example {
-    padding-left: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.html-example {
+    min-width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--action-red-60);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+@media only screen and (min-width:768px){
+    .flashcard {
+        min-height: 140px;
+        flex-basis: 0%;
+        max-width: 45%;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -197,11 +225,14 @@ body {
     .flashcard-row {
         flex-direction: row;
         padding: 20px 40px;
-        gap: 24px;
+        justify-content: center;
     }
 
     .flashcard {
+        min-width: 420px;
         max-width: 420px;
+        flex-basis: 24%;
+        margin: 20px 40px;
     }
 
     .code-container {
