@@ -377,13 +377,19 @@
                         <div class="bullet-point">
                             <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
                             <span>
-                                In this example, <span class="code-text bold-text">arr1</span> and <span class="code-text bold-text">arr2</span> both refer to the same array
+                                In this example, <span class="code-text bold-text">arr3</span> and <span class="code-text bold-text">arr4</span> are two separate arrays.
                             </span>
                         </div>
                         <div class="bullet-point">
                             <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
                             <span>
-                                Any changes made to <span class="code-text bold-text">arr2</span> will also affect <span class="code-text bold-text">arr1</span>, because they are essentially two references pointing to the same array.
+                                The spread operator (<span class="code-text bold-text">[...arr3]</span>) creates a new array (<span class="code-text bold-text">arr4</span>), with the same elements as arr3, but they are stored in different memory locations.
+                            </span>
+                        </div>
+                        <div class="bullet-point">
+                            <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                            <span>
+                                This means that changes made to <span class="code-text bold-text">arr4</span> do not affect <span class="code-text bold-text">arr3</span>. They are distinct arrays.
                             </span>
                         </div>
                     </div>
