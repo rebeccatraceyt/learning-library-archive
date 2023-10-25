@@ -1,0 +1,136 @@
+footer {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.footer-divider {
+    border-top: 4px solid rgba(35, 187, 187, 0.75);
+    border-radius: 5px;
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.footer-container {
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: center;
+    width: 90%;
+    padding: 2% 5%;
+    margin: 1.5em auto;
+}
+
+.footer-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.footer-section > ul > li,
+#logo-section > .terms {
+    font-size: 12px;
+    font-weight: 400;
+    list-style: none;
+}
+
+.footer-section > ul > li > a {
+    color: #445261;
+}
+
+.terms > a {
+    text-decoration: none;
+    color: #404042;
+    width: 100%;
+    align-self: flex-end;
+}
+
+#menu-languages,
+#menu-resources,
+#menu-ci {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    padding-left: 0;
+}
+
+.footer-section > h5 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    width: 100%;
+}
+
+.footer-down {
+    margin: 3px 5px 0px 5px;
+}
+
+.footer-header {
+    width: 100%;
+}
+
+#logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.menu {
+    display: none;
+}
+
+.menu-open {
+    display: flex;
+}
+
+.footer-down-clicked > span > img {
+    transform: rotateX(180deg);
+}
+
+.footer-link:hover {
+    border-bottom: 1px solid #404042;
+}
+
+@media only screen and (min-width: 700px) {
+    .footer-section {
+        width: 25%;
+    }
+
+    .footer-section > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 11px;
+        padding-left: 0;
+    }
+
+    .footer-divider {
+        width: 96%;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 12px;
+        align-self: stretch;
+        width: 100%;
+        padding: 2% 2%;
+    }
+
+    .footer-down {
+        display: none;
+    }
+
+    .footer-section > h5 {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+    }
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/breadcrumbs.css" />
+    <link rel="stylesheet" href="assets/css/resource_resets.css" />
+    <link rel="stylesheet" href="assets/css/resource_detail.css">
+    <title>5 Planes of UX &mdash; Learning Library</title>
+</head>
+<body>
+
+    <!-- Header & Nav -->
+    <header>
+        <nav aria-label="Main Navigation" class="navbar" role="navigation">
+            <div class="logo-section">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+                    alt="code-institute-logo" class="nav-logo" />
+            </div>
+            <div class="menu-section">
+                <a href="javascript:void(0);" id="mobile-nav" class="nav-mobile" aria-label="Mobile Navigation Menu">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/ci_hamburger-md.svg"
+                        alt="ci hamburger menu" />
+                </a>
+                <ul id="nav-menu" class="nav-menu nav-hidden">
+                    <!-- Close button (mobile nav) -->
+                    <li id="close-item" class="nav-item">
+                        <a id="nav-close" href="#"> X </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <!-- Resources Menu (dropdown on desktop) -->
+                    <li class="nav-item" id="desktop-nav-item">
+                        <a href="#" id="resources-dropdown"><span>Resources
+                                <img class="nav-down"
+                                    src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/down-chevrondown-chevron.svg" /></span></a>
+                        <ul id="resources-menu" class="menu">
+                            <li class="nav-sub-item">
+                                <a href="#">HTML & CSS</a>
+                            </li>
+                            <li class="nav-sub-item">
+                                <a href="#">JavaScript</a>
+                            </li>
+                            <li class="nav-sub-item">
+                                <a href="#">Python</a>
+                            </li>
+                            <li class="nav-sub-item">
+                                <a href="#">Django</a>
+                            </li>
+                            <li class="nav-sub-item">
+                                <a href="#">Troubleshooting & Debugging</a>
+                            </li>
+                            <li class="nav-sub-item">
+                                <a href="cat_overview.html">User-Centric Design</a>
+                            </li>
+                            <li class="nav-sub-item">
+                                <a href="#">DevLab Sessions</a>
+                            </li>
+                            <li class="nav-sub-item">
+                                <a href="#">DevTips Archive</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Mobile nav list items -->
+                    <li class="nav-item" id="mobile-nav-item">
+                        <a href="#">HTML & CSS</a>
+                    </li>
+                    <li class="nav-item" id="mobile-nav-item">
+                        <a href="#">JavaScript</a>
+                    </li>
+                    <li class="nav-item" id="mobile-nav-item">
+                        <a href="#">Python</a>
+                    </li>
+                    <li class="nav-item" id="mobile-nav-item">
+                        <a href="#">Django</a>
+                    </li>
+                    <li class="nav-item" id="mobile-nav-item">
+                        <a href="#">Troubleshoot & Debug</a>
+                    </li>
+                    <li class="nav-item" id="mobile-nav-item">
+                        <a href="#">User-Centric Design</a>
+                    </li>
+                    <li class="nav-item" id="mobile-nav-item">
+                        <a href="#">DevLab Sessions</a>
+                    </li>
+                    <li class="nav-item" id="mobile-nav-item">
+                        <a href="#">DevTips Archive</a>
+                    </li>
+                    <li class="nav-item" id="mobile-nav-item">
+                        <span class="nav-divider"></span>
+                    </li>
+                    <!-- Log-in Button - all screens -->
+                    <li class="nav-item">
+                        <a id="log-in-btn" href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="page-padding">
+
+        <!-- Breadcrumbs -->
+        <div id="sm-breadcrumbs">
+            <a href="/" id="home-breadcrumb" class="breadcrumbs">
+                &lt;
+                User-Centric Design
+            </a>
+        </div>
+        <div id="lg-breadcrumbs">
+            <div id="link-breadcrumbs">
+                <a href="/" id="home-breadcrumb" class="breadcrumbs">
+                    User-Centric Design
+                </a>
+                <span class="breadcrumbs">
+                    &gt;
+                </span>
+            </div>
+            <span id="active-breadcrumb" class="box-shadow">
+                Bitesize: 5 Planes of UX
+            </span>
+
+        </div>
+
+        <!-- Resource Detail -->
+        <section id="template-body" class="box-shadow">
+            <div id="header">
+                <div id="header-text">
+                    <h1 class="text-heading">5 Planes of UX</h1>
+                    <span>
+                        Jesse James Garrett introduced us to the five planes of UX design in his book called The Elements of User Experience. 
+                        It is an abstract framework that breaks down the design experience into manageable components. 
+                        This is a great guide to follow when planning your project. 
+                        The planes are strategy, scope, structure, skeleton, and surface. 
+                    </span>
+                </div>
+                <hr id="header-hr" />
+            </div>
+            <div class="body">
+                <div class="row section-padding">
+                    <div class="col-left">
+                        <img class="box-shadow" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/strategy_plane.svg" alt="strategy plane thumbnail image">
+                    </div>
+                    <div class="col-right">
+                        <p class="alt-heading">Strategy</p>
+                        <p>
+                            In this plane, you can brainstorm the featured components that are necessary to meet your user stories and product objectives. This is the most abstract and least constrained part of the project, where you can keep in mind the most important and viable features that will allow for a more concise, user-friendly design.
+                        </p>
+                    </div>
+                </div>
+                <div class="row section-padding reverse">
+                    <div class="col-left">
+                        <p class="alt-heading">Scope</p>
+                        <p>
+                            The scope plane is necessary to help  identify the project's needs, aligning the strategised features. This is broken into content and functionality requirements. This plane is used to develop a scalable list of requirements for the project.
+                        </p>
+                    </div>
+                    <div class="col-right">
+                        <img class="box-shadow" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/scope_plane.svg" alt="scope plane thumbnail image">
+                    </div>
+                </div>
+                <div class="row section-padding">
+                    <div class="col-left">
+                        <img class="box-shadow" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/structure_plane.svg" alt="structure plane thumbnail image">
+                    </div>
+                    <div class="col-right">
+                        <p class="alt-heading">Structure</p>
+                        <p>
+                            In the structure plane you can plan the Information Architecture, to improve findability and usability for users. You can do this by creating a flow navigation chart to illustrate the ideal flow of the site.
+                        </p>
+                    </div>
+                </div>
+                <div class="row section-padding reverse">
+                    <div class="col-left">
+                        <p class="alt-heading">Skeleton</p>
+                        <p>
+                            During the skeleton plane you can create grey scale wireframes for different device sizes by adding in the components and content that were prioritised in previous planning stages. 
+                        </p>
+                    </div>
+                    <div class="col-right">
+                        <img class="box-shadow" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/skeleton_plane.svg" alt="skeleton plane thumbnail image">
+                    </div>
+                </div>
+                <div class="row section-padding">
+                    <div class="col-left">
+                        <img class="box-shadow" src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/surface_plane.svg" alt="surface plane thumbnail image">
+                    </div>
+                    <div class="col-right">
+                        <p class="alt-heading">Surface</p>
+                        <p>
+                            Using the previous planes as a foundation, you can create mockup versions of the above wireframes to reflect the desired end product. This is where the typography, styling and components are strategically designed to optimise the user experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-icon">
+                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png" alt="Code Institute logo - light version for dark backgrounds">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+
+    <hr class="footer-divider">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h5 class="footer-header">
+                    <span>Languages <img class="footer-down"
+                            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/down-chevrondown-chevron.svg"
+                            alt="Chevron pointing down - languages"></span>
+                </h5>
+                <ul id="menu-languages" class="menu">
+                    <li class="footer-link"><a href="#">HTML & CSS</a></li>
+                    <li class="footer-link"><a href="#">JavaScript</a></li>
+                    <li class="footer-link"><a href="#">Python</a></li>
+                    <li class="footer-link"><a href="#">Django</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5 class="footer-header">
+                    <span>Resources <img class="footer-down"
+                            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/down-chevrondown-chevron.svg"
+                            alt="Chevron pointing down - resources"></span>
+                </h5>
+                <ul id="menu-resources" class="menu">
+                    <li class="footer-link"><a href="#">Troubleshooting & Debugging</a></li>
+                    <li class="footer-link"><a href="#">User-Centric Design</a></li>
+                    <li class="footer-link"><a href="#">DevLab Sessions</a></li>
+                    <li class="footer-link"><a href="#">Devtips Archive</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5 class="footer-header">
+                    <span>Code Institute <img class="footer-down"
+                            src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/down-chevrondown-chevron.svg"
+                            alt="Chevron pointing down - Code Institute"></span>
+                </h5>
+                <ul id="menu-ci" class="menu">
+                    <li class="footer-link"><a href="#">About</a></li>
+                    <li class="footer-link"><a href="#">Contact Us</a></li>
+                    <li class="footer-link"><a href="#">Plagiarism Policy</a></li>
+                </ul>
+            </div>
+            <div id="logo-section" class="footer-section">
+                <div class="logo">
+                    <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/library-logo-dark.png"
+                        alt="code institute logo">
+                </div>
+                <span class="terms"><a href="#" target="_blank" aria-label="Read our terms & conditions"> Terms &
+                        Conditions</a> | <a href="#" target="_blank" aria-label="Read our privacy policy">Privacy
+                        Policy</a> </span>
+                <div class="social"><a href="#" target="_blank" aria-label="Code Institute facebook"><i
+                            class="fa-brands fa-facebook"></i></a><a href="#" target="_blank"
+                        aria-label="Code Institute twitter/x"><i class="fa-brands fa-square-x-twitter"></i></a><a
+                        href="#" target="_blank" aria-label="Code Institute instagram"><i
+                            class="fa-brands fa-instagram"></i></a><a href="#" target="_blank"
+                        aria-label="Code Institute linkedin"><i class="fa-brands fa-linkedin"></i></a><a href="#"
+                        target="_blank" aria-label="Code Institute tik-tok"><i class="fa-brands fa-tiktok"></i></a><a
+                        href="#" target="_blank" aria-label="Code Institute youtube"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="copyright"><i class="fa-regular fa-copyright"></i><span> 2023 Code Institute</span>
+                </div>
+            </div>
+    </footer>
+
+    <!-- Script for Navigation Functionality -->
+    <script src="assets/js/navigation.js"></script>
+
+</body>
+</html>
