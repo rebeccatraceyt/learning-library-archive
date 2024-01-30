@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/flashcards/flashcard_test.css" />
+    <title>TEST</title>
+</head>
+
+    <body>
+
+        <!-- NAVIGATION SECTION -->
+        <nav>
+            <a href="bitesize.html">Bitesize</a>
+            <a href="checklist.html">Checklists</a>
+            <a href="flashcards.html">Flash</a>
+        </nav>
+		<!-- ....... -->
+
+        <!-- MAIN SECTION - RESOURCE -->
+
+        <main id="main">    
+            <div id="overview">
+                <!-- Flashcard heading -->
+                <div id="overview__heading">
+                    <h1 id="overview__heading--text">
+                        CSS Style Rules
+                    </h1>
+                </div>
+                <!-- ....... -->
+
+                <!-- Flashcard intro -->
+                <div id="overview__intro">
+                    <div class="overview__point">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                        <span>
+                            CSS (Cascading Style Sheets) style rules are sets of instructions that define the visual presentation and layout of HTML elements on a web page. 
+                        </span>
+                    </div>
+                    <div class="overview__point">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                        <span>
+                            They control properties such as colors, fonts, spacing, and positioning, enabling us to create consistent and visually appealing designs.
+                        </span>
+                    </div>
+                    <div class="overview__point">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                        <span>
+                            By applying these rules to HTML elements using selectors, we can apply specific styles to individual elements or groups, ensuring a separation between content and presentation for a better user experience.
+                        </span>
+                    </div>
+                    <div class="flashcard__point">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                        <span>
+                            These flashcards delve into the foundational aspects of the style rule, unveiling the importance of selectors, declarations, property/value pairs, and their impact.
+                        </span>
+                    </div>
+                </div>
+                <!-- ....... -->
+                
+                <div id="note__sm">
+                    <p>
+                        * Note: Flashcards are optimised for larger screens due to their compact design. 
+                    </p>
+                </div>
+            </div>
+
+        
+            <h2>INTERACTIVE</h2>
+            <div id="flashcards">
+                <div class="flashcard box-shadow">
+                    <div class="flashcard__header">
+                        <h2>Selecting Elements in CSS</h2>
+                    </div>
+
+                    <!-- FLASHCARD Container -->
+                    <div class="flashcard__container">
+
+                        <div class="flashcard__side flashcard__side--front">
+                            <!-- CODE BLOCK -->
+                            <div class="code__block">
+                                <div class="text__code code__container box-shadow">
+                                    <div class="code__margin">
+                                        <span class="color__orange">body {</span>
+                                    </div>
+                                    <div class="code__indent--1">
+                                        <br>
+                                        <span class="color__grey">
+                                            /* Property: Value; */ 
+                                        </span>
+                                        <br>
+                                        <span>
+                                            <span class="color__blue">color</span>: <span class="color__green">red</span>;
+                                        </span>
+                                    </div>
+                                    <br>
+                                    <div class="code__margin">
+                                        <span>
+                                            <span class="color__orange">}</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flashcard__side flashcard__side--back">
+                            <!-- STEPS -->
+                            <div class="flashcard__point">
+                                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                                <span>
+                                    The selector (body) determines which elements receive the defined style.
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="flashcard box-shadow">
+                    <div class="flashcard__header">
+                        <h2>Constructing Declarations</h2>
+                    </div>
+
+                    <!-- FLASHCARD Container -->
+                    <div class="flashcard__container">
+
+                        <div class="flashcard__side flashcard__side--front">
+                            <!-- CODE BLOCK -->
+                            <div class="code__block">
+                                <div class="text__code code__container box-shadow">
+                                    <div class="code__margin">
+                                        <span class="color__orange">selector {</span>
+                                    </div>
+                                    <div class="code__indent--1">
+                                        <br>
+                                        <span class="color__grey">
+                                            /* Style Declaration */ 
+                                        </span>
+                                        <br>
+                                        <span>
+                                            <span class="color__blue">property1</span>: <span class="color__green">value1</span>;
+                                        </span>
+                                    </div>
+                                    <br>
+                                    <div class="code__margin">
+                                        <span>
+                                            <span class="color__orange">}</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flashcard__side flashcard__side--back">
+                            <!-- STEPS -->
+                            <div class="flashcard__point">
+                                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                                <span>
+                                    Declarations, enclosed in curly brackets, follow selectors and hold property/value pairs.
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="flashcard box-shadow">
+                    <div class="flashcard__header">
+                        <h2>Defining Properties and Values</h2>
+                    </div>
+
+                    <!-- FLASHCARD Container -->
+                    <div class="flashcard__container">
+
+                        <div class="flashcard__side flashcard__side--front">
+                            <!-- CODE BLOCK -->
+                            <div class="code__block">
+                                <div class="text__code code__container box-shadow">
+                                    <div class="code__margin">
+                                        <span class="color__orange">selector {</span>
+                                    </div>
+                                    <div class="code__indent--1">
+                                        <br>
+                                        <span class="color__grey">
+                                            /* Pairing */ 
+                                        </span>
+                                        <br>
+                                        <span>
+                                            <span class="color__blue">property</span>: <span class="color__green">value</span>;
+                                        </span>
+                                    </div>
+                                    <br>
+                                    <div class="code__margin">
+                                        <span>
+                                            <span class="color__orange">}</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flashcard__side flashcard__side--back">
+                            <!-- STEPS -->
+                            <div class="flashcard__point">
+                                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                                <span>
+                                    Declarations in CSS are composed of property/value pairs, defining precise stylistic attributes for elements.
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="flashcard box-shadow">
+                    <div class="flashcard__header">
+                        <h2>Composing Property/Value Pairs</h2>
+                    </div>
+
+                    <!-- FLASHCARD Container -->
+                    <div class="flashcard__container">
+
+                        <div class="flashcard__side flashcard__side--front">
+                            <!-- CODE BLOCK -->
+                            <div class="code__block">
+                                <div class="text__code code__container box-shadow">
+                                    <div class="code__margin">
+                                        <span class="color__orange">selector {</span>
+                                    </div>
+                                    <div class="code__indent--1">
+                                        <br>
+                                        <span class="color__grey">
+                                            /* Property: Value; */ 
+                                        </span>
+                                        <br>
+                                        <span>
+                                            <span class="color__blue">color</span>: <span class="color__green">red</span>;
+                                        </span>
+                                    </div>
+                                    <br>
+                                    <div class="code__margin">
+                                        <span>
+                                            <span class="color__orange">}</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flashcard__side flashcard__side--back">
+                            <!-- STEPS -->
+                            <div class="flashcard__point">
+                                <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                                <span>
+                                    Properties (e.g., color) refer to HTML element attributes affected by assigned values (e.g., red).
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>STATIC</h2>
+            <div id="flashcards">
+                <div class="flashcard box-shadow">
+                    <div class="flashcard__header">
+                        <h2>Selecting Elements in CSS</h2>
+                    </div>
+    
+                    <div class="flashcard__container">
+                        <!-- CODE BLOCK -->
+                        <div class="code__block">
+                            <div class="text__code code__container box-shadow">
+                                <div class="code__margin">
+                                    <span class="color__orange">body {</span>
+                                </div>
+                                <div class="code__indent--1">
+                                    <br>
+                                    <span class="color__grey">
+                                        /* Property: Value; */ 
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="color__blue">color</span>: <span class="color__green">red</span>;
+                                    </span>
+                                </div>
+                                <br>
+                                <div class="code__margin">
+                                    <span>
+                                        <span class="color__orange">}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- STEPS -->
+                    <div class="flashcard__point">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                        <span>
+                            The selector (body) determines which elements receive the defined style.
+                        </span>
+                    </div>
+                </div>               
+                
+                <div class="flashcard box-shadow">
+                    <div class="flashcard__header">
+                        <h2>Constructing Declarations</h2>
+                    </div>
+    
+                    <div class="flashcard__container">
+                        <!-- CODE BLOCK -->
+                        <div class="code__block">
+                            <div class="text__code code__container box-shadow">
+                                <div class="code__margin">
+                                    <span class="color__orange">selector {</span>
+                                </div>
+                                <div class="code__indent--1">
+                                    <br>
+                                    <span class="color__grey">
+                                        /* Style Declaration */ 
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="color__blue">property1</span>: <span class="color__green">value1</span>;
+                                    </span>
+                                </div>
+                                <br>
+                                <div class="code__margin">
+                                    <span>
+                                        <span class="color__orange">}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- STEPS -->
+                    <div class="flashcard__point">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                        <span>
+                            Declarations, enclosed in curly brackets, follow selectors and hold property/value pairs.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flashcard box-shadow">
+                    <div class="flashcard__header">
+                        <h2>Defining Properties and Values</h2>
+                    </div>
+    
+                    <div class="flashcard__container">
+                        <!-- CODE BLOCK -->
+                        <div class="code__block">
+                            <div class="text__code code__container box-shadow">
+                                <div class="code__margin">
+                                    <span class="color__orange">selector {</span>
+                                </div>
+                                <div class="code__indent--1">
+                                    <br>
+                                    <span class="color__grey">
+                                        /* Pairing */ 
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="color__blue">property</span>: <span class="color__green">value</span>;
+                                    </span>
+                                </div>
+                                <br>
+                                <div class="code__margin">
+                                    <span>
+                                        <span class="color__orange">}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- STEPS -->
+                    <div class="flashcard__point">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                        <span>
+                            Declarations in CSS are composed of property/value pairs, defining precise stylistic attributes for elements.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flashcard box-shadow">
+                    <div class="flashcard__header">
+                        <h2>Composing Property/Value Pairs</h2>
+                    </div>
+    
+                    <div class="flashcard__container">
+                        <!-- CODE BLOCK -->
+                        <div class="code__block">
+                            <div class="text__code code__container box-shadow">
+                                <div class="code__margin">
+                                    <span class="color__orange">selector {</span>
+                                </div>
+                                <div class="code__indent--1">
+                                    <br>
+                                    <span class="color__grey">
+                                        /* Property: Value; */ 
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <span class="color__blue">color</span>: <span class="color__green">red</span>;
+                                    </span>
+                                </div>
+                                <br>
+                                <div class="code__margin">
+                                    <span>
+                                        <span class="color__orange">}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- STEPS -->
+                    <div class="flashcard__point">
+                        <img src="https://4060571.fs1.hubspotusercontent-na1.net/hubfs/4060571/library-assets/arrow-right_secondary.svg" alt="blue arrow pointing right">
+                        <span>
+                            Properties (e.g., color) refer to HTML element attributes affected by assigned values (e.g., red).
+                        </span>
+                    </div>
+                </div>
+                      
+            </div>
+            
+            <!-- ....... -->
+
+        </main>
+
+        <!-- ....... -->
+
+    </body>
+</html>

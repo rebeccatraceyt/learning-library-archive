@@ -1,0 +1,464 @@
+/*------------------------------------
+             Font Imports
+------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+/*------------------------------------
+            Root Variables
+------------------------------------*/
+:root {
+    --body-font: "Montserrat", sans-serif;
+    --alt-font: "Indie Flower", cursive;
+    --code-font: "Courier Prime", monospace;
+
+    --action-red-60: #E8C0B4;
+    --action-red-100: #E10F09;
+    --action-blue: #23BBBB;
+    --action-blue-25: rgba(35, 187, 187, 0.25);
+    --action-blue-50: rgba(35, 187, 187, 0.50);
+
+    --text-color: #4A4A4F;
+    --text-white: #FAFAFA;
+    --text-alt-white: #FCFDFD;
+    --text-alt-blue: #445261;
+    --text-blue: #058282;
+
+    --accent-pink: #FBBABC;
+    --accent-orange: #F3D377;
+    --accent-green: #95E8BC;
+    --accent-blue: #A1D2F5;
+    --accent-grey: #D6D7D8;
+
+    --box-shadow: rgba(0, 0, 0, 0.25);
+    --box-shadow-14: rgba(0, 0, 0, 0.14);
+    --box-shadow-13: rgba(0, 0, 0, 0.13);
+    --box-shadow-12: rgba(0, 0, 0, 0.12);
+    --box-shadow-11: rgba(0, 0, 0, 0.11);
+}
+
+/*------------------------------------
+            Reset Styles
+------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0px 8px 16px var(--box-shadow);
+    box-shadow: 0px 8px 16px var(--box-shadow);
+}
+
+.box-shadow__sm {
+    -webkit-box-shadow: 0 2px 4px 0 var(--box-shadow-13), 0 1px 1px 0 var(--box-shadow-11);
+    box-shadow: 0 2px 4px 0 var(--box-shadow-13), 0 1px 1px 0 var(--box-shadow-11);
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*------------------------------------
+            Text Resets
+------------------------------------*/
+.text__code {
+    font-family: var(--code-font);
+}
+.text__bold {
+    font-weight: 900;
+}
+.text__italic {
+    font-style: italic;
+}
+.text__center {
+    text-align: center;   
+}
+.text__alt {
+    font-family: var(--alt-font);
+}
+
+/*------------------------------------
+            Color Resets
+------------------------------------*/
+.color__red {
+    color: var(--action-red-100);
+}
+.color__red--60 {
+    color: var(--action-red-60);
+}
+.color__orange {
+    color: var(--accent-orange);
+}
+.color__blue {
+    color: var(--accent-blue);
+}
+.color__blue--secondary {
+    color: var(--action-blue);
+}
+.color__blue--text {
+    color: var(--text-blue);
+}
+.color__green {
+    color: var(--accent-green);
+}
+.color__pink {
+    color: var(--accent-pink);
+}
+.color__grey {
+    color: var(--accent-grey);
+}
+
+/*------------------------------------
+           Show/Hide Resets
+------------------------------------*/
+.show__sm {
+    /* Show on small devices */
+    display: inline-block;
+}
+.show__lg {
+    /* Hide on small devices */
+    display: none;
+}
+
+/*------------------------------------
+            Media Queries
+------------------------------------*/
+@media only screen and (min-width: 1024px) {
+
+    /* Show/Hide Resets */
+    .show__sm {
+        /* Hide on large devices */
+        display: none;
+    }
+    .show__lg {
+        /* Show on large devices */
+        display: inline-block;
+    }
+}
+
+
+/*------------------------------------
+            General Styles
+------------------------------------*/
+.code__block {
+    display: flex;
+    justify-content: center;
+}
+
+.code__container {
+    min-width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    color: var(--text-alt-white);
+    background-color: var(--text-alt-blue);
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.code__margin {
+    margin-bottom: 8px;
+}
+
+/*------------------------------------
+         Indentation Styles
+------------------------------------*/
+.code__indent--1 {
+    padding-left: 20px;
+}
+
+.code__indent--2 {
+    padding-left: 32px;
+}
+
+.code__indent--3 {
+    padding-left: 44px;
+}
+
+.code__indent--4 {
+    padding-left: 56px;
+}
+
+.code__indent--5 {
+    padding-left: 64px;
+}
+
+/*------------------------------------
+            Media Queries
+------------------------------------*/
+@media only screen and (min-width: 600px) {
+    
+    .code__container {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+}
+
+
+/*------------------------------------
+           General Styles
+------------------------------------*/
+#overview {
+    padding: 40px 0;
+}
+#main {
+    padding: 116px 24px;
+}
+
+/*------------------------------------
+        Overview Intro Styles
+------------------------------------*/
+#overview__heading {
+    text-align: justify;
+}
+#overview__heading--text {
+    font-weight: 800;
+    font-size: 2.25em;
+    padding-bottom: 20px;
+}
+#overview__intro {
+    padding-bottom: 20px;
+}
+.overview__point {
+    display: flex;
+    align-items: flex-start;
+    margin: 16px 0;
+}
+
+
+/*------------------------------------
+        Overview Filter Styles
+------------------------------------*/
+#overview__filter {
+    text-align: right;
+    padding-bottom: 20px;
+}
+#overview__filter--selector {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    font-weight: 900;
+    padding: 4px;
+}
+#overview__filter--selector > option {
+    font-weight: 800;
+    padding: 4px;
+}
+
+
+/*------------------------------------
+        Overview Card Styles
+------------------------------------*/
+#overview__cards {
+    display: flex;
+    gap: 12px;
+    flex-flow: row wrap;
+}
+.overview__card {
+    max-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+
+    margin: 20px auto;
+
+    border-radius: 12px;
+    background-color: var(--text-alt-white);
+}
+.overview__card--shadow{
+    -webkit-box-shadow: 0 7px 15px 0 var(--box-shadow-14), 0 1px 4px 0 var(--box-shadow-12);
+    box-shadow: 0 7px 15px 0 var(--box-shadow-14), 0 1px 4px 0 var(--box-shadow-12);
+}
+.overview__card--img {
+    border-radius: 4px;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+.overview__card--img > img {
+    width: 100%;
+}
+.overview__card--title {
+    font-weight: bolder;
+    padding-bottom: 4px;
+    font-size: 20px;
+}
+.overview__card--desc {
+    height: 60px;
+}
+.overview__card--type {
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 90%;
+}
+.overview__card--link {
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--action-red-100);
+    border-radius: 2px;
+    padding: 12px;
+    color: var(--text-alt-white);
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    transition: all 0.2s linear 0s;
+}
+.overview__card--link:link,
+.overview__card--link:visited,
+.overview__card--link:active {
+    color: var(--text-alt-white);
+}
+.overview__card--link > img {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: all 0.2s linear 0s;
+}
+
+@media only screen and (min-width: 768px) {
+    #main {
+        padding: 116px 54px 24px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #main {
+        padding: 116px 48px;
+        max-width: 1000px;
+        margin: 1em auto;
+    }
+
+    /* overview cards */
+    #overview__cards {
+        flex-direction: row;
+        padding: 20px 0;
+        gap: 24px;
+        justify-content: space-evenly;
+    }
+    .overview__card {
+        flex-basis: 24%;
+    }
+
+    .overview__card--link:hover > img {
+        visibility: visible;
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+    }
+    .overview__card--link:hover {
+        /* Moves text slightly on hover */
+        color: var(--text-alt-white);
+        gap: 8px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #main {
+        max-width: 1200px;
+        margin: .7em auto 0;
+    }
+}
+
+/*------------------------------------
+        Bullet Point Styles
+------------------------------------*/
+.flashcard__point {
+    display: flex;
+    align-items: flex-start;
+    margin: 16px 0;
+}
+
+#note__sm {
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 16px;
+}
+
+#flashcards {
+    display: flex;
+    gap: 12px;
+    flex-flow: row wrap;
+}
+
+.flashcard {
+    width: 92%;
+    max-width: 420px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    margin: 20px auto;
+
+    border-radius: 12px;
+    background-color: var(--text-alt-white);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.flashcard:hover {
+    transform: scale(1.05);
+}
+
+.flashcard__header > h2 {
+    font-weight: 600;
+    font-family: var(--alt-font);
+    font-size: 1.75rem;
+    color: var(--action-red-100);
+
+}
+
+.flashcard__container {
+    min-width: 100%;
+    margin: 20px 0 0;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    #note__sm {
+        display: none;
+    }
+
+    .flashcard {
+        position: relative;
+        perspective: 150em;
+    }
+    .flashcard__side {
+        width: 100%;
+        max-width: 100%;
+        backface-visibility: hidden;
+        transition: all 0.6s ease-in-out;
+    }
+    .flashcard__side--back {
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 32%;
+        padding: 20px 40px 0 0;
+        margin: 0;
+    }
+
+    .flashcard:hover .flashcard__side--front {
+        transform: rotateY(-180deg);
+   }
+    .flashcard:hover .flashcard__side--back {
+        transform: rotate(0);
+   }
+}
